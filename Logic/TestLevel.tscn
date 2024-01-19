@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://3u70tg1egoi8"]
+[gd_scene load_steps=3 format=3 uid="uid://3u70tg1egoi8"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lrahw"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_840oi"]
 
 [node name="TestLevel" type="Node3D"]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+process_material = SubResource("ParticleProcessMaterial_lrahw")
+draw_pass_1 = SubResource("QuadMesh_840oi")
