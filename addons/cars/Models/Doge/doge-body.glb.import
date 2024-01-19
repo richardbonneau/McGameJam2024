@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bty2rpvw2dh0h"
-path="res://.godot/imported/doge-body.glb-99e1d130851993fae0e8e58b693199d1.scn"
+path="res://.godot/imported/doge-body.glb-d0f304b99cf59fd986d1388d532ddf1e.scn"
 
 [deps]
 
-source_file="res://cars/Models/Doge/doge-body.glb"
-dest_files=["res://.godot/imported/doge-body.glb-99e1d130851993fae0e8e58b693199d1.scn"]
+source_file="res://addons/cars/Models/Doge/doge-body.glb"
+dest_files=["res://.godot/imported/doge-body.glb-d0f304b99cf59fd986d1388d532ddf1e.scn"]
 
 [params]
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://ci52bv1m15cbs"]
 
-[ext_resource type="PackedScene" uid="uid://duy0dbkychify" path="res://cars/BaseCar.tscn" id="1_cfkas"]
-[ext_resource type="PackedScene" uid="uid://benmjny2guowm" path="res://cars/Models/Doge/Wheel.glb" id="2_eoiid"]
-[ext_resource type="PackedScene" uid="uid://bty2rpvw2dh0h" path="res://cars/Models/Doge/doge-body.glb" id="3_om8jj"]
+[ext_resource type="PackedScene" uid="uid://duy0dbkychify" path="res://addons/cars/BaseCar.tscn" id="1_cfkas"]
+[ext_resource type="PackedScene" uid="uid://benmjny2guowm" path="res://addons/cars/Models/Doge/Wheel.glb" id="2_eoiid"]
+[ext_resource type="PackedScene" uid="uid://bty2rpvw2dh0h" path="res://addons/cars/Models/Doge/doge-body.glb" id="3_om8jj"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_n7qdn"]
 radius = 0.291194
