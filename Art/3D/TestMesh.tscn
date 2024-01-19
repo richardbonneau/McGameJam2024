@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dr3tk07rrjfw2"]
+
+[node name="TestMesh" type="MeshInstance3D"]
