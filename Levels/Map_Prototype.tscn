@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://6kitw55ykire"]
+[gd_scene load_steps=58 format=3 uid="uid://6kitw55ykire"]
 
 [ext_resource type="Texture2D" uid="uid://bq4k15d7oygys" path="res://Art/2D Textures/Prototyping_Textures/Dark/texture_01.png" id="3_gu8lt"]
 [ext_resource type="Texture2D" uid="uid://csfoxj3ksam8o" path="res://Art/2D Textures/Prototyping_Textures/Purple/texture_01.png" id="3_xwj66"]
@@ -8,8 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://b7ol2txgmcrwf" path="res://Logic/Players/Player.tscn" id="5_y2pjp"]
 [ext_resource type="Texture2D" uid="uid://cow2052lhftoh" path="res://Art/2D Textures/Prototyping_Textures/Orange/texture_13.png" id="6_s8swx"]
 [ext_resource type="Texture2D" uid="uid://crmx5h11mmb3k" path="res://Art/2D Textures/Prototyping_Textures/Red/texture_01.png" id="6_xkvdd"]
-[ext_resource type="PackedScene" uid="uid://cqhpexl1kre73" path="res://Logic/ScoreMultiplierZone/ScoreMultiplierZone.tscn" id="9_ybgyr"]
-[ext_resource type="PackedScene" uid="uid://cq0s7u8yng7bi" path="res://Logic/DestructibleProp/DestructibleProp.tscn" id="10_6kvfq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xq3s7"]
 sky_top_color = Color(0.419608, 0.54902, 0.619608, 1)
@@ -66,13 +64,13 @@ size = Vector3(1, 5.03717, 33.498)
 [sub_resource type="BoxShape3D" id="BoxShape3D_1rgu6"]
 size = Vector3(1, 5.12592, 235.526)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wxhw2"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ww5m1"]
 albedo_texture = ExtResource("3_xwj66")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_s48hf"]
-material = SubResource("StandardMaterial3D_wxhw2")
+material = SubResource("StandardMaterial3D_ww5m1")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v4xt8"]
 
@@ -172,13 +170,13 @@ size = Vector3(0.758301, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_xsnlv"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6o4hj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d3akh"]
 albedo_texture = ExtResource("6_xkvdd")
 uv1_triplanar = true
 uv1_world_triplanar = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_jfav8"]
-material = SubResource("StandardMaterial3D_6o4hj")
+material = SubResource("StandardMaterial3D_d3akh")
 
 [node name="Main2" type="Node3D"]
 
@@ -1219,43 +1217,4 @@ transform = Transform3D(250, 0, 0, 0, 10, 0, 0, 0, 600, -248.756, 0, 278.519)
 mesh = SubResource("PlaneMesh_jfav8")
 
 [node name="Player" parent="." instance=ExtResource("5_y2pjp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 133.701, 3.47596, -8.69397)
-
-[node name="ScoreMultiplierZone" parent="." instance=ExtResource("9_ybgyr")]
-transform = Transform3D(22.7754, 0, 0, 0, 1, 0, 0, 0, 20.2054, 146.458, 1, -31.407)
-
-[node name="ScoreMultiplierZone2" parent="." instance=ExtResource("9_ybgyr")]
-transform = Transform3D(22.7754, 0, 0, 0, 1, 0, 0, 0, 20.2054, 63.0951, 1, 43.1181)
-
-[node name="DestructibleProp" parent="." instance=ExtResource("10_6kvfq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.671, 1.409, -23.4625)
-
-[node name="DestructibleProp2" parent="." instance=ExtResource("10_6kvfq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139.671, 1.409, -23.4625)
-
-[node name="DestructibleProp3" parent="." instance=ExtResource("10_6kvfq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140.671, 1.409, -23.4625)
-
-[node name="DestructibleProp4" parent="." instance=ExtResource("10_6kvfq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 140.671, 2.409, -23.4625)
-
-[node name="DestructibleProp5" parent="." instance=ExtResource("10_6kvfq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139.671, 2.409, -23.4625)
-
-[node name="DestructibleProp6" parent="." instance=ExtResource("10_6kvfq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.671, 2.409, -23.4625)
-
-[node name="DestructibleProp7" parent="." instance=ExtResource("10_6kvfq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 130.671, 1.409, -23.4625)
-
-[node name="DestructibleProp8" parent="." instance=ExtResource("10_6kvfq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131.671, 1.409, -23.4625)
-
-[node name="DestructibleProp9" parent="." instance=ExtResource("10_6kvfq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 131.671, 2.409, -23.4625)
-
-[node name="DestructibleProp10" parent="." instance=ExtResource("10_6kvfq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 130.671, 2.409, -23.4625)
-
-[node name="DestructibleProp11" parent="." instance=ExtResource("10_6kvfq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 129.671, 2.409, -23.4625)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.8712, 3.47596, -8.69397)
