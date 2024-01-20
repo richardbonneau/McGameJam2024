@@ -25,9 +25,8 @@ center_of_mass_mode = 1
 center_of_mass = Vector3(0, -0.1, 0)
 max_contacts_reported = 20
 contact_monitor = true
-script = ExtResource("1_lbsfk")
-STEER_LIMIT = 0.4
-engine_force_value = 100
+STEER_LIMIT = 0.6
+engine_force_value = 40
 
 [node name="wheal0" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.997421, 0.340338, -1.50006)

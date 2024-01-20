@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Scoring="*res://Singletons/Scoring.gd"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/zylann.hterrain/plugin.cfg")
+
 [input]
 
 player1_gas={
