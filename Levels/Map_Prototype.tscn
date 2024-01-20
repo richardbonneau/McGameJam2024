@@ -1,0 +1,398 @@
+[gd_scene load_steps=28 format=3 uid="uid://6kitw55ykire"]
+
+[ext_resource type="Texture2D" uid="uid://bq4k15d7oygys" path="res://Art/2D Textures/Prototyping_Textures/Dark/texture_01.png" id="3_gu8lt"]
+[ext_resource type="Texture2D" uid="uid://t6ss6jmy1fav" path="res://Art/2D Textures/Prototyping_Textures/Green/texture_01.png" id="4_11dri"]
+[ext_resource type="Texture2D" uid="uid://cnb1gdtdbrxwq" path="res://Art/2D Textures/Prototyping_Textures/Orange/texture_01.png" id="5_4sxbp"]
+[ext_resource type="PackedScene" uid="uid://b7ol2txgmcrwf" path="res://Logic/Players/Player.tscn" id="5_y2pjp"]
+[ext_resource type="Texture2D" uid="uid://cow2052lhftoh" path="res://Art/2D Textures/Prototyping_Textures/Orange/texture_13.png" id="6_s8swx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xq3s7"]
+sky_top_color = Color(0.419608, 0.54902, 0.619608, 1)
+sky_horizon_color = Color(0.654902, 0.679505, 0.688152, 1)
+ground_horizon_color = Color(0.654902, 0.679505, 0.688152, 1)
+
+[sub_resource type="Sky" id="Sky_ye2ye"]
+sky_material = SubResource("ProceduralSkyMaterial_xq3s7")
+
+[sub_resource type="Environment" id="Environment_v385p"]
+background_mode = 2
+sky = SubResource("Sky_ye2ye")
+tonemap_mode = 2
+ssr_enabled = true
+ssao_enabled = true
+ssao_radius = 1.5
+ssao_intensity = 0.6
+ssao_power = 32.7849
+ssil_enabled = true
+sdfgi_y_scale = 2
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xprl3"]
+albedo_texture = ExtResource("4_11dri")
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eoh52"]
+size = Vector3(33.8479, 0.709839, 536)
+
+[sub_resource type="BoxMesh" id="BoxMesh_d0esh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ijful"]
+albedo_texture = ExtResource("3_gu8lt")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d27qk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v4mij"]
+albedo_texture = ExtResource("4_11dri")
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6qfg2"]
+size = Vector3(1.45745, 4.2717, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ktm5u"]
+albedo_texture = ExtResource("4_11dri")
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p3yrm"]
+size = Vector3(1, 5.03717, 33.498)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1rgu6"]
+size = Vector3(1, 5.12592, 235.526)
+
+[sub_resource type="PrismMesh" id="PrismMesh_rducj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5quk8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xbk7q"]
+albedo_texture = ExtResource("6_s8swx")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_y0why"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_fl2gx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e5cg2"]
+albedo_texture = ExtResource("5_4sxbp")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_jujpq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_rewjs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ahn72"]
+
+[node name="Main2" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_v385p")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.80696, 0.183487, -0.56138, 0, 0.950516, 0.310677, 0.590606, -0.250704, 0.767028, 0, 43.5687, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 200.0
+
+[node name="EnvironmentBaseModel" type="Node3D" parent="."]
+
+[node name="Base" type="CSGCombiner3D" parent="EnvironmentBaseModel"]
+
+[node name="Floor1" type="CSGBox3D" parent="EnvironmentBaseModel/Base"]
+transform = Transform3D(11.0604, 0, 0, 0, 1, 0, 0, 0, 1, 187.349, 1.02583, 188.32)
+size = Vector3(33.8462, 0.25, 536)
+material = SubResource("StandardMaterial3D_xprl3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/Base/Floor1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.145264, -0.145081, 0.0921326)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/Base/Floor1/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.138, -0.00800002, -0.149994)
+shape = SubResource("BoxShape3D_eoh52")
+
+[node name="Road" type="CSGMesh3D" parent="EnvironmentBaseModel/Base"]
+transform = Transform3D(16, 0, 0, 0, 0.25, 0, 0, 0, 500, 132.68, 1.284, 170.352)
+mesh = SubResource("BoxMesh_d0esh")
+material = SubResource("StandardMaterial3D_ijful")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/Base/Road"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/Base/Road/StaticBody3D"]
+shape = SubResource("BoxShape3D_d27qk")
+
+[node name="SpawnSide" type="Node3D" parent="EnvironmentBaseModel"]
+
+[node name="GatePillar" type="CSGBox3D" parent="EnvironmentBaseModel/SpawnSide"]
+transform = Transform3D(1, 0, 0, 0, 1.66781, 0, 0, 0, 1, 126.23, 4.69878, -79.1571)
+size = Vector3(1.47052, 4.28894, 0.99173)
+material = SubResource("StandardMaterial3D_v4mij")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/GatePillar"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/GatePillar/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000305176, -0.000976563, 0)
+shape = SubResource("BoxShape3D_6qfg2")
+
+[node name="GatePillar2" type="CSGBox3D" parent="EnvironmentBaseModel/SpawnSide"]
+transform = Transform3D(1, 0, 0, 0, 1.66781, 0, 0, 0, 1, 138.23, 4.69878, -79.1571)
+size = Vector3(1.47052, 4.28894, 0.99173)
+material = SubResource("StandardMaterial3D_v4mij")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/GatePillar2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/GatePillar2/StaticBody3D"]
+transform = Transform3D(0.999989, 0, 0, 0, 1, 0, 0, 0, 0.999989, 0.000949934, 0.00428796, 0)
+shape = SubResource("BoxShape3D_6qfg2")
+
+[node name="Wall-Boundry" type="CSGBox3D" parent="EnvironmentBaseModel/SpawnSide"]
+transform = Transform3D(-4.37114e-08, 0, 3.74634, 0, 1, 0, -1, 0, -1.63758e-07, 62.7605, 3.65845, -79.1807)
+size = Vector3(1, 5.02045, 33.5)
+material = SubResource("StandardMaterial3D_ktm5u")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/Wall-Boundry"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/Wall-Boundry/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00790405, -0.00217247)
+shape = SubResource("BoxShape3D_p3yrm")
+
+[node name="Wall-Boundry2" type="CSGBox3D" parent="EnvironmentBaseModel/SpawnSide"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 256.747, 3.68229, -79.1571)
+size = Vector3(1, 5.02045, 235.507)
+material = SubResource("StandardMaterial3D_ktm5u")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/Wall-Boundry2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/Wall-Boundry2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0298767, -0.00906372)
+shape = SubResource("BoxShape3D_1rgu6")
+
+[node name="Hills_Blockout" type="Node3D" parent="EnvironmentBaseModel"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 217.92, 48.7453, -131.303)
+mesh = SubResource("PrismMesh_rducj")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 272.253, 48.7453, -131.303)
+mesh = SubResource("PrismMesh_rducj")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 325.112, 48.7453, -131.303)
+mesh = SubResource("PrismMesh_rducj")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(70.7107, 0, -70.7107, 0, 100, 0, 70.7107, 0, 70.7107, 404.439, 58.4369, -114.813)
+mesh = SubResource("PrismMesh_rducj")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(4.45087, 0, -99.9009, 0, 100, 0, 99.9009, 0, 4.45087, 420.809, 52.9167, -43.4657)
+mesh = SubResource("PrismMesh_rducj")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(4.45087, 0, -99.9009, 0, 100, 0, 99.9009, 0, 4.45087, 421.395, 52.9167, 18.7141)
+mesh = SubResource("PrismMesh_rducj")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(4.45087, 0, -99.9009, 0, 100, 0, 99.9009, 0, 4.45087, 424.087, 52.9167, 79.1459)
+mesh = SubResource("PrismMesh_rducj")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(4.45087, 0, -99.9009, 0, 100, 0, 99.9009, 0, 4.45087, 427.742, 52.9167, 161.184)
+mesh = SubResource("PrismMesh_rducj")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(4.45087, 0, -99.9009, 0, 100, 0, 99.9009, 0, 4.45087, 430.46, 52.9167, 222.178)
+mesh = SubResource("PrismMesh_rducj")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(4.45087, 0, -99.9009, 0, 100, 0, 99.9009, 0, 4.45087, 432.87, 52.9167, 276.281)
+mesh = SubResource("PrismMesh_rducj")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(4.45087, 0, -99.9009, 0, 100, 0, 99.9009, 0, 4.45087, 434.834, 52.9167, 320.352)
+mesh = SubResource("PrismMesh_rducj")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(-4.45012, 0.0812509, -99.9009, -1.82551, -99.9833, 0, -99.8843, 1.8237, 4.45086, 436.749, 52.9167, 363.345)
+mesh = SubResource("PrismMesh_rducj")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(-4.45012, 0.0812509, -99.9009, -1.82551, -99.9833, 0, -99.8843, 1.8237, 4.45086, 424.79, 46.8284, 422.497)
+mesh = SubResource("PrismMesh_rducj")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(-4.45012, 0.0812509, -99.9009, -1.82551, -99.9833, 0, -99.8843, 1.8237, 4.45086, 410.683, -4.41542, 399.2)
+mesh = SubResource("PrismMesh_rducj")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(-4.45012, 0.0812509, -99.9009, -1.82551, -99.9833, 0, -99.8843, 1.8237, 4.45086, 393.351, -3.74184, 436.902)
+mesh = SubResource("PrismMesh_rducj")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="Grass_Trees_area" type="CSGMesh3D" parent="EnvironmentBaseModel"]
+transform = Transform3D(150, 0, 0, 0, 1.464, 0, 0, 0, 143.038, 296.443, 1.6178, -5.71421)
+mesh = SubResource("BoxMesh_5quk8")
+material = SubResource("StandardMaterial3D_xbk7q")
+
+[node name="CityBlock_LessDeveloped" type="Node3D" parent="EnvironmentBaseModel"]
+
+[node name="Building" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 164.514, 8.59891, -58.8714)
+mesh = SubResource("BoxMesh_y0why")
+
+[node name="Building2" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 164.514, 8.59891, -40.2844)
+mesh = SubResource("BoxMesh_y0why")
+
+[node name="Building3" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 164.514, 8.59891, -22.9229)
+mesh = SubResource("BoxMesh_y0why")
+
+[node name="Building10" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 111.26, 8.59891, -58.8714)
+mesh = SubResource("BoxMesh_y0why")
+
+[node name="Building11" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 111.26, 8.59891, -40.2844)
+mesh = SubResource("BoxMesh_y0why")
+
+[node name="Building12" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 111.26, 8.59891, -22.9229)
+mesh = SubResource("BoxMesh_y0why")
+
+[node name="Building4" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 181.42, 8.59891, 15.523)
+mesh = SubResource("BoxMesh_y0why")
+
+[node name="Building5" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 181.42, 8.59891, 34.6088)
+mesh = SubResource("BoxMesh_y0why")
+
+[node name="Building6" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 181.42, 8.59891, 52.2848)
+mesh = SubResource("BoxMesh_y0why")
+
+[node name="Building7" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 112.388, 8.59891, 15.523)
+mesh = SubResource("BoxMesh_y0why")
+
+[node name="Building8" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 112.388, 8.59891, 34.6088)
+mesh = SubResource("BoxMesh_y0why")
+
+[node name="Building9" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 112.388, 8.59891, 52.2848)
+mesh = SubResource("BoxMesh_y0why")
+
+[node name="Beach Area" type="Node3D" parent="EnvironmentBaseModel"]
+
+[node name="Sand" type="CSGMesh3D" parent="EnvironmentBaseModel/Beach Area"]
+transform = Transform3D(100, 0, 0, 0, 0.25, 0, 0, 0, 236.916, 50.4397, 1.17549, 40.7563)
+mesh = SubResource("BoxMesh_fl2gx")
+material = SubResource("StandardMaterial3D_e5cg2")
+
+[node name="DockArea" type="CSGMesh3D" parent="EnvironmentBaseModel/Beach Area"]
+transform = Transform3D(50, 0, 0, 0, 10, 0, 0, 0, 20, 81.9097, 6.18606, 99.9869)
+mesh = SubResource("BoxMesh_jujpq")
+
+[node name="DockArea2" type="CSGMesh3D" parent="EnvironmentBaseModel/Beach Area"]
+transform = Transform3D(50, 0, 0, 0, 10, 0, 0, 0, 20, 81.9097, 6.18606, 121.516)
+mesh = SubResource("BoxMesh_jujpq")
+
+[node name="DockArea3" type="CSGMesh3D" parent="EnvironmentBaseModel/Beach Area"]
+transform = Transform3D(50, 0, 0, 0, 10, 0, 0, 0, 20, 81.9097, 6.18606, 143.395)
+mesh = SubResource("BoxMesh_jujpq")
+
+[node name="Container" type="Node3D" parent="EnvironmentBaseModel/Beach Area"]
+
+[node name="Containers" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container"]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 5, 24.5442, 3.99538, 102.732)
+mesh = SubResource("BoxMesh_rewjs")
+skeleton = NodePath("../..")
+
+[node name="Containers2" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container"]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 5, 24.5442, 3.99538, 108.59)
+mesh = SubResource("BoxMesh_rewjs")
+skeleton = NodePath("../..")
+
+[node name="Containers3" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container"]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 5, 24.5442, 3.99538, 114.134)
+mesh = SubResource("BoxMesh_rewjs")
+skeleton = NodePath("../..")
+
+[node name="Containers4" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container"]
+transform = Transform3D(-4.37114e-07, 0, 5, 0, 5, 0, -10, 0, -2.18557e-07, 26.9804, 9.07068, 109.485)
+mesh = SubResource("BoxMesh_rewjs")
+skeleton = NodePath("../..")
+
+[node name="Containers5" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container"]
+transform = Transform3D(-4.37114e-07, 0, 4, 0, 5, 0, -10, 0, -1.74846e-07, 21.8336, 9.07068, 109.485)
+mesh = SubResource("BoxMesh_rewjs")
+skeleton = NodePath("../..")
+
+[node name="Container2" type="Node3D" parent="EnvironmentBaseModel/Beach Area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 36.0059)
+
+[node name="Containers" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container2"]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 5, 24.5442, 3.99538, 102.732)
+mesh = SubResource("BoxMesh_rewjs")
+skeleton = NodePath("../..")
+
+[node name="Containers2" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container2"]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 5, 24.5442, 3.99538, 108.59)
+mesh = SubResource("BoxMesh_rewjs")
+skeleton = NodePath("../..")
+
+[node name="Containers3" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container2"]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 5, 24.5442, 3.99538, 114.134)
+mesh = SubResource("BoxMesh_rewjs")
+skeleton = NodePath("../..")
+
+[node name="Containers4" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container2"]
+transform = Transform3D(-4.37114e-07, 0, 5, 0, 5, 0, -10, 0, -2.18557e-07, 26.9804, 9.07068, 109.485)
+mesh = SubResource("BoxMesh_rewjs")
+skeleton = NodePath("../..")
+
+[node name="Containers5" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container2"]
+transform = Transform3D(-4.37114e-07, 0, 4, 0, 5, 0, -10, 0, -1.74846e-07, 21.8336, 9.07068, 109.485)
+mesh = SubResource("BoxMesh_rewjs")
+skeleton = NodePath("../..")
+
+[node name="CityBlock_MoreDeveloped" type="Node3D" parent="EnvironmentBaseModel"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 190.908, 13.5885, 115.555)
+mesh = SubResource("BoxMesh_ahn72")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 211.081, 13.7499, 115.485)
+mesh = SubResource("BoxMesh_ahn72")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 227.438, 13.7499, 115.485)
+mesh = SubResource("BoxMesh_ahn72")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 243.688, 13.7499, 115.485)
+mesh = SubResource("BoxMesh_ahn72")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 259.854, 13.7499, 115.485)
+mesh = SubResource("BoxMesh_ahn72")
+
+[node name="Player" parent="." instance=ExtResource("5_y2pjp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.8712, 3.47596, -8.69397)
