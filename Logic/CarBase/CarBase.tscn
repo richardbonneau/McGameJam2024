@@ -1,6 +1,5 @@
-[gd_scene load_steps=10 format=3 uid="uid://ci52bv1m15cbs"]
+[gd_scene load_steps=9 format=3 uid="uid://ci52bv1m15cbs"]
 
-[ext_resource type="Script" path="res://addons/cars/BaseCar.gd" id="1_lbsfk"]
 [ext_resource type="PackedScene" uid="uid://benmjny2guowm" path="res://addons/cars/Models/Doge/Wheel.glb" id="2_eoiid"]
 [ext_resource type="Script" path="res://addons/cars/camera/CameraFollow.gd" id="3_ahucd"]
 [ext_resource type="PackedScene" uid="uid://bty2rpvw2dh0h" path="res://addons/cars/Models/Doge/doge-body.glb" id="3_om8jj"]
@@ -25,8 +24,6 @@ center_of_mass_mode = 1
 center_of_mass = Vector3(0, -0.1, 0)
 max_contacts_reported = 20
 contact_monitor = true
-STEER_LIMIT = 0.6
-engine_force_value = 40
 
 [node name="wheal0" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.997421, 0.340338, -1.50006)

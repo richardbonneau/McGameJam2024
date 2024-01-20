@@ -42,7 +42,7 @@ func _physics_process(delta):
 	elif  Input.get_action_strength("player"+player_num+"_lookright"):
 		is_panning = true
 		right_cam.current = true
-	elif Input.get_action_strength("player"+player_num+"_lookdown"):
+	elif Input.get_action_strength("player"+player_num+"_lookbehind"):
 		is_panning = true
 		behind_cam.current = true
 	else: 
