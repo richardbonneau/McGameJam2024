@@ -16,7 +16,8 @@ radius = 0.363529
 [node name="CarBase" instance=ExtResource("1_cfkas")]
 max_contacts_reported = 20
 contact_monitor = true
-STEER_LIMIT = 0.4
+STEER_LIMIT = 0.6
+engine_force_value = 40
 
 [node name="wheal0" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.997421, 0.340338, -1.50006)
