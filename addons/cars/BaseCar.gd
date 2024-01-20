@@ -1,5 +1,5 @@
 extends VehicleBody3D
-
+class_name Car
 
 @export var STEER_SPEED = 1.5
 @export var STEER_LIMIT = 0.6
@@ -49,7 +49,4 @@ func _physics_process(delta):
 
 func traction(speed):
 	apply_central_force(Vector3.DOWN*speed)
-
-
-
 

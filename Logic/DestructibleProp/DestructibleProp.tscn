@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cq0s7u8yng7bi"]
+
+[ext_resource type="Script" path="res://Logic/DestructibleProp/DestructibleProp.gd" id="1_dpk2n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t8dgi"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_gu5ti"]
+material = SubResource("StandardMaterial3D_t8dgi")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t465a"]
+
+[node name="DestructibleProp" type="Node3D"]
+script = ExtResource("1_dpk2n")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+max_contacts_reported = 1
+contact_monitor = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+mesh = SubResource("BoxMesh_gu5ti")
+skeleton = NodePath("")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+shape = SubResource("BoxShape3D_t465a")
+
+[connection signal="body_entered" from="RigidBody3D" to="." method="_on_rigid_body_3d_body_entered"]
+[connection signal="body_shape_entered" from="RigidBody3D" to="." method="_on_rigid_body_3d_body_shape_entered"]
