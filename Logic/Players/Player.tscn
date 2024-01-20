@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7ol2txgmcrwf"]
+
+[ext_resource type="Script" path="res://Logic/Players/Scripts/Player1.gd" id="1_0dqci"]
+[ext_resource type="PackedScene" uid="uid://ci52bv1m15cbs" path="res://Logic/CarBase/CarBase.tscn" id="1_kkdoe"]
+
+[node name="Player" type="Node3D"]
+script = ExtResource("1_0dqci")
+
+[node name="CarBase" parent="." instance=ExtResource("1_kkdoe")]

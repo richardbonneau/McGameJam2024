@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://budh13b2gu3b0"]
 
-[ext_resource type="PackedScene" uid="uid://ci52bv1m15cbs" path="res://addons/cars/Doge.tscn" id="1_wrgfx"]
 [ext_resource type="Texture2D" uid="uid://cpwiyoo7664vj" path="res://addons/cars/Models/texture_10.png" id="2_ho6lt"]
 [ext_resource type="PackedScene" uid="uid://cq0s7u8yng7bi" path="res://Logic/DestructibleProp/DestructibleProp.tscn" id="3_icc3y"]
+[ext_resource type="PackedScene" uid="uid://b7ol2txgmcrwf" path="res://Logic/Players/Player.tscn" id="3_tgjuq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b7tlo"]
 sky_top_color = Color(0.419608, 0.54902, 0.619608, 1)
@@ -44,10 +44,6 @@ environment = SubResource("Environment_8dxyn")
 transform = Transform3D(0.80696, 0.183487, -0.56138, 0, 0.950516, 0.310676, 0.590606, -0.250704, 0.767029, 0, 43.5687, 0)
 shadow_enabled = true
 directional_shadow_max_distance = 200.0
-
-[node name="car" parent="." instance=ExtResource("1_wrgfx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.564415, 0.184314, -6.30866)
-engine_force_value = 200
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 material_override = SubResource("StandardMaterial3D_2da72")
@@ -116,92 +112,130 @@ size = Vector3(0.3, 0.14044, 10.8715)
 transform = Transform3D(-0.00242604, 0, -0.999997, 0, 2.55802, 0, 0.999997, 0, -0.00242604, 1.59131, 0.169201, -18.9048)
 size = Vector3(0.3, 0.14044, 10.8715)
 
-[node name="DestructibleProp" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProps" type="Node3D" parent="."]
+
+[node name="DestructibleProp" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -21.9762)
 
-[node name="DestructibleProp4" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp4" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -21.9762)
 
-[node name="DestructibleProp5" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp5" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -21.9762)
 
-[node name="DestructibleProp6" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp6" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -21.9762)
 
-[node name="DestructibleProp2" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp31" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -8.9762)
+
+[node name="DestructibleProp2" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -21.9762)
 
-[node name="DestructibleProp3" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp3" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -21.9762)
 
-[node name="DestructibleProp7" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp7" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -21.9762)
 
-[node name="DestructibleProp8" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp8" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -21.9762)
 
-[node name="DestructibleProp9" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp9" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, -21.9762)
 
-[node name="DestructibleProp10" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp10" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, -21.9762)
 
-[node name="DestructibleProp11" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp11" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -21.9762)
 
-[node name="DestructibleProp12" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp12" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, -21.9762)
 
-[node name="DestructibleProp13" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp13" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -21.9762)
 
-[node name="DestructibleProp14" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp14" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -21.9762)
 
-[node name="DestructibleProp15" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp15" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 2, -21.9762)
 
-[node name="DestructibleProp16" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp16" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, -21.9762)
 
-[node name="DestructibleProp17" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp17" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, -21.9762)
 
-[node name="DestructibleProp18" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp18" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, -21.9762)
 
-[node name="DestructibleProp19" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp19" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -21.9762)
 
-[node name="DestructibleProp20" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp20" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, -21.9762)
 
-[node name="DestructibleProp21" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp21" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3, -21.9762)
 
-[node name="DestructibleProp22" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp22" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 3, -21.9762)
 
-[node name="DestructibleProp23" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp23" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -21.9762)
 
-[node name="DestructibleProp24" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp24" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 3, -21.9762)
 
-[node name="DestructibleProp25" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp25" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -21.9762)
 
-[node name="DestructibleProp26" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp26" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, -21.9762)
 
-[node name="DestructibleProp27" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp27" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 4, -21.9762)
 
-[node name="DestructibleProp28" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp28" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 4, -21.9762)
 
-[node name="DestructibleProp29" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp29" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, -21.9762)
 
-[node name="DestructibleProp30" parent="." instance=ExtResource("3_icc3y")]
+[node name="DestructibleProp30" parent="DestructibleProps" instance=ExtResource("3_icc3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 4, -21.9762)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(2, 2)
+render_target_update_mode = 4
+
+[node name="Player1" parent="VBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("3_tgjuq")]
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/SubViewportContainer2"]
+handle_input_locally = false
+size = Vector2i(2, 2)
+render_target_update_mode = 4
+
+[node name="Player2" parent="VBoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("3_tgjuq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+player_index = 1

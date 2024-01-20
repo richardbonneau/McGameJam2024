@@ -6,6 +6,11 @@ class_name Car
 var steer_target = 0
 @export var engine_force_value = 40
 
+@onready var player_gas:String = "player"+str(get_parent().player_index+1)+"_gas"
+@onready var player_brake:String = "player"+str(get_parent().player_index+1)+"_brake"
+@onready var player_turn_left:String = "player"+str(get_parent().player_index+1)+"_turn_left"
+@onready var player_turn_right:String = "player"+str(get_parent().player_index+1)+"_turn_right"
+
 
 func _physics_process(delta):
 	var speed = linear_velocity.length()*Engine.get_frames_per_second()*delta
@@ -13,9 +18,9 @@ func _physics_process(delta):
 	$Hud/speed.text=str(round(speed*3.8))+"  KMPH"
 
 	var fwd_mps = transform.basis.x.x
-	steer_target = Input.get_action_strength("turn_left") - Input.get_action_strength("turn_right")
+	steer_target = Input.get_action_strength(player_turn_left) - Input.get_action_strength(player_turn_right)
 	steer_target *= STEER_LIMIT
-	if Input.is_action_pressed("brake"):
+	if Input.is_action_pressed(player_brake):
 	# Increase engine force at low speeds to make the initial acceleration faster.
 
 		if speed < 20 and speed != 0:
@@ -24,7 +29,7 @@ func _physics_process(delta):
 			engine_force = engine_force_value
 	else:
 		engine_force = 0
-	if Input.is_action_pressed("gas"):
+	if Input.is_action_pressed(player_gas):
 		# Increase engine force at low speeds to make the initial acceleration faster.
 		if fwd_mps >= -1:
 			if speed < 30 and speed != 0:
