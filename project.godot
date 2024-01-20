@@ -15,6 +15,10 @@ run/main_scene="res://Levels/main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Scoring="*res://Singletons/Scoring.gd"
+
 [input]
 
 player1_gas={

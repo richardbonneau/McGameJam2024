@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://budh13b2gu3b0"]
+[gd_scene load_steps=11 format=3 uid="uid://budh13b2gu3b0"]
 
 [ext_resource type="Texture2D" uid="uid://cpwiyoo7664vj" path="res://addons/cars/Models/texture_10.png" id="2_ho6lt"]
 [ext_resource type="PackedScene" uid="uid://cq0s7u8yng7bi" path="res://Logic/DestructibleProp/DestructibleProp.tscn" id="3_icc3y"]
 [ext_resource type="PackedScene" uid="uid://b7ol2txgmcrwf" path="res://Logic/Players/Player.tscn" id="3_tgjuq"]
+[ext_resource type="Script" path="res://UI/UI.gd" id="4_hak0q"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b7tlo"]
 sky_top_color = Color(0.419608, 0.54902, 0.619608, 1)
@@ -221,7 +222,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="VBoxContainer/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(1152, 322)
 render_target_update_mode = 4
 
 [node name="Player1" parent="VBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("3_tgjuq")]
@@ -233,9 +234,16 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="VBoxContainer/SubViewportContainer2"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(1152, 322)
 render_target_update_mode = 4
 
 [node name="Player2" parent="VBoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("3_tgjuq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
 player_index = 1
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_hak0q")

@@ -7,3 +7,12 @@
 script = ExtResource("1_0dqci")
 
 [node name="CarBase" parent="." instance=ExtResource("1_kkdoe")]
+
+[node name="Score" type="Label" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "0"
+horizontal_alignment = 1
