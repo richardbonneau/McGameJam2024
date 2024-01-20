@@ -13,7 +13,6 @@ var steer_target = 0
 
 
 func _physics_process(delta):
-	print("Input.get_action_strength(player_turn_right) ",Input.get_action_strength(player_turn_right))
 	var speed = linear_velocity.length()*Engine.get_frames_per_second()*delta
 	traction(speed)
 	$Hud/speed.text=str(round(speed*3.8))+"  KMPH"
