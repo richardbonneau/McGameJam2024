@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7mmdfjqqprep"
-path.s3tc="res://.godot/imported/Brick_racked-concrete-wall.jpg-321a2d6a590b1b3eb1f39f17ce9d9d4e.s3tc.ctex"
+path.s3tc="res://.godot/imported/Brick_racked-concrete-wall.jpg-c80701f4da0dceed24e7716fa2aa4b4b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Art/3D/DestructibleProps/Brick_racked-concrete-wall.jpg"
-dest_files=["res://.godot/imported/Brick_racked-concrete-wall.jpg-321a2d6a590b1b3eb1f39f17ce9d9d4e.s3tc.ctex"]
+source_file="res://Art/3D/Meshes/DestructibleProps/Brick_racked-concrete-wall.jpg"
+dest_files=["res://.godot/imported/Brick_racked-concrete-wall.jpg-c80701f4da0dceed24e7716fa2aa4b4b.s3tc.ctex"]
 
 [params]
 

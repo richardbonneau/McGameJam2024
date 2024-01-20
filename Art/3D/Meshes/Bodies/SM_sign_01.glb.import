@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b1ouygw0ra4uo"
-path="res://.godot/imported/SM_sign_01.glb-6a165018d7fde3e65e4db966f4120443.scn"
+path="res://.godot/imported/SM_sign_01.glb-6148bec3414d99a5dbbcfefa1f7c3ab6.scn"
 
 [deps]
 
-source_file="res://Art/3D/Meshes/SM_sign_01.glb"
-dest_files=["res://.godot/imported/SM_sign_01.glb-6a165018d7fde3e65e4db966f4120443.scn"]
+source_file="res://Art/3D/Meshes/Bodies/SM_sign_01.glb"
+dest_files=["res://.godot/imported/SM_sign_01.glb-6148bec3414d99a5dbbcfefa1f7c3ab6.scn"]
 
 [params]
 

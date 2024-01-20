@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cl1lidoivj8ff"
-path.s3tc="res://.godot/imported/Barrel_dirty red.jpg-3283a53b9a9af84302e1c2e1ec551a89.s3tc.ctex"
+path.s3tc="res://.godot/imported/Barrel_dirty red.jpg-1837a248d42f98fc3cd0b6019c251497.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Art/3D/DestructibleProps/Barrel_dirty red.jpg"
-dest_files=["res://.godot/imported/Barrel_dirty red.jpg-3283a53b9a9af84302e1c2e1ec551a89.s3tc.ctex"]
+source_file="res://Art/3D/Meshes/DestructibleProps/Barrel_dirty red.jpg"
+dest_files=["res://.godot/imported/Barrel_dirty red.jpg-1837a248d42f98fc3cd0b6019c251497.s3tc.ctex"]
 
 [params]
 
