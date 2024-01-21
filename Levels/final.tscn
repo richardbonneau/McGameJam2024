@@ -1,7 +1,6 @@
-[gd_scene load_steps=63 format=3 uid="uid://dslk3p0i4c6sp"]
+[gd_scene load_steps=62 format=3 uid="uid://dslk3p0i4c6sp"]
 
 [ext_resource type="Texture2D" uid="uid://t6ss6jmy1fav" path="res://Art/2D Textures/Prototyping_Textures/Green/texture_01.png" id="1_pv02d"]
-[ext_resource type="Texture2D" uid="uid://bq4k15d7oygys" path="res://Art/2D Textures/Prototyping_Textures/Dark/texture_01.png" id="2_ai827"]
 [ext_resource type="Texture2D" uid="uid://csfoxj3ksam8o" path="res://Art/2D Textures/Prototyping_Textures/Purple/texture_01.png" id="3_hj63j"]
 [ext_resource type="Texture2D" uid="uid://dnoo58ob7qq5p" path="res://Art/2D Textures/Prototyping_Textures/Purple/texture_13.png" id="4_8yta2"]
 [ext_resource type="Texture2D" uid="uid://cow2052lhftoh" path="res://Art/2D Textures/Prototyping_Textures/Orange/texture_13.png" id="5_gdog7"]
@@ -22,6 +21,9 @@
 [ext_resource type="PackedScene" uid="uid://die6l7hfocn88" path="res://Art/3D/Meshes/Buildings/BigBuilding3/big-house--block-col.glb" id="20_cnccd"]
 [ext_resource type="PackedScene" uid="uid://dolwarhg6y8xx" path="res://Art/3D/Meshes/Buildings/BigBuilding4/building-tall-col.glb" id="21_crasj"]
 [ext_resource type="PackedScene" uid="uid://cnbncydhk18f0" path="res://Art/3D/Meshes/Buildings/BigBuilding5/building-5-col.glb" id="22_fx4i4"]
+[ext_resource type="PackedScene" uid="uid://dfo11pj5cqqti" path="res://Art/3D/Meshes/Buildings/BigBuilding6/building-6-col.glb" id="23_snw6q"]
+[ext_resource type="PackedScene" uid="uid://dmggiulkofpr6" path="res://Art/3D/Meshes/Waterfall_Assets/stone-flat-col.glb" id="24_5qupq"]
+[ext_resource type="PackedScene" uid="uid://nlprt22sbkm4" path="res://Art/3D/Meshes/RoadFull/FullRoad-col.glb" id="24_48na8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u75fd"]
 albedo_texture = ExtResource("1_pv02d")
@@ -29,15 +31,6 @@ uv1_triplanar = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rj1ao"]
 size = Vector3(33.8479, 0.709839, 536)
-
-[sub_resource type="BoxMesh" id="BoxMesh_cajhi"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nhv5w"]
-albedo_texture = ExtResource("2_ai827")
-uv1_triplanar = true
-uv1_world_triplanar = true
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_u2vxt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7fgl7"]
 albedo_texture = ExtResource("3_hj63j")
@@ -167,6 +160,7 @@ material = SubResource("StandardMaterial3D_6o4hj")
 
 [node name="EnvironmentBaseModel" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.074, 0, 456.462)
+visible = false
 
 [node name="Base" type="CSGCombiner3D" parent="EnvironmentBaseModel"]
 
@@ -181,16 +175,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.145264, -0.145081, 0.09213
 [node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/Base/Floor1/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.138, -0.00800002, -0.149994)
 shape = SubResource("BoxShape3D_rj1ao")
-
-[node name="Road" type="CSGMesh3D" parent="EnvironmentBaseModel/Base"]
-transform = Transform3D(16, 0, 0, 0, 0.25, 0, 0, 0, 540.738, 132.68, 1.284, 190.746)
-mesh = SubResource("BoxMesh_cajhi")
-material = SubResource("StandardMaterial3D_nhv5w")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/Base/Road"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/Base/Road/StaticBody3D"]
-shape = SubResource("BoxShape3D_u2vxt")
 
 [node name="SpawnSide" type="Node3D" parent="EnvironmentBaseModel"]
 
@@ -452,8 +436,6 @@ shape = SubResource("BoxShape3D_5wcft")
 transform = Transform3D(150, 0, 0, 0, 1.464, 0, 0, 0, 143.038, 296.443, 1.6178, -5.71421)
 mesh = SubResource("BoxMesh_do6lr")
 material = SubResource("StandardMaterial3D_d58ae")
-
-[node name="CityBlock_LessDeveloped" type="Node3D" parent="EnvironmentBaseModel"]
 
 [node name="Beach Area" type="Node3D" parent="EnvironmentBaseModel"]
 
@@ -973,10 +955,10 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 165.303, 1.22766, 710.067)
 [node name="Buildings" type="Node3D" parent="Final_envrinment"]
 
 [node name="SM_Maison_01" parent="Final_envrinment/Buildings" instance=ExtResource("12_k0b32")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 137.618, 1.23341, 416.901)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 135.294, 1.23341, 416.901)
 
 [node name="SM_Maison_02" parent="Final_envrinment/Buildings" instance=ExtResource("12_k0b32")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 191.214, 1.57132, 422.876)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 184.91, 1.57132, 422.876)
 
 [node name="SM_Maison_03" parent="Final_envrinment/Buildings" instance=ExtResource("13_7hdjn")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 134.155, 1.01209, 449.384)
@@ -985,34 +967,37 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 134.15
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 187.107, 1.01209, 457.659)
 
 [node name="SM_Maison_07" parent="Final_envrinment/Buildings" instance=ExtResource("12_k0b32")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 191.214, 1.57132, 490.192)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 186.326, 1.57132, 490.192)
 
 [node name="SM_Maison_08" parent="Final_envrinment/Buildings" instance=ExtResource("13_7hdjn")]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 187.107, 1.01209, 524.975)
 
 [node name="SM_Maison_04" parent="Final_envrinment/Buildings" instance=ExtResource("12_k0b32")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 137.618, 1.23341, 481.663)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 135.287, 1.23341, 481.663)
 
 [node name="SM_Maison_05" parent="Final_envrinment/Buildings" instance=ExtResource("13_7hdjn")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 134.155, 1.01209, 514.146)
 
 [node name="big-house3-col" parent="Final_envrinment/Buildings" instance=ExtResource("18_cc8cs")]
-transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 224.033, 1.24027, 647.648)
+transform = Transform3D(-1.99675, 0, 0.113978, 0, 2, 0, -0.113978, 0, -1.99675, 224.033, 1.24027, 657.419)
 
 [node name="big-house4-col" parent="Final_envrinment/Buildings" instance=ExtResource("19_sqw5e")]
-transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 252.468, 1.22781, 645.6)
+transform = Transform3D(-2, 0, -1.74846e-07, 0, 2, 0, 1.74846e-07, 0, -2, 252.468, 1.22781, 655.304)
 
 [node name="big-house--block-col" parent="Final_envrinment/Buildings" instance=ExtResource("20_cnccd")]
-transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 283.454, 1.22784, 651.387)
+transform = Transform3D(-2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 283.454, 1.22784, 660.574)
 
 [node name="big-house--block-col2" parent="Final_envrinment/Buildings" instance=ExtResource("20_cnccd")]
-transform = Transform3D(2, 0, -3.49691e-07, 0, 2, 0, 3.49691e-07, 0, 2, 256.926, 1.22784, 599.8)
+transform = Transform3D(2, 0, -3.49691e-07, 0, 2, 0, 3.49691e-07, 0, 2, 246.442, 1.22784, 599.8)
 
 [node name="building-tall-col" parent="Final_envrinment/Buildings" instance=ExtResource("21_crasj")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 224.992, 1.59113, 599.914)
+transform = Transform3D(1.49909, 0, -0.0523492, 0, 1.5, 0, 0.0523492, 0, 1.49909, 220.898, 1.59113, 600.393)
 
 [node name="building-5-col" parent="Final_envrinment/Buildings" instance=ExtResource("22_fx4i4")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 286.285, 1.81872, 599.397)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 274.278, 2.07866, 600.397)
+
+[node name="building-6-col" parent="Final_envrinment/Buildings" instance=ExtResource("23_snw6q")]
+transform = Transform3D(0.10868, 0, -1.99705, 0, 2, 0, 1.99705, 0, 0.10868, 193.876, 1.25289, 562.251)
 
 [node name="Beach" type="Node3D" parent="Final_envrinment"]
 
@@ -1045,3 +1030,273 @@ transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, 60.788
 
 [node name="building-dock-col" parent="Final_envrinment/Beach" instance=ExtResource("17_dgyxr")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 123.73, 1.12477, 581.374)
+
+[node name="Road" type="Node3D" parent="Final_envrinment"]
+
+[node name="FullRoad-col" parent="Final_envrinment/Road" instance=ExtResource("24_48na8")]
+transform = Transform3D(-10, 0, -8.74228e-07, 0, 10, 0, 8.74228e-07, 0, -10, 160.194, 1.39621, 420.985)
+
+[node name="Waterfall" type="Node3D" parent="Final_envrinment"]
+
+[node name="Rocks" type="Node3D" parent="Final_envrinment/Waterfall"]
+
+[node name="stone-flat-col" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 267.667, 1.22767, 759.813)
+
+[node name="stone-flat-col2" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 273.797, 1.22767, 767.335)
+
+[node name="stone-flat-col3" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 272.57, 4.58635, 761.755)
+
+[node name="stone-flat-col4" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.5, 0, -4.33013, 0, 5, 0, 4.33013, 0, 2.5, 279.755, 1.22767, 767.812)
+
+[node name="stone-flat-col5" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.5, 0, -4.33013, 0, 5, 0, 4.33013, 0, 2.5, 276.306, 1.22767, 776.882)
+
+[node name="stone-flat-col6" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.5, 0, -4.33013, 0, 5, 0, 4.33013, 0, 2.5, 280.525, 4.58635, 773.028)
+
+[node name="stone-flat-col7" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.5, 0, -4.33013, 0, 5, 0, 4.33013, 0, 2.5, 283.177, 1.22767, 778.22)
+
+[node name="stone-flat-col8" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.5, 0, -4.33013, 0, 5, 0, 4.33013, 0, 2.5, 279.728, 1.22767, 787.29)
+
+[node name="stone-flat-col9" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.5, 0, -4.33013, 0, 5, 0, 4.33013, 0, 2.5, 283.947, 4.58635, 783.436)
+
+[node name="stone-flat-col10" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.75891, 0, -1.53388, 0, 5, 0, 1.53388, 0, 4.75891, 282.289, 1.22767, 787.526)
+
+[node name="stone-flat-col11" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.75891, 0, -1.53388, 0, 5, 0, 1.53388, 0, 4.75891, 285.816, 1.22767, 796.565)
+
+[node name="stone-flat-col12" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.75891, 0, -1.53388, 0, 5, 0, 1.53388, 0, 4.75891, 286.36, 4.58635, 790.877)
+
+[node name="stone-flat-col13" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(1.05108, 0, -4.88828, 0, 5, 0, 4.88828, 0, 1.05108, 291.34, 1.22767, 798.847)
+
+[node name="stone-flat-col14" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(1.05108, 0, -4.88828, 0, 5, 0, 4.88828, 0, 1.05108, 285.276, 1.22767, 806.421)
+
+[node name="stone-flat-col15" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(1.05108, 0, -4.88828, 0, 5, 0, 4.88828, 0, 1.05108, 290.473, 4.58635, 804.048)
+
+[node name="stone-flat-col16" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(3.3544, 0, -3.70783, 0, 5, 0, 3.70783, 0, 3.3544, 292.947, 1.22767, 809.218)
+
+[node name="stone-flat-col17" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(3.3544, 0, -3.70783, 0, 5, 0, 3.70783, 0, 3.3544, 291.481, 1.22767, 818.81)
+
+[node name="stone-flat-col18" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(3.3544, 0, -3.70783, 0, 5, 0, 3.70783, 0, 3.3544, 294.796, 4.58635, 814.156)
+
+[node name="stone-flat-col19" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.05757, 0, 4.55702, 0, 5, 0, -4.55702, 0, 2.05757, 356.869, 0.755176, 715.042)
+
+[node name="stone-flat-col20" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.05757, 0, 4.55702, 0, 5, 0, -4.55702, 0, 2.05757, 366.247, 0.755176, 712.55)
+
+[node name="stone-flat-col21" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.05757, 0, 4.55702, 0, 5, 0, -4.55702, 0, 2.05757, 360.656, 4.11386, 711.372)
+
+[node name="stone-flat-col22" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.97528, 0, 0.496598, 0, 5, 0, -0.496598, 0, 4.97528, 369.134, 0.755176, 707.317)
+
+[node name="stone-flat-col23" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.89868, 0, -4.07402, 0, 5, 0, 4.07402, 0, 2.89868, 370.022, 0.755176, 721.991)
+
+[node name="stone-flat-col24" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.89868, 0, -4.07402, 0, 5, 0, 4.07402, 0, 2.89868, 373.857, 4.11386, 717.756)
+
+[node name="stone-flat-col25" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.89868, 0, -4.07402, 0, 5, 0, 4.07402, 0, 2.89868, 376.989, 0.755176, 722.673)
+
+[node name="stone-flat-col26" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.89868, 0, -4.07402, 0, 5, 0, 4.07402, 0, 2.89868, 374.414, 0.755176, 732.029)
+
+[node name="stone-flat-col27" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.89868, 0, -4.07402, 0, 5, 0, 4.07402, 0, 2.89868, 378.249, 4.11386, 727.793)
+
+[node name="stone-flat-col28" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.88274, 0, -1.07649, 0, 5, 0, 1.07649, 0, 4.88274, 376.986, 0.755176, 732.021)
+
+[node name="stone-flat-col29" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.88274, 0, -1.07649, 0, 5, 0, 1.07649, 0, 4.88274, 381.353, 0.755176, 740.686)
+
+[node name="stone-flat-col30" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.88274, 0, -1.07649, 0, 5, 0, 1.07649, 0, 4.88274, 381.355, 4.11386, 734.972)
+
+[node name="stone-flat-col31" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(1.5091, 0, -4.76682, 0, 5, 0, 4.76682, 0, 1.5091, 387.068, 0.755176, 742.435)
+
+[node name="stone-flat-col32" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(1.5091, 0, -4.76682, 0, 5, 0, 4.76682, 0, 1.5091, 381.747, 0.755176, 750.549)
+
+[node name="stone-flat-col33" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(1.5091, 0, -4.76682, 0, 5, 0, 4.76682, 0, 1.5091, 386.697, 4.11386, 747.695)
+
+[node name="stone-flat-col34" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(-1.5091, 0, 4.76682, 0, 5, 0, -4.76682, 0, -1.5091, 388.337, 0.755176, 761.875)
+
+[node name="stone-flat-col35" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(-1.5091, 0, 4.76682, 0, 5, 0, -4.76682, 0, -1.5091, 393.658, 0.755176, 753.76)
+
+[node name="stone-flat-col36" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(-1.5091, 0, 4.76682, 0, 5, 0, -4.76682, 0, -1.5091, 388.709, 4.11386, 756.615)
+
+[node name="stone-flat-col37" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(-4.18969, 0, 2.72883, 0, 5, 0, -2.72883, 0, -4.18969, 305.795, 0.755176, 738.854)
+
+[node name="stone-flat-col38" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(-4.18969, 0, 2.72883, 0, 5, 0, -2.72883, 0, -4.18969, 304.763, 0.755176, 729.205)
+
+[node name="stone-flat-col39" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(-4.18969, 0, 2.72883, 0, 5, 0, -2.72883, 0, -4.18969, 302.746, 4.11386, 734.551)
+
+[node name="stone-flat-col40" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(0.268391, 0, 4.99279, 0, 5, 0, -4.99279, 0, 0.268391, 300.031, 0.755176, 725.554)
+
+[node name="stone-flat-col41" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.46862, 0, 2.24309, 0, 5, 0, -2.24309, 0, 4.46862, 314.67, 0.755176, 726.915)
+
+[node name="stone-flat-col42" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.46862, 0, 2.24309, 0, 5, 0, -2.24309, 0, 4.46862, 311.069, 4.11386, 722.479)
+
+[node name="stone-flat-col43" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.46862, 0, 2.24309, 0, 5, 0, -2.24309, 0, 4.46862, 316.407, 0.755176, 720.134)
+
+[node name="stone-flat-col44" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.46862, 0, 2.24309, 0, 5, 0, -2.24309, 0, 4.46862, 325.26, 0.755176, 724.106)
+
+[node name="stone-flat-col45" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.46862, 0, 2.24309, 0, 5, 0, -2.24309, 0, 4.46862, 321.659, 4.11386, 719.67)
+
+[node name="stone-flat-col46" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(1.80894, 0, 4.6613, 0, 5, 0, -4.6613, 0, 1.80894, 325.645, 0.755176, 721.564)
+
+[node name="stone-flat-col47" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(1.80894, 0, 4.6613, 0, 5, 0, -4.6613, 0, 1.80894, 334.875, 0.755176, 718.57)
+
+[node name="stone-flat-col55" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.91116, 0, 0.938363, 0, 5, 0, -0.938363, 0, 4.91116, 384.958, 0.755176, 768.545)
+
+[node name="stone-flat-col56" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.91116, 0, 0.938363, 0, 5, 0, -0.938363, 0, 4.91116, 392.391, 0.755176, 774.782)
+
+[node name="stone-flat-col57" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.91116, 0, 0.938363, 0, 5, 0, -0.938363, 0, 4.91116, 390.138, 4.11386, 769.532)
+
+[node name="stone-flat-col58" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(3.26823, 0, -3.78401, 0, 5, 0, 3.78401, 0, 3.26823, 398.332, 0.755176, 774.133)
+
+[node name="stone-flat-col59" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(-1.665, 0, -4.71463, 0, 5, 0, 4.71463, 0, -1.665, 386.84, 0.755176, 783.301)
+
+[node name="stone-flat-col60" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(-1.665, 0, -4.71463, 0, 5, 0, 4.71463, 0, -1.665, 392.51, 4.11386, 784.002)
+
+[node name="stone-flat-col61" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(-1.665, 0, -4.71463, 0, 5, 0, 4.71463, 0, -1.665, 390.29, 0.755176, 789.392)
+
+[node name="stone-flat-col62" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(-1.665, 0, -4.71463, 0, 5, 0, 4.71463, 0, -1.665, 381.156, 0.755176, 792.667)
+
+[node name="stone-flat-col63" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(-1.665, 0, -4.71463, 0, 5, 0, 4.71463, 0, -1.665, 386.826, 4.11386, 793.368)
+
+[node name="stone-flat-col64" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(1.92824, 0, -4.61323, 0, 5, 0, 4.61323, 0, 1.92824, 382.642, 0.755176, 794.767)
+
+[node name="stone-flat-col65" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(1.92824, 0, -4.61323, 0, 5, 0, 4.61323, 0, 1.92824, 378.066, 0.755176, 803.323)
+
+[node name="stone-flat-col66" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.06282, 0, 4.55464, 0, 5, 0, -4.55464, 0, 2.06282, 292.158, 0.755176, 822.412)
+
+[node name="stone-flat-col67" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.06282, 0, 4.55464, 0, 5, 0, -4.55464, 0, 2.06282, 301.539, 0.755176, 819.931)
+
+[node name="stone-flat-col68" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.06282, 0, 4.55464, 0, 5, 0, -4.55464, 0, 2.06282, 295.949, 4.11386, 818.747)
+
+[node name="stone-flat-col69" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.97585, 0, 0.490867, 0, 5, 0, -0.490867, 0, 4.97585, 304.431, 0.755176, 814.701)
+
+[node name="stone-flat-col70" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.89399, 0, -4.07736, 0, 5, 0, 4.07736, 0, 2.89399, 305.302, 0.755176, 829.377)
+
+[node name="stone-flat-col71" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.89399, 0, -4.07736, 0, 5, 0, 4.07736, 0, 2.89399, 309.142, 4.11386, 825.146)
+
+[node name="stone-flat-col72" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.89399, 0, -4.07736, 0, 5, 0, 4.07736, 0, 2.89399, 312.268, 0.755176, 830.067)
+
+[node name="stone-flat-col73" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.89399, 0, -4.07736, 0, 5, 0, 4.07736, 0, 2.89399, 309.683, 0.755176, 839.419)
+
+[node name="stone-flat-col74" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.89399, 0, -4.07736, 0, 5, 0, 4.07736, 0, 2.89399, 313.523, 4.11386, 835.188)
+
+[node name="stone-flat-col75" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.8815, 0, -1.08211, 0, 5, 0, 1.08211, 0, 4.8815, 312.255, 0.755176, 839.415)
+
+[node name="stone-flat-col76" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.8815, 0, -1.08211, 0, 5, 0, 1.08211, 0, 4.8815, 316.612, 0.755176, 848.085)
+
+[node name="stone-flat-col77" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.90069, 0.234544, 4.06583, -0.0260738, 4.99267, -0.269408, -4.07251, 0.135092, 2.89766, 310.99, 6.15768, 838.097)
+
+[node name="stone-flat-col78" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.90069, 0.234544, 4.06583, -0.0260738, 4.99267, -0.269408, -4.07251, 0.135092, 2.89766, 320.663, 5.72043, 837.463)
+
+[node name="stone-flat-col79" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.90069, 0.234544, 4.06583, -0.0260738, 4.99267, -0.269408, -4.07251, 0.135092, 2.89766, 315.571, 9.38126, 835.32)
+
+[node name="stone-flat-col80" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.97146, 0.234544, -0.479155, -0.246352, 4.99267, -0.112124, 0.473192, 0.135092, 4.97572, 324.507, 5.66366, 832.887)
+
+[node name="stone-flat-col81" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.04949, 0.234544, -4.55462, -0.21954, 4.99267, 0.158314, 4.55537, 0.135092, 2.05678, 322.529, 5.36249, 847.452)
+
+[node name="stone-flat-col82" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.04949, 0.234544, -4.55462, -0.21954, 4.99267, 0.158314, 4.55537, 0.135092, 2.05678, 327.266, 8.59346, 844.129)
+
+[node name="stone-flat-col83" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.04949, 0.234544, -4.55462, -0.21954, 4.99267, 0.158314, 4.55537, 0.135092, 2.05678, 329.223, 4.99355, 849.465)
+
+[node name="stone-flat-col84" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.04949, 0.234544, -4.55462, -0.21954, 4.99267, 0.158314, 4.55537, 0.135092, 2.05678, 324.884, 4.96254, 858.144)
+
+[node name="stone-flat-col85" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(2.04949, 0.234544, -4.55462, -0.21954, 4.99267, 0.158314, 4.55537, 0.135092, 2.05678, 329.621, 8.19352, 854.821)
+
+[node name="stone-flat-col86" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.57544, 0.234544, -2.00259, -0.269013, 4.99267, -0.0298848, 1.99826, 0.135092, 4.58135, 327.405, 4.83085, 858.633)
+
+[node name="stone-flat-col87" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.57544, 0.234544, -2.00259, -0.269013, 4.99267, -0.0298848, 1.99826, 0.135092, 4.58135, 330.003, 4.45608, 867.975)
+
+[node name="stone-flat-col48" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(1.80894, 0, 4.6613, 0, 5, 0, -4.6613, 0, 1.80894, 329.228, 4.11386, 717.695)
+
+[node name="stone-flat-col49" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.94127, 0, 0.764066, 0, 5, 0, -0.764066, 0, 4.94127, 337.475, 0.755176, 713.188)
+
+[node name="stone-flat-col50" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.94127, 0, 0.764066, 0, 5, 0, -0.764066, 0, 4.94127, 344.682, 0.755176, 719.685)
+
+[node name="stone-flat-col51" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(4.94127, 0, 0.764066, 0, 5, 0, -0.764066, 0, 4.94127, 342.617, 4.11386, 714.358)
+
+[node name="stone-flat-col52" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(-4.94128, 0, -0.764066, 0, 5, 0, 0.764066, 0, -4.94128, 356.881, 0.755176, 714.9)
+
+[node name="stone-flat-col53" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(-4.94128, 0, -0.764066, 0, 5, 0, 0.764066, 0, -4.94128, 349.673, 0.755176, 708.404)
+
+[node name="stone-flat-col54" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
+transform = Transform3D(-4.94128, 0, -0.764066, 0, 5, 0, 0.764066, 0, -4.94128, 351.739, 4.11386, 713.731)
