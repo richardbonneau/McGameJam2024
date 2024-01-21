@@ -72,10 +72,10 @@
 		<count>5</count>
 		<item_version>0</item_version>
 		<item>1</item>
-		<item>11</item>
 		<item>1</item>
-		<item>12</item>
-		<item>12</item>
+		<item>1</item>
+		<item>11</item>
+		<item>11</item>
 	</v2>
 </e>
 <e class_id_reference="2">
@@ -156,41 +156,81 @@
 <e class_id_reference="2">
 	<Event></Event>
 </e>
-<e class_id_reference="2">
-	<Event></Event>
+<e class_id="10" class_name="GeneralWarningEvent" tracking_level="0" version="0">
+	<ObjectProcessEvent class_id="11" tracking_level="0" version="1">
+		<Event></Event>
+		<m_role>3</m_role>
+		<m_eventSeverity>3</m_eventSeverity>
+		<m_objectId>
+			<strData></strData>
+		</m_objectId>
+		<m_startTime class_id="12" tracking_level="0" version="0">
+			<timestamp></timestamp>
+		</m_startTime>
+		<m_endTime>
+			<timestamp></timestamp>
+		</m_endTime>
+	</ObjectProcessEvent>
+	<message>
+		<strData>got document version: 1.38, upgrading to 1.38...</strData>
+	</message>
 </e>
-<e class_id_reference="2">
-	<Event></Event>
+<e class_id_reference="10">
+	<ObjectProcessEvent>
+		<Event></Event>
+		<m_role>3</m_role>
+		<m_eventSeverity>2</m_eventSeverity>
+		<m_objectId>
+			<strData></strData>
+		</m_objectId>
+		<m_startTime>
+			<timestamp></timestamp>
+		</m_startTime>
+		<m_endTime>
+			<timestamp></timestamp>
+		</m_endTime>
+	</ObjectProcessEvent>
+	<message>
+		<strData>Warning: Invalid shader node:normal</strData>
+	</message>
 </e>
-<e class_id_reference="2">
-	<Event></Event>
+<e class_id_reference="10">
+	<ObjectProcessEvent>
+		<Event></Event>
+		<m_role>3</m_role>
+		<m_eventSeverity>2</m_eventSeverity>
+		<m_objectId>
+			<strData></strData>
+		</m_objectId>
+		<m_startTime>
+			<timestamp></timestamp>
+		</m_startTime>
+		<m_endTime>
+			<timestamp></timestamp>
+		</m_endTime>
+	</ObjectProcessEvent>
+	<message>
+		<strData>Warning: Invalid shader node:opacity</strData>
+	</message>
 </e>
-<e class_id_reference="2">
-	<Event></Event>
-</e>
-<e class_id_reference="2">
-	<Event></Event>
-</e>
-<e class_id_reference="2">
-	<Event></Event>
-</e>
-<e class_id_reference="2">
-	<Event></Event>
-</e>
-<e class_id_reference="2">
-	<Event></Event>
-</e>
-<e class_id_reference="2">
-	<Event></Event>
-</e>
-<e class_id_reference="2">
-	<Event></Event>
-</e>
-<e class_id_reference="2">
-	<Event></Event>
-</e>
-<e class_id_reference="2">
-	<Event></Event>
+<e class_id_reference="10">
+	<ObjectProcessEvent>
+		<Event></Event>
+		<m_role>3</m_role>
+		<m_eventSeverity>2</m_eventSeverity>
+		<m_objectId>
+			<strData></strData>
+		</m_objectId>
+		<m_startTime>
+			<timestamp></timestamp>
+		</m_startTime>
+		<m_endTime>
+			<timestamp></timestamp>
+		</m_endTime>
+	</ObjectProcessEvent>
+	<message>
+		<strData>Warning: Invalid shader node:sheen</strData>
+	</message>
 </e>
 <e class_id_reference="2">
 	<Event></Event>
@@ -345,10 +385,10 @@
 		<item_version>0</item_version>
 	</v2>
 </e>
-<e class_id="10" class_name="TranslationEndEvent" tracking_level="0" version="0">
+<e class_id="13" class_name="TranslationEndEvent" tracking_level="0" version="0">
 	<Event></Event>
 </e>
-<e class_id="11" class_name="ProcessorWorkdata" tracking_level="0" version="0">
+<e class_id="14" class_name="ProcessorWorkdata" tracking_level="0" version="0">
 	<WorkdataEvent>
 		<Event></Event>
 		<m_severity>3</m_severity>
@@ -536,10 +576,10 @@
 				<strData>false</strData>
 			</item>
 			<item>
-				<strData>0.03</strData>
+				<strData>0.62</strData>
 			</item>
 			<item>
-				<strData>4</strData>
+				<strData>55</strData>
 			</item>
 		</v2>
 	</WorkdataEvent>
