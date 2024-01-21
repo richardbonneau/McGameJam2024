@@ -1,6 +1,7 @@
-[gd_scene load_steps=45 format=3 uid="uid://b1huo5x3o0xom"]
+[gd_scene load_steps=46 format=3 uid="uid://b1huo5x3o0xom"]
 
 [ext_resource type="Script" path="res://addons/cars/BaseCar.gd" id="1_vucwb"]
+[ext_resource type="PackedScene" uid="uid://blviphndeqdbe" path="res://Logic/ScoreMultiplierZone/PointingArrow.tscn" id="2_odaxq"]
 [ext_resource type="Texture2D" uid="uid://b4jruy7h7v585" path="res://Art/3D/Meshes/Bodies/Tardis_wood blue 5.jpg" id="2_xnw8a"]
 [ext_resource type="PackedScene" uid="uid://benmjny2guowm" path="res://addons/cars/Models/Doge/Wheel.glb" id="3_fp8wc"]
 [ext_resource type="Script" path="res://addons/cars/camera/CameraFollow.gd" id="4_kwrqr"]
@@ -655,6 +656,9 @@ script = ExtResource("1_vucwb")
 STEER_SPEED = 2.0
 STEER_LIMIT = 0.8
 
+[node name="PointingArrow" parent="." instance=ExtResource("2_odaxq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.97808, 0)
+
 [node name="Body" type="Node3D" parent="."]
 
 [node name="Tardis" type="Node3D" parent="Body"]
@@ -790,7 +794,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0775136, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.215, 0)
 
 [node name="Camera3D" type="Camera3D" parent="look"]
-transform = Transform3D(1, 0, 0, 0, 0.974347, 0.225053, 0, -0.225053, 0.974347, 0, 1.97324, 6.19962)
+transform = Transform3D(1, 0, 0, 0, 0.974347, 0.225053, 0, -0.225053, 0.974347, 0, 3.78734, 5.02949)
 top_level = true
 visible = false
 current = true
