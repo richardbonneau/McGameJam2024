@@ -655,6 +655,7 @@ contact_monitor = true
 script = ExtResource("1_vucwb")
 STEER_SPEED = 2.0
 STEER_LIMIT = 0.8
+engine_force_value = 120
 
 [node name="PointingArrow" parent="." instance=ExtResource("2_odaxq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.97808, 0)

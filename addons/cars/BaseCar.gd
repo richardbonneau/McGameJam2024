@@ -28,8 +28,8 @@ func _physics_process(delta):
 	steer_target *= STEER_LIMIT
 	if Input.is_action_pressed(player_brake):
 		# ENgine sounds
-		if not $Engine.is_playing():
-			$Engine.play
+		#if not $Engine.is_playing():
+			#$Engine.play
 	# Increase engine force at low speeds to make the initial acceleration faster.
 
 		if speed < 20 and speed != 0:
@@ -39,9 +39,9 @@ func _physics_process(delta):
 	else:
 		engine_force = 0
 	if Input.is_action_pressed(player_gas):
-		# Add Sound Effects
-		if not $Engine.is_playing():
-			$Engine.play()
+		## Add Sound Effects
+		#if not $Engine.is_playing():
+			#$Engine.play()
 		# Increase engine force at low speeds to make the initial acceleration faster.
 		if fwd_mps >= -1:
 			if speed < 30 and speed != 0:

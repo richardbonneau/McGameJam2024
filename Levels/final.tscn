@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://dslk3p0i4c6sp"]
+[gd_scene load_steps=48 format=3 uid="uid://dslk3p0i4c6sp"]
 
 [ext_resource type="Material" uid="uid://b11i6simv8xf6" path="res://Art/Shaders/Water Shader/water_mat.tres" id="7_abi5m"]
 [ext_resource type="PackedScene" uid="uid://b7ol2txgmcrwf" path="res://Logic/Players/Player.tscn" id="10_xmfmd"]
@@ -40,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://qn8g1nar7fwv" path="res://Art/3D/Prefabs/DestructibleProps/Bench.tscn" id="39_7jq8y"]
 [ext_resource type="PackedScene" uid="uid://bbobit2bkgqt6" path="res://Art/3D/Prefabs/sm_speedbump_01.tscn" id="39_dt0i1"]
 [ext_resource type="PackedScene" uid="uid://duoandt737xuc" path="res://Art/3D/Prefabs/sm_ramp_012.tscn" id="40_yook5"]
+[ext_resource type="PackedScene" uid="uid://b5w6okxah8pia" path="res://Art/3D/Prefabs/sm_blockadesign_012.tscn" id="41_45q0h"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_otjqn"]
 
@@ -3205,3 +3206,105 @@ transform = Transform3D(-0.0167943, 0.000377056, 0.299529, -0.00137654, 0.299996
 
 [node name="SM_Ramp_012" parent="." instance=ExtResource("40_yook5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5359, -3.32293, 309.905)
+
+[node name="SM_blockadesign_012" parent="." instance=ExtResource("41_45q0h")]
+transform = Transform3D(0.703271, 0, -0.710922, 0, 1, 0, 0.710922, 0, 0.703271, 70.2803, -1.32253, 316.439)
+
+[node name="SM_blockadesign_017" parent="." instance=ExtResource("41_45q0h")]
+transform = Transform3D(-0.0169289, 0, -0.999857, 0, 1, 0, 0.999857, 0, -0.0169289, 70.2803, -1.32253, 312.754)
+
+[node name="SM_blockadesign_013" parent="." instance=ExtResource("41_45q0h")]
+transform = Transform3D(0.997034, 0, 0.0769626, 0, 1, 0, -0.0769626, 0, 0.997034, 74.0408, -1.87584, 319.439)
+
+[node name="SM_blockadesign_014" parent="." instance=ExtResource("41_45q0h")]
+transform = Transform3D(0.997034, 0, 0.0769626, 0, 1, 0, -0.0769626, 0, 0.997034, 77.9973, -2.85149, 319.439)
+
+[node name="SM_blockadesign_015" parent="." instance=ExtResource("41_45q0h")]
+transform = Transform3D(0.997034, 0, 0.0769626, 0, 1, 0, -0.0769626, 0, 0.997034, 81.7674, -2.89287, 319.439)
+
+[node name="SM_blockadesign_016" parent="." instance=ExtResource("41_45q0h")]
+transform = Transform3D(0.88956, 0, -0.456819, 0, 1, 0, 0.456819, 0, 0.88956, 84.9421, -3.26872, 319.439)
+
+[node name="Barrel" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 82.4164, -3.0375, 310.658)
+
+[node name="Barrel2" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 83.9002, -3.0375, 310.658)
+
+[node name="Barrel3" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 82.9515, -3.0375, 312.211)
+
+[node name="Barrel4" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 81.8185, -3.0375, 313.658)
+
+[node name="Barrel5" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(0.0274708, 0, -0.399056, 0, 0.4, 0, 0.399056, 0, 0.0274708, 83.883, -3.0375, 293.355)
+
+[node name="Barrel6" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(0.0274708, 0, -0.399056, 0, 0.4, 0, 0.399056, 0, 0.0274708, 83.9849, -3.0375, 294.836)
+
+[node name="Barrel7" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(0.0274708, 0, -0.399056, 0, 0.4, 0, 0.399056, 0, 0.0274708, 82.37, -3.0375, 293.996)
+
+[node name="Barrel8" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(0.0274708, 0, -0.399056, 0, 0.4, 0, 0.399056, 0, 0.0274708, 80.8487, -3.0375, 292.965)
+
+[node name="Barrel9" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.376082, 0, -0.136244, 0, 0.4, 0, 0.136244, 0, -0.376082, 95.1013, -3.0375, 294.737)
+
+[node name="Barrel10" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.376082, 0, -0.136244, 0, 0.4, 0, 0.136244, 0, -0.376082, 93.7062, -3.0375, 295.243)
+
+[node name="Barrel11" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.376082, 0, -0.136244, 0, 0.4, 0, 0.136244, 0, -0.376082, 94.0691, -3.0375, 293.459)
+
+[node name="Barrel12" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.376082, 0, -0.136244, 0, 0.4, 0, 0.136244, 0, -0.376082, 94.6415, -3.0375, 291.713)
+
+[node name="Barrel13" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.200357, 0, 0.346204, 0, 0.4, 0, -0.346204, 0, -0.200357, 89.0723, -3.0375, 306.455)
+
+[node name="Barrel14" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.200357, 0, 0.346204, 0, 0.4, 0, -0.346204, 0, -0.200357, 88.3291, -3.0375, 305.171)
+
+[node name="Barrel15" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.200357, 0, 0.346204, 0, 0.4, 0, -0.346204, 0, -0.200357, 90.1488, -3.0375, 305.214)
+
+[node name="Barrel16" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.200357, 0, 0.346204, 0, 0.4, 0, -0.346204, 0, -0.200357, 91.9686, -3.0375, 305.47)
+
+[node name="Barrel17" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.346117, 0, 0.200508, 0, 0.4, 0, -0.200508, 0, -0.346117, 89.6164, -3.0375, 303.928)
+
+[node name="Barrel18" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.346117, 0, 0.200508, 0, 0.4, 0, -0.200508, 0, -0.346117, 88.3325, -3.0375, 303.184)
+
+[node name="Barrel19" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.346117, 0, 0.200508, 0, 0.4, 0, -0.200508, 0, -0.346117, 89.9321, -3.0375, 302.316)
+
+[node name="Barrel20" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.346117, 0, 0.200508, 0, 0.4, 0, -0.200508, 0, -0.346117, 91.6378, -3.0375, 301.632)
+
+[node name="Barrel21" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.391991, 0, -0.0796445, 0, 0.4, 0, 0.0796445, 0, -0.391991, 79.6463, -3.0375, 313.526)
+
+[node name="Barrel22" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.391991, 0, -0.0796445, 0, 0.4, 0, 0.0796445, 0, -0.391991, 78.1922, -3.0375, 313.821)
+
+[node name="Barrel23" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.391991, 0, -0.0796445, 0, 0.4, 0, 0.0796445, 0, -0.391991, 78.8127, -3.0375, 312.11)
+
+[node name="Barrel24" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.391991, 0, -0.0796445, 0, 0.4, 0, 0.0796445, 0, -0.391991, 79.6349, -3.0375, 310.466)
+
+[node name="Barrel25" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.391991, 0, -0.0796445, 0, 0.4, 0, 0.0796445, 0, -0.391991, 79.6463, -3.0375, 298.355)
+
+[node name="Barrel26" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.391991, 0, -0.0796445, 0, 0.4, 0, 0.0796445, 0, -0.391991, 78.1922, -3.0375, 298.651)
+
+[node name="Barrel27" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.391991, 0, -0.0796445, 0, 0.4, 0, 0.0796445, 0, -0.391991, 78.8127, -3.0375, 296.94)
+
+[node name="Barrel28" parent="." instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.391991, 0, -0.0796445, 0, 0.4, 0, 0.0796445, 0, -0.391991, 79.6349, -3.0375, 295.296)

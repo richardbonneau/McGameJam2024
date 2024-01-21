@@ -113,6 +113,7 @@ props = [NodePath("../Barrel/StaticBody3D")]
 [node name="Barrel" type="Node3D" parent="."]
 
 [node name="StaticBody3D" type="RigidBody3D" parent="Barrel"]
+mass = 0.5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel/StaticBody3D"]
 transform = Transform3D(2.00774, 0, 0, 0, 1.94567, 0, 0, 0, 2.04147, 0, 1.96885, 0)
