@@ -62,6 +62,7 @@ contact_monitor = true
 script = ExtResource("1_us88s")
 STEER_SPEED = 2.0
 STEER_LIMIT = 0.8
+engine_force_value = 80
 
 [node name="Body" type="Node3D" parent="."]
 

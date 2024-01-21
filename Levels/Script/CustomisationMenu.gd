@@ -33,6 +33,11 @@ var parts = {
 		"avatar": "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png",
 		"model": preload("res://Art/3D/Wheels/Pizza.tscn")
 	},
+		{
+		"name": "Pizza",
+		"avatar": "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png",
+		"model": preload("res://Art/3D/Wheels/Pizza.tscn")
+	},
 ],
 	MenuTypes.BODY:[
 	{
@@ -109,7 +114,8 @@ func _on_back_menu_pressed():
 
 func _on_button_5_pressed():
 	if part_indexes[current_menu] > 0: part_indexes[current_menu] -= 1
-	else: part_indexes[current_menu] = parts[current_menu][part_indexes[current_menu]].size() - 1
+	else: part_indexes[current_menu] = parts[current_menu][part_indexes[current_menu]].size()
+	print("part_indexes[current_menu] part_indexes[current_menu] ",part_indexes[current_menu])
 	display_avatars()
 
 
