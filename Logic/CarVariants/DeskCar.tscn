@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://hydpp4c8o1mv"]
+[gd_scene load_steps=69 format=3 uid="uid://hydpp4c8o1mv"]
 
 [ext_resource type="Script" path="res://addons/cars/BaseCar.gd" id="1_q62ek"]
 [ext_resource type="Texture2D" uid="uid://dv0ig6v3ugmkf" path="res://Art/3D/Meshes/Bodies/Desk_Shrek.jpg" id="2_e4cmt"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://46q0wry20s35" path="res://Art/3D/Meshes/Bodies/Desk_mcgill-logo.jpg" id="3_cgyjs"]
 [ext_resource type="PackedScene" uid="uid://benmjny2guowm" path="res://addons/cars/Models/Doge/Wheel.glb" id="4_grey8"]
 [ext_resource type="Script" path="res://addons/cars/camera/CameraFollow.gd" id="5_kej2c"]
+[ext_resource type="AudioStream" uid="uid://chsj6sxagpj3y" path="res://Sound/car-acceleration-inside-car-7087.mp3" id="7_6he30"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_onma1"]
 resource_name = "Material.001"
@@ -791,6 +792,7 @@ contact_monitor = true
 script = ExtResource("1_q62ek")
 STEER_SPEED = 2.0
 STEER_LIMIT = 0.8
+engine_force_value = 200
 
 [node name="PointingArrow" parent="." instance=ExtResource("2_u774e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.02599, 0)
@@ -1061,3 +1063,8 @@ shape = SubResource("BoxShape3D_welsf")
 [node name="CollisionShape3D12" type="CollisionShape3D" parent="."]
 transform = Transform3D(-2.59626e-09, 9.27774e-09, 0.570033, -0.0117826, 0.477055, 0, -0.0513621, -0.113005, -2.49169e-08, 0.133631, 1.34484, -0.442511)
 shape = SubResource("BoxShape3D_flq5t")
+
+[node name="Engine" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_6he30")
+volume_db = 41.802
+max_distance = 147.6
