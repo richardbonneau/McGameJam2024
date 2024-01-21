@@ -1,5 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://bfc3k6h0skavs"]
+[gd_scene load_steps=22 format=3 uid="uid://bfc3k6h0skavs"]
 
+[ext_resource type="PackedScene" uid="uid://8vgtlaja8723" path="res://Logic/PropsCollisioin/PropsCollision.tscn" id="1_hmhgc"]
 [ext_resource type="Material" uid="uid://cm3fab7bnjyqs" path="res://Art/2D Textures/M_signstand_01.tres" id="1_xdeow"]
 [ext_resource type="Material" uid="uid://hmtbo582xjn7" path="res://Art/2D Textures/M_signweight_01.tres" id="2_dsncb"]
 [ext_resource type="Material" uid="uid://xno1uahcwr3p" path="res://Art/2D Textures/M_Sign_04.tres" id="3_73al1"]
@@ -169,20 +170,24 @@ size = Vector3(111, 2, 42)
 
 [node name="Sm_Sign_02" type="Node3D"]
 
+[node name="PropsCollision" parent="." node_paths=PackedStringArray("props") instance=ExtResource("1_hmhgc")]
+transform = Transform3D(2.36931, 0, 0, 0, 2.19722, 0, 0, 0, 2.54122, 0, 1.99811, 0)
+props = [NodePath("../SM_signstand_012/Node/StaticBody3D"), NodePath("../SM_signweight_01/Node/StaticBody3D"), NodePath("../SM_sign_042/Node/StaticBody3D"), NodePath("../SM_sign_022/Node/StaticBody3D")]
+
 [node name="SM_signstand_012" type="Node3D" parent="."]
 
 [node name="Node" type="Node3D" parent="SM_signstand_012"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -0.0586677, 0)
 
-[node name="SM_signstand_01" type="MeshInstance3D" parent="SM_signstand_012/Node"]
+[node name="StaticBody3D" type="RigidBody3D" parent="SM_signstand_012/Node"]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="SM_signstand_01" type="MeshInstance3D" parent="SM_signstand_012/Node/StaticBody3D"]
 mesh = SubResource("ArrayMesh_852j4")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("1_xdeow")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SM_signstand_012/Node/SM_signstand_01"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_signstand_012/Node/SM_signstand_01/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_signstand_012/Node/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.583316, 1.40966, 177.59)
 shape = SubResource("BoxShape3D_rn3mp")
 
@@ -192,15 +197,15 @@ transform = Transform3D(0.967736, 0, -0.251968, 0, 1, 0, 0.251968, 0, 0.967736, 
 [node name="Node" type="Node3D" parent="SM_signweight_01"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -0.0586677, 0)
 
-[node name="weight_005" type="MeshInstance3D" parent="SM_signweight_01/Node"]
+[node name="StaticBody3D" type="RigidBody3D" parent="SM_signweight_01/Node"]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="weight_005" type="MeshInstance3D" parent="SM_signweight_01/Node/StaticBody3D"]
 mesh = SubResource("ArrayMesh_gp8a6")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_dsncb")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SM_signweight_01/Node/weight_005"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_signweight_01/Node/weight_005/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_signweight_01/Node/StaticBody3D"]
 transform = Transform3D(0.986677, -0.162689, 0, 0.162689, 0.986677, 0, 0, 0, 1, 0.808154, 10.833, 8.44086)
 shape = SubResource("BoxShape3D_c6xug")
 
@@ -210,15 +215,16 @@ transform = Transform3D(0.999998, -0.00203173, -0.00074546, 0.00203174, 0.999998
 [node name="Node" type="Node3D" parent="SM_sign_042"]
 transform = Transform3D(0.707107, 0, -0.707107, 0.707107, 0, 0.707107, 0, -1, 0, 0, 2.81739, -0.0712843)
 
-[node name="SM_sign_04" type="MeshInstance3D" parent="SM_sign_042/Node"]
-transform = Transform3D(0.01, -9.09495e-13, 1.65254e-11, 0, 0.01, -4.54747e-13, 1.64424e-11, 0, 0.01, 0, 0, 0)
+[node name="StaticBody3D" type="RigidBody3D" parent="SM_sign_042/Node"]
+transform = Transform3D(0.01, -4.54747e-13, 4.82189e-10, 0, 0.01, -4.54747e-13, 1.64442e-11, 0, 0.01, 0, 0, 0)
+
+[node name="SM_sign_04" type="MeshInstance3D" parent="SM_sign_042/Node/StaticBody3D"]
+transform = Transform3D(1, 5.82077e-11, -9.89301e-08, 0, 1, 5.82077e-11, 2.02708e-08, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_5p8eo")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("3_73al1")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SM_sign_042/Node/SM_sign_04"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_sign_042/Node/SM_sign_04/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_sign_042/Node/StaticBody3D"]
 transform = Transform3D(0.7071, -1.7928e-08, -0.707105, -1.16497e-08, 1.00007, -1.39698e-08, 0.70707, -2.07801e-08, 0.707109, 3.90109, 6.49993, 1.69542)
 shape = SubResource("BoxShape3D_52g2f")
 
@@ -228,14 +234,15 @@ transform = Transform3D(0.998514, 0.0544971, 0, -0.0544971, 0.998514, 0, 0, 0, 1
 [node name="Node" type="Node3D" parent="SM_sign_022"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.0889754, 1.26003, -0.0712843)
 
-[node name="SM_sign_02" type="MeshInstance3D" parent="SM_sign_022/Node"]
+[node name="StaticBody3D" type="RigidBody3D" parent="SM_sign_022/Node"]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="SM_sign_02" type="MeshInstance3D" parent="SM_sign_022/Node/StaticBody3D"]
+transform = Transform3D(1, 0, -3.72529e-09, 0, 1, 0, 3.72529e-09, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_j0gd1")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("4_hasnb")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SM_sign_022/Node/SM_sign_02"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_sign_022/Node/SM_sign_02/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_sign_022/Node/StaticBody3D"]
 transform = Transform3D(0.999972, 0, -1.60187e-07, 0, 0.999974, 0, 1.60187e-07, 0, 0.999972, 9.99964, 0.499978, 42.4995)
 shape = SubResource("BoxShape3D_4q46w")

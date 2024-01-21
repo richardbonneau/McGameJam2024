@@ -129,7 +129,7 @@ shadow_mesh = SubResource("ArrayMesh_q1d2j")
 [node name="SM_Stopsign_01" type="Node3D"]
 
 [node name="PropsCollision" parent="." node_paths=PackedStringArray("props") instance=ExtResource("1_i3l4o")]
-transform = Transform3D(2.593, 0, 0, 0, 3, 0, 0, 0, 2.512, 0, 3.07123, 0)
+transform = Transform3D(2.593, 0, 0, 0, 2.64212, 0, 0, 0, 2.512, 0, 2.6182, 0)
 props = [NodePath("../SM_signstand_012/Node/StaticBody3D"), NodePath("../SM_signweight_01/Node/RigidBody3D"), NodePath("../SM_sign_052/Node/RigidBody3D")]
 
 [node name="SM_signstand_012" type="Node3D" parent="."]
@@ -145,7 +145,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.583316, 1.40966, 177.59)
 shape = SubResource("BoxShape3D_rn3mp")
 
 [node name="SM_signstand_01" type="MeshInstance3D" parent="SM_signstand_012/Node/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.31323e-08, 4.76837e-06)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.31323e-08, 5.24521e-06)
 mesh = SubResource("ArrayMesh_852j4")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_p3bdi")

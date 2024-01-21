@@ -6,25 +6,56 @@ extends Control
 @onready var Obj_2 = %Obj2
 @onready var Obj_3 = %Obj3
 
-enum menu_types {
+enum MenuTypes {
 	WHEEL, BODY,
-	 #ENGINE
 }
-@onready var current_menu : menu_types = menu_types.WHEEL
+@onready var current_menu : MenuTypes = MenuTypes.WHEEL
+
 var type_names : Dictionary = {
-	menu_types.WHEEL : "Wheel",
-	menu_types.BODY  : "Body",
-	#menu_types.ENGINE : "Engine"
+	MenuTypes.WHEEL : "Wheel",
+	MenuTypes.BODY  : "Body",
 }
 
-var wheels = ["res://Art/2D/pngimg.com - car_wheel_PNG23302.png", "res://Art/2D/wheel.svg", "res://Art/2D/pngimg.com - car_wheel_PNG23302.png"]
-var bodies = ["res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png", "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png", "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png"]
-#var engines = ["res://Art/2D/pngimg.com - engine_PNG4.png", "res://Art/2D/pngimg.com - engine_PNG4.png", "res://Art/2D/pngimg.com - engine_PNG4.png"]
+var parts = {
+	MenuTypes.WHEEL: [
+	{
+		"name": "Life Saver",
+		"avatar": "res://Art/2D/wheel.svg",
+		"model": preload("res://Art/3D/Wheels/LifeRing.tscn")
+	},
+	{
+		"name": "Pizza",
+		"avatar": "res://Art/2D/pngimg.com - car_wheel_PNG23302.png",
+		"model": preload("res://Art/3D/Wheels/Pizza.tscn")
+	},
+	{
+		"name": "Pizza",
+		"avatar": "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png",
+		"model": preload("res://Art/3D/Wheels/Pizza.tscn")
+	},
+],
+	MenuTypes.BODY:[
+	{
+		"name": "Desk",
+		"avatar": "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png",
+		"model": preload("res://Logic/CarVariants/DeskCar.tscn")
+	},
+	{
+		"name": "Tardis",
+		"avatar": "res://Art/2D/pngimg.com - car_wheel_PNG23302.png",
+		"model": preload("res://Logic/CarVariants/TardisCar.tscn")
+	},
+	{
+		"name": "Tardis",
+		"avatar": "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png",
+		"model": preload("res://Logic/CarVariants/TardisCar.tscn")
+	},
+]
+}
 
-var type_assets : Dictionary = {
-	menu_types.WHEEL : wheels,
-	menu_types.BODY : bodies,
-	#menu_types.ENGINE : engines
+var part_indexes = {
+	MenuTypes.WHEEL: 0,
+	MenuTypes.BODY: 0,
 }
 
 @onready var player_num = get_parent().get_parent().player_index+1
@@ -32,56 +63,55 @@ var type_assets : Dictionary = {
 func _ready():
 	GameManager.GamePhaseChange.connect(_on_game_phase_change)
 
+func display_avatars():
+	var avatars = []
+	
+	var first_avatar
+	var second_avatar
+	var third_avatar
+	
+	if part_indexes[current_menu] == 0: 
+		first_avatar = load(parts[current_menu][-1].avatar)
+	else: first_avatar = load(parts[current_menu][part_indexes[current_menu] -1].avatar)
+	
+	second_avatar = load(parts[current_menu][part_indexes[current_menu]].avatar)
+
+	if part_indexes[current_menu] > parts[current_menu].size() - 2:
+		third_avatar = load(parts[current_menu][0].avatar)
+	else: third_avatar = load(parts[current_menu][part_indexes[current_menu] +1].avatar)
+	
+	Obj_1.texture_normal = first_avatar
+	Obj_2.texture_normal = second_avatar
+	Obj_3.texture_normal = third_avatar
+
 func _on_next_menu_pressed():
 	current_menu += 1
-	if(current_menu == menu_types.size()):
+	if(current_menu == MenuTypes.size()):
 		current_menu = 0
 	menu_label.text = type_names[current_menu]
-	Obj_1.texture_normal = load(type_assets[current_menu][0])
-	Obj_2.texture_normal = load(type_assets[current_menu][1])
-	Obj_3.texture_normal = load(type_assets[current_menu][2])
+	display_avatars()
 	GameManager.CustomCamSwitch.emit(player_num, current_menu)
 
 func _on_back_menu_pressed():
 	current_menu -= 1
 	if(current_menu < 0):
-		current_menu = menu_types.size() -1
+		current_menu = MenuTypes.size() -1
 	menu_label.text = type_names[current_menu]
-	
-	Obj_1.texture_normal = load(type_assets[current_menu][0])
-	Obj_2.texture_normal = load(type_assets[current_menu][1])
-	Obj_3.texture_normal = load(type_assets[current_menu][2])
+	display_avatars()
 	GameManager.CustomCamSwitch.emit(player_num, current_menu)
 
 
 func _on_button_5_pressed():
-	var newAssetArr = []
-	for i in range(1, menu_types.size()):
-			newAssetArr.push_back(type_assets[current_menu][i])
-	newAssetArr.push_back(type_assets[current_menu][0])
-	type_assets[current_menu] = newAssetArr
-	
-	Obj_1.texture_normal = load(type_assets[current_menu][0])
-	Obj_2.texture_normal = load(type_assets[current_menu][1])
-	Obj_3.texture_normal = load(type_assets[current_menu][2])
+	if part_indexes[current_menu] > 0: part_indexes[current_menu] -= 1
+	else: part_indexes[current_menu] = parts[current_menu][part_indexes[current_menu]].size() - 1
+	display_avatars()
 
 
 func _on_button_4_pressed():
-	var newAssetArr = []
-	for i in range(0, menu_types.size()-1):
-			newAssetArr.push_back(type_assets[current_menu][i])
-	newAssetArr.push_front(type_assets[current_menu][menu_types.size()-1])
-	type_assets[current_menu] = newAssetArr
-	
-	Obj_1.texture_normal = load(type_assets[current_menu][0])
-	Obj_2.texture_normal = load(type_assets[current_menu][1])
-	Obj_3.texture_normal = load(type_assets[current_menu][2])
-	
-	# CAR ASSET CHANGED TO THE NEW OBJ2
-	
-func changeCar():
-	pass
-	#car.changeStuff = obj2
+	if part_indexes[current_menu] < parts[current_menu][part_indexes[current_menu]].size() - 1: part_indexes[current_menu] += 1
+	else: part_indexes[current_menu] = 0
+	print("part_indexes[current_menu]",part_indexes[current_menu])
+	display_avatars()
 
 func _on_ready_pressed():
 	GameManager.player_ready(player_num-1)
@@ -90,3 +120,7 @@ func _on_ready_pressed():
 func _on_game_phase_change(new_phase):
 	if new_phase == GameManager.GamePhases.READY or new_phase == GameManager.GamePhases.GAME: 
 		get_parent().queue_free()
+
+
+func _on_apply_change_to_car_pressed():
+	CustomizationManager.change_part.emit(player_num, type_names[current_menu], parts[current_menu][part_indexes[current_menu]].model)

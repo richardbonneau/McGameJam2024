@@ -146,6 +146,7 @@ theme_override_font_sizes/font_size = 50
 text = "Ready"
 
 [connection signal="pressed" from="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer2/Button5" to="CustomisationMenuUI" method="_on_button_5_pressed"]
+[connection signal="pressed" from="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer2/Obj2" to="CustomisationMenuUI" method="_on_apply_change_to_car_pressed"]
 [connection signal="pressed" from="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer2/Button4" to="CustomisationMenuUI" method="_on_button_4_pressed"]
 [connection signal="pressed" from="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer/BackMenu" to="CustomisationMenuUI" method="_on_back_menu_pressed"]
 [connection signal="pressed" from="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer/NextMenu" to="CustomisationMenuUI" method="_on_next_menu_pressed"]
