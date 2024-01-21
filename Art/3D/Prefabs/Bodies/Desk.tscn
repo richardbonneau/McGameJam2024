@@ -779,7 +779,7 @@ size = Vector3(1, 1.22772, 0.848999)
 [node name="Desk" type="Node3D"]
 
 [node name="Desk2" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00483608, -0.00415432, 0.00521493)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00483608, -0.00415432, 0.00521493)
 
 [node name="Desk" type="MeshInstance3D" parent="Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
@@ -882,6 +882,7 @@ mesh = SubResource("ArrayMesh_0f5h3")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Desk2"]
+unique_name_in_owner = true
 transform = Transform3D(1.00383, 0, 0, 0, 0.987862, 0, 0, 0, 0.99478, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Desk2/StaticBody3D"]
@@ -931,3 +932,18 @@ shape = SubResource("BoxShape3D_yahp5")
 [node name="CollisionShape3D12" type="CollisionShape3D" parent="Desk2/StaticBody3D"]
 transform = Transform3D(0.0511661, 0.112574, 0, -0.0119274, 0.482917, 0, 0, 0, 0.573024, 0.778434, 1.36136, 0.0749928)
 shape = SubResource("BoxShape3D_dbsa6")
+
+[node name="WheelPositions" type="Node3D" parent="Desk2"]
+unique_name_in_owner = true
+
+[node name="Node3D" type="Node3D" parent="Desk2/WheelPositions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.118568, 0, -1.23683)
+
+[node name="Node3D2" type="Node3D" parent="Desk2/WheelPositions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.118568, 0, 1.14278)
+
+[node name="Node3D3" type="Node3D" parent="Desk2/WheelPositions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16134, 0, 1.14278)
+
+[node name="Node3D4" type="Node3D" parent="Desk2/WheelPositions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16134, 0, -1.20887)

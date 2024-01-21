@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://jadiumrc8xdn"]
+[gd_scene load_steps=9 format=3 uid="uid://clx76ky30gvua"]
 
 [ext_resource type="Texture2D" uid="uid://cy6kfynkyqqjy" path="res://Art/3D/Wheels/Pizza_pizza 3.jpg" id="1_wm076"]
 [ext_resource type="Texture2D" uid="uid://b8hglmdeyye42" path="res://Art/3D/Wheels/Pizza_Crust3.jpg" id="2_vdrrc"]
@@ -107,24 +107,16 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_uxjuf")
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_d2bli"]
-
 [node name="Pizza" type="Node3D"]
 
 [node name="Pizza" type="Node3D" parent="."]
 
 [node name="Cylinder" type="MeshInstance3D" parent="Pizza"]
-transform = Transform3D(0, 0.033, 0, -0.255679, 0, 0, 0, 0, 0.255679, 0.0270954, 0.319764, 0)
+transform = Transform3D(0, 0.033, 0, -0.255679, 0, 0, 0, 0, 0.255679, -0.00994293, -0.00617242, 0)
 mesh = SubResource("ArrayMesh_qkwvd")
 skeleton = NodePath("")
 
 [node name="Torus" type="MeshInstance3D" parent="Pizza"]
-transform = Transform3D(0, 0.135722, 0, -0.255805, 0, 0, 0, 0, 0.255805, 0.0271273, 0.317997, -0.00179842)
+transform = Transform3D(0, 0.135722, 0, -0.255805, 0, 0, 0, 0, 0.255805, -0.00991103, -0.0079394, -0.00179842)
 mesh = SubResource("ArrayMesh_cm5gm")
 skeleton = NodePath("")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Pizza"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Pizza/StaticBody3D"]
-transform = Transform3D(-0.0143089, -0.0346425, 0, 0.620514, -0.00079885, 0, 0, 0, 0.627137, 0.0382414, 0.316953, -0.00021708)
-shape = SubResource("CylinderShape3D_d2bli")
