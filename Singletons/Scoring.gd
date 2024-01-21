@@ -24,7 +24,11 @@ func init_score_multiplier_zones(zone:Area3D)->void:
 	score_zones.append(zone)
 
 func activate_score_zone():
-	score_zones[current_score_zone_index]
+	await get_tree().create_timer(0.5).timeout
+	for zone in score_zones:
+		zone.visible = false
+	score_zones[current_score_zone_index].visible = true
+
 
 func get_active_zone_location()-> Vector3:
 	if not score_zones.is_empty() and score_zones[current_score_zone_index]:
