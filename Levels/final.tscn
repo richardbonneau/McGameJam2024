@@ -2747,6 +2747,54 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 113.517, -3.41569, 328.264)
 [node name="SM_Constructioncone_015" parent="." instance=ExtResource("41_idk2d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.429, -3.39003, 327.71)
 
+[node name="SM_Constructioncone_016" parent="." instance=ExtResource("41_idk2d")]
+transform = Transform3D(0.150967, 0, 0.988539, 0, 1, 0, -0.988539, 0, 0.150967, 125.488, -3.41569, 323.114)
+
+[node name="SM_Constructioncone_017" parent="." instance=ExtResource("41_idk2d")]
+transform = Transform3D(0.150967, 0, 0.988539, 0, 1, 0, -0.988539, 0, 0.150967, 125.38, -3.39003, 320.152)
+
+[node name="SM_Constructioncone_018" parent="." instance=ExtResource("41_idk2d")]
+transform = Transform3D(0.150967, 0, 0.988539, 0, 1, 0, -0.988539, 0, 0.150967, 125.488, -3.41569, 328.134)
+
+[node name="SM_Constructioncone_019" parent="." instance=ExtResource("41_idk2d")]
+transform = Transform3D(0.150967, 0, 0.988539, 0, 1, 0, -0.988539, 0, 0.150967, 125.38, -3.39003, 325.173)
+
+[node name="SM_Constructioncone_020" parent="." instance=ExtResource("41_idk2d")]
+transform = Transform3D(0.150967, 0, 0.988539, 0, 1, 0, -0.988539, 0, 0.150967, 86.7182, -3.41569, 313.021)
+
+[node name="SM_Constructioncone_021" parent="." instance=ExtResource("41_idk2d")]
+transform = Transform3D(0.150967, 0, 0.988539, 0, 1, 0, -0.988539, 0, 0.150967, 86.6098, -3.39003, 310.059)
+
+[node name="SM_Constructioncone_022" parent="." instance=ExtResource("41_idk2d")]
+transform = Transform3D(0.980765, 0, 0.195193, 0, 1, 0, -0.195193, 0, 0.980765, 85.2903, -3.41569, 288.971)
+
+[node name="SM_Constructioncone_023" parent="." instance=ExtResource("41_idk2d")]
+transform = Transform3D(0.980765, 0, 0.195193, 0, 1, 0, -0.195193, 0, 0.980765, 88.0377, -3.39003, 287.859)
+
+[node name="SM_Constructioncone_024" parent="." instance=ExtResource("41_idk2d")]
+transform = Transform3D(0.980765, 0, 0.195193, 0, 1, 0, -0.195193, 0, 0.980765, 85.2903, -3.41569, 291.129)
+
+[node name="SM_Constructioncone_025" parent="." instance=ExtResource("41_idk2d")]
+transform = Transform3D(0.980765, 0, 0.195193, 0, 1, 0, -0.195193, 0, 0.980765, 88.0377, -3.39003, 290.017)
+
+[node name="SM_Constructioncone_026" parent="." instance=ExtResource("41_idk2d")]
+transform = Transform3D(0.980765, 0, 0.195193, 0, 1, 0, -0.195193, 0, 0.980765, 85.2903, -3.41569, 286.715)
+
+[node name="SM_Constructioncone_027" parent="." instance=ExtResource("41_idk2d")]
+transform = Transform3D(0.980765, 0, 0.195193, 0, 1, 0, -0.195193, 0, 0.980765, 88.0377, -3.39003, 285.603)
+
+[node name="SM_Constructioncone_028" parent="." instance=ExtResource("41_idk2d")]
+transform = Transform3D(0.980765, 0, 0.195193, 0, 1, 0, -0.195193, 0, 0.980765, 89.3719, -3.41569, 286.715)
+
+[node name="SM_Constructioncone_029" parent="." instance=ExtResource("41_idk2d")]
+transform = Transform3D(0.980765, 0, 0.195193, 0, 1, 0, -0.195193, 0, 0.980765, 92.1193, -3.39003, 285.603)
+
+[node name="SM_Constructioncone_030" parent="." instance=ExtResource("41_idk2d")]
+transform = Transform3D(0.980765, 0, 0.195193, 0, 1, 0, -0.195193, 0, 0.980765, 90.6051, -3.41569, 289.073)
+
+[node name="SM_Constructioncone_031" parent="." instance=ExtResource("41_idk2d")]
+transform = Transform3D(0.980765, 0, 0.195193, 0, 1, 0, -0.195193, 0, 0.980765, 93.3525, -3.39003, 287.961)
+
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.7775, 0, 309.654)
 

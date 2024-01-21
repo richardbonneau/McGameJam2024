@@ -50,6 +50,11 @@ var parts = {
 		"avatar": "res://Art/2D/bath.png",
 		"model": preload("res://Logic/CarVariants/SuzanneCar.tscn")
 	},
+		{
+		"name": "BeanCar",
+		"avatar": "res://Art/2D/pizza.png",
+		"model": preload("res://Logic/CarVariants/BeanCar.tscn")
+	},
 	
 ]
 }
@@ -109,7 +114,7 @@ func _on_button_5_pressed():
 
 
 func _on_button_4_pressed():
-	if part_indexes[current_menu] < parts[current_menu][part_indexes[current_menu]].size() - 1: part_indexes[current_menu] += 1
+	if part_indexes[current_menu] < parts[current_menu][part_indexes[current_menu]].size(): part_indexes[current_menu] += 1
 	else: part_indexes[current_menu] = 0
 	print("part_indexes[current_menu]",part_indexes[current_menu])
 	display_avatars()
