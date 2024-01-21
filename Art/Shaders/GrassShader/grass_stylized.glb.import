@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ccuckgb5vvwng"
-path="res://.godot/imported/river-col.glb-4b498927be2e9b3f8c6039a4a4ec4eed.scn"
+uid="uid://cs5iqt4748hqb"
+path="res://.godot/imported/grass_stylized.glb-fd49f6e6fd0b201619cc072f47fc3f24.scn"
 
 [deps]
 
-source_file="res://Art/3D/Meshes/Waterfall_Assets/river-col.glb"
-dest_files=["res://.godot/imported/river-col.glb-4b498927be2e9b3f8c6039a4a4ec4eed.scn"]
+source_file="res://Art/Shaders/GrassShader/grass_stylized.glb"
+dest_files=["res://.godot/imported/grass_stylized.glb-fd49f6e6fd0b201619cc072f47fc3f24.scn"]
 
 [params]
 
