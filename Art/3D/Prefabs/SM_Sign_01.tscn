@@ -1,9 +1,9 @@
 [gd_scene load_steps=17 format=3 uid="uid://bbp7plmbiahgr"]
 
-[ext_resource type="Material" path="res://Art/2D Textures/M_Sign_01.tres" id="1_oftii"]
+[ext_resource type="Material" uid="uid://3rmy3ia4k3pk" path="res://Art/2D Textures/M_Sign_01.tres" id="1_oftii"]
 [ext_resource type="PackedScene" uid="uid://8vgtlaja8723" path="res://Logic/PropsCollisioin/PropsCollision.tscn" id="1_wieo8"]
-[ext_resource type="Material" path="res://Art/2D Textures/M_signstand_01.tres" id="2_kdpy6"]
-[ext_resource type="Material" path="res://Art/2D Textures/M_signweight_01.tres" id="3_3km7i"]
+[ext_resource type="Material" uid="uid://cm3fab7bnjyqs" path="res://Art/2D Textures/M_signstand_01.tres" id="2_kdpy6"]
+[ext_resource type="Material" uid="uid://hmtbo582xjn7" path="res://Art/2D Textures/M_signweight_01.tres" id="3_3km7i"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bhgly"]
 size = Vector3(197.716, 8.35498, 199.179)
@@ -129,7 +129,7 @@ shadow_mesh = SubResource("ArrayMesh_b2ifg")
 [node name="Sm_Sign_01" type="Node3D"]
 
 [node name="PropsCollision" parent="." node_paths=PackedStringArray("props") instance=ExtResource("1_wieo8")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.95368, 0)
+transform = Transform3D(3.12254, 0, 0, 0, 2.73274, 0, 0, 0, 3.07112, 0, 2.62206, 0)
 props = [NodePath("../SM_sign_012/Node/StaticBody3D"), NodePath("../SM_signstand_012/Node/StaticBody3D"), NodePath("../SM_signweight_01/Node/StaticBody3D")]
 
 [node name="SM_sign_012" type="Node3D" parent="."]
