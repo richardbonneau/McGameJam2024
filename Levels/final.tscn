@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=3 uid="uid://dslk3p0i4c6sp"]
+[gd_scene load_steps=80 format=3 uid="uid://dslk3p0i4c6sp"]
 
 [ext_resource type="Texture2D" uid="uid://t6ss6jmy1fav" path="res://Art/2D Textures/Prototyping_Textures/Green/texture_01.png" id="1_pv02d"]
 [ext_resource type="Texture2D" uid="uid://csfoxj3ksam8o" path="res://Art/2D Textures/Prototyping_Textures/Purple/texture_01.png" id="3_hj63j"]
@@ -31,9 +31,11 @@
 [ext_resource type="PackedScene" uid="uid://c1b1htpnjtvqt" path="res://Art/3D/Meshes/SM_Trashcan_01.glb" id="33_iis3l"]
 [ext_resource type="PackedScene" uid="uid://b5c2tgy36dak5" path="res://terrain_test_123_col.tscn" id="34_ooqed"]
 [ext_resource type="PackedScene" uid="uid://bbp7plmbiahgr" path="res://Art/3D/Prefabs/SM_Sign_01.tscn" id="34_vhlht"]
-[ext_resource type="PackedScene" path="res://Art/Shaders/Water Shader/plane_test_col.tscn" id="35_5s006"]
+[ext_resource type="Script" path="res://Levels/EndGameScreen.gd" id="35_2dncu"]
+[ext_resource type="PackedScene" uid="uid://bkxeeebkr36rx" path="res://Art/Shaders/Water Shader/plane_test_col.tscn" id="35_5s006"]
 [ext_resource type="PackedScene" uid="uid://dymdolkmjxvoh" path="res://Art/3D/Meshes/Beach/Props/beach-towel.glb" id="35_wdxr7"]
 [ext_resource type="PackedScene" uid="uid://dhi5xwppqnwqu" path="res://Art/3D/Meshes/Beach/Props/beach-ball.glb" id="36_eufhf"]
+[ext_resource type="PackedScene" uid="uid://cq0s7u8yng7bi" path="res://Logic/DestructibleProp/DestructibleProp.tscn" id="36_p26yr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u75fd"]
 albedo_texture = ExtResource("1_pv02d")
@@ -2693,7 +2695,7 @@ transform = Transform3D(0.613644, -0.269684, 1.88433, -0.0151946, 1.97907, 0.288
 [node name="ConstructionCones" type="Node3D" parent="Final_envrinment/Props"]
 
 [node name="SM_Constructioncone_012" parent="Final_envrinment/Props/ConstructionCones" instance=ExtResource("29_0nk1f")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 172.72, 2.16649, 497.181)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 165.71, 1.39252, 497.181)
 
 [node name="SM_Constructioncone_013" parent="Final_envrinment/Props/ConstructionCones" instance=ExtResource("29_0nk1f")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 167.166, 1.42442, 449.939)
@@ -2748,3 +2750,84 @@ player_index = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_2pnem")
+
+[node name="EndGameScreen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("35_2dncu")
+
+[node name="TextureRect" type="ColorRect" parent="EndGameScreen"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+
+[node name="Label" type="Label" parent="EndGameScreen/TextureRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -47.5
+offset_top = 62.0
+offset_right = 47.5
+offset_bottom = 85.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "Match Over!"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EndGameScreen/TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EndGameScreen/TextureRect/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="EndGameScreen/TextureRect/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Player 1"
+
+[node name="PlayerOneScore" type="Label" parent="EndGameScreen/TextureRect/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="Label" type="Label" parent="EndGameScreen/TextureRect/HBoxContainer"]
+layout_mode = 2
+text = "                                                              "
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="EndGameScreen/TextureRect/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="EndGameScreen/TextureRect/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Player 2"
+
+[node name="PlayerTwoScore" type="Label" parent="EndGameScreen/TextureRect/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="DestructibleProp" parent="." instance=ExtResource("36_p26yr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.73177, -2.43834, -39.1512)

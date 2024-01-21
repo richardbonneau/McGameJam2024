@@ -4,6 +4,12 @@ extends Node3D
 @export var points:int = 100
 var has_been_hit:bool = false
 
+func _ready()->void:
+	for prop:RigidBody3D in props:
+		prop.freeze = true
+		prop.max_contacts_reported = 10
+		prop.contact_monitor = true
+
 func _on_body_entered(body: Node) -> void:
 	if not has_been_hit and body is Car:
 		has_been_hit = true
