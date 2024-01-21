@@ -223,7 +223,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="VBoxContainer/SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(1152, 322)
 render_target_update_mode = 4
 
 [node name="Player1" parent="VBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("3_tgjuq")]
@@ -235,7 +235,7 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="VBoxContainer/SubViewportContainer2"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(1152, 322)
 render_target_update_mode = 4
 
 [node name="Player2" parent="VBoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("3_tgjuq")]

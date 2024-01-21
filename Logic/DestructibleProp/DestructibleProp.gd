@@ -13,7 +13,8 @@ func _on_rigid_body_3d_body_entered(body: Node) -> void:
 		elif player_index == 1: mat.albedo_color = Color("ff0000")
 		mesh_instance.set_surface_override_material(0, mat)
 		
-		var points_to_score:int = points
+		var rng = RandomNumberGenerator.new()
+		var points_to_score:int = rng.randi_range(points-10, points)
 		if Scoring.players_in_zone["player"+str(player_index+1)]: points_to_score *= Scoring.current_multiplier
 		Scoring.player_scored.emit(player_index, points_to_score)
 		
