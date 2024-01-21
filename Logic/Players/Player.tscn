@@ -50,9 +50,11 @@ horizontal_alignment = 1
 continuous_cd = true
 
 [node name="MainTimer" type="Timer" parent="."]
-wait_time = 90.0
+wait_time = 2.0
 one_shot = true
 script = ExtResource("4_f5tgu")
 
 [node name="Respawner" type="Node3D" parent="."]
 script = ExtResource("4_ube04")
+
+[connection signal="timeout" from="MainTimer" to="MainTimer" method="_on_timeout"]

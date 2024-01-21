@@ -2893,3 +2893,4 @@ transform = Transform3D(17.2869, 0, 9.77707e-12, 0, 25.3696, 0, -8.6402e-12, 0, 
 shape = SubResource("BoxShape3D_rn62x")
 
 [node name="ColorRect" parent="." instance=ExtResource("41_oks43")]
+visible = false
