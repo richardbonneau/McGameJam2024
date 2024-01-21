@@ -1,8 +1,5 @@
-[gd_scene load_steps=60 format=3 uid="uid://cbbftlbhdd4yi"]
+[gd_scene load_steps=56 format=3 uid="uid://cbbftlbhdd4yi"]
 
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="2_rbv2w"]
-[ext_resource type="Resource" path="res://Terrain/data.hterrain" id="3_l6vfd"]
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="4_qp5pd"]
 [ext_resource type="PackedScene" uid="uid://b7ol2txgmcrwf" path="res://Logic/Players/Player.tscn" id="5_3035y"]
 [ext_resource type="Texture2D" uid="uid://t6ss6jmy1fav" path="res://Art/2D Textures/Prototyping_Textures/Green/texture_01.png" id="5_b8t3f"]
 [ext_resource type="Texture2D" uid="uid://bq4k15d7oygys" path="res://Art/2D Textures/Prototyping_Textures/Dark/texture_01.png" id="6_f2ce6"]
@@ -10,13 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://dnoo58ob7qq5p" path="res://Art/2D Textures/Prototyping_Textures/Purple/texture_13.png" id="8_faivx"]
 [ext_resource type="Texture2D" uid="uid://cow2052lhftoh" path="res://Art/2D Textures/Prototyping_Textures/Orange/texture_13.png" id="9_q811l"]
 [ext_resource type="Texture2D" uid="uid://cnb1gdtdbrxwq" path="res://Art/2D Textures/Prototyping_Textures/Orange/texture_01.png" id="10_bpkv3"]
+[ext_resource type="Material" uid="uid://b11i6simv8xf6" path="res://Art/Shaders/Water Shader/water_mat.tres" id="11_45064"]
 [ext_resource type="Texture2D" uid="uid://crmx5h11mmb3k" path="res://Art/2D Textures/Prototyping_Textures/Red/texture_01.png" id="11_w424d"]
-[ext_resource type="PackedScene" path="res://Art/hill-spawn-col.glb" id="12_qnnky"]
-
-[sub_resource type="Resource" id="Resource_w4r55"]
-script = ExtResource("4_qp5pd")
-mode = 0
-textures = [[], []]
+[ext_resource type="Shader" path="res://Art/Shaders/Water Shader/Water.gdshader" id="12_qb13f"]
+[ext_resource type="PackedScene" path="res://Art/3D/Terrain-test123-col.glb" id="14_u1hp5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_53trb"]
 albedo_texture = ExtResource("5_b8t3f")
@@ -102,25 +96,25 @@ uv1_world_triplanar = true
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_u4mdi"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3qi6c"]
-albedo_texture = ExtResource("11_w424d")
-uv1_triplanar = true
-uv1_world_triplanar = true
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tgag3"]
+render_priority = 0
+shader = ExtResource("12_qb13f")
+shader_parameter/main_color = Color(0.406208, 0.78359, 0.968676, 1)
+shader_parameter/intersection_color = Color(1, 1, 1, 1)
+shader_parameter/intersection_max_threshold = 0.5
+shader_parameter/displ_amount = 0.6
+shader_parameter/near = 0.15
+shader_parameter/far = 300.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kcjjc"]
-albedo_texture = ExtResource("11_w424d")
-uv1_triplanar = true
-uv1_world_triplanar = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ft2wx"]
-albedo_texture = ExtResource("11_w424d")
-uv1_triplanar = true
-uv1_world_triplanar = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pu327"]
-albedo_texture = ExtResource("11_w424d")
-uv1_triplanar = true
-uv1_world_triplanar = true
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x0ckm"]
+render_priority = 0
+shader = ExtResource("12_qb13f")
+shader_parameter/main_color = Color(0.406208, 0.78359, 0.968676, 1)
+shader_parameter/intersection_color = Color(1, 1, 1, 1)
+shader_parameter/intersection_max_threshold = 0.5
+shader_parameter/displ_amount = 0.6
+shader_parameter/near = 0.15
+shader_parameter/far = 300.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_p1l5v"]
 
@@ -167,28 +161,6 @@ uv1_world_triplanar = true
 material = SubResource("StandardMaterial3D_6o4hj")
 
 [node name="Map_Alpha" type="Node3D"]
-
-[node name="HTerrain" type="Node3D" parent="."]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -2500, -5, -2500)
-script = ExtResource("2_rbv2w")
-_terrain_data = ExtResource("3_l6vfd")
-chunk_size = 64
-collision_enabled = true
-collision_layer = 1
-collision_mask = 1
-shader_type = "Classic4Lite"
-custom_shader = null
-custom_globalmap_shader = null
-texture_set = SubResource("Resource_w4r55")
-render_layers = 1
-cast_shadow = 1
-shader_params/u_ground_uv_scale = 20
-shader_params/u_depth_blending = true
-shader_params/u_triplanar = null
-shader_params/u_tile_reduction = null
-
-[node name="Player" parent="." instance=ExtResource("5_3035y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 235.785, 5.6125, 478.533)
 
 [node name="EnvironmentBaseModel" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.074, 0, 456.462)
@@ -720,24 +692,19 @@ mesh = SubResource("BoxMesh_dy46l")
 [node name="Waterfall and River" type="Node3D" parent="EnvironmentBaseModel"]
 
 [node name="Waterfall" type="CSGMesh3D" parent="EnvironmentBaseModel/Waterfall and River"]
-transform = Transform3D(134.335, 0, 0, 0, 36.0938, -8.6203, 0, 17.2406, 18.0469, 309.388, 49.7939, 393.51)
+transform = Transform3D(134.335, 0, 0, 0, 43.79, -7.74231, 0, 20.9168, 16.2088, 309.037, 49.3234, 393.343)
 mesh = SubResource("CylinderMesh_u4mdi")
-material = SubResource("StandardMaterial3D_3qi6c")
-
-[node name="Waterfall2" type="CSGMesh3D" parent="EnvironmentBaseModel/Waterfall and River"]
-transform = Transform3D(129.687, 0, 0, 0, 36.0938, -8.6203, 0, 17.2406, 18.0469, 309.388, 3.39158, 373.701)
-mesh = SubResource("CylinderMesh_u4mdi")
-material = SubResource("StandardMaterial3D_kcjjc")
+material = ExtResource("11_45064")
 
 [node name="WaterfallDropBase" type="CSGMesh3D" parent="EnvironmentBaseModel/Waterfall and River"]
-transform = Transform3D(137.888, 0, 0, 0, 3.11609, -19.9392, 0, 39.8784, 1.55804, 307.44, 3.52781, 374.928)
+transform = Transform3D(137.888, 0, 0, 0, 3.11609, -19.9392, 0, 39.8784, 1.55804, 305.369, 2.40844, 374.928)
 mesh = SubResource("CylinderMesh_u4mdi")
-material = SubResource("StandardMaterial3D_ft2wx")
+material = SubResource("ShaderMaterial_tgag3")
 
 [node name="WaterfallDropCollectionBase" type="CSGMesh3D" parent="EnvironmentBaseModel/Waterfall and River"]
 transform = Transform3D(89.0728, 14.8125, 0.803057, 0, 2.18719, -19.4205, -55.553, 23.7502, 1.28761, 292.893, 3.52781, 324.079)
 mesh = SubResource("CylinderMesh_u4mdi")
-material = SubResource("StandardMaterial3D_pu327")
+material = SubResource("ShaderMaterial_x0ckm")
 
 [node name="WaterfallToRiver" type="CSGMesh3D" parent="EnvironmentBaseModel/Waterfall and River"]
 transform = Transform3D(37.2793, 15.3382, 0.714637, -4.82371e-07, 1.86801, -14.2546, -31.1825, 18.3371, 0.854363, 268.837, 0.631134, 296.68)
@@ -1222,8 +1189,8 @@ mesh = SubResource("BoxMesh_0awv6")
 transform = Transform3D(250, 0, 0, 0, 10, 0, 0, 0, 600, -248.756, 0, 278.519)
 mesh = SubResource("PlaneMesh_ovnhh")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.7429, 0.669403, 0, -0.669403, 0.7429, 0, 0, 0)
+[node name="Player" parent="." instance=ExtResource("5_3035y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 161.024, 3.34794, 462.715)
 
-[node name="hill-spawn-col" parent="." instance=ExtResource("12_qnnky")]
-transform = Transform3D(-10, 0, 8.74228e-07, 0, 10, 0, -8.74228e-07, 0, -10, 291.849, 1.22768, 477.991)
+[node name="Terrain-test123-col" parent="." instance=ExtResource("14_u1hp5")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 165.303, 1.22766, 710.067)
