@@ -27,7 +27,7 @@
 [ext_resource type="Material" uid="uid://cmki30syutrlq" path="res://Art/Shaders/Water Shader/waterfall_mat.tres" id="25_ium0f"]
 [ext_resource type="PackedScene" uid="uid://ctf303i6yrtxo" path="res://Art/3D/Prefabs/sm_roadsign_big_01.tscn" id="26_p0mc3"]
 [ext_resource type="Shader" path="res://Art/Shaders/GrassShader/grass.gdshader" id="27_cb2ck"]
-[ext_resource type="ArrayMesh" path="res://Art/Shaders/GrassShader/Grass_Stylized.res" id="27_jpoju"]
+[ext_resource type="ArrayMesh" uid="uid://c7imlx7rd88n" path="res://Art/Shaders/GrassShader/Grass_Stylized.res" id="27_jpoju"]
 [ext_resource type="PackedScene" uid="uid://drh4e7yk8285f" path="res://Art/3D/Meshes/SM_Ramp_01.glb" id="28_6pqgr"]
 [ext_resource type="PackedScene" uid="uid://cfuhkqsi2anll" path="res://Art/3D/Meshes/SM_Constructioncone_01.glb" id="29_0nk1f"]
 [ext_resource type="PackedScene" uid="uid://cubpyr83q7g1y" path="res://Art/3D/Meshes/fence-steel-col.glb" id="29_h02el"]
