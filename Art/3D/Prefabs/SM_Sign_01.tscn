@@ -1,8 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://bbp7plmbiahgr"]
+[gd_scene load_steps=17 format=3 uid="uid://bbp7plmbiahgr"]
 
-[ext_resource type="Material" uid="uid://3rmy3ia4k3pk" path="res://Art/2D Textures/M_Sign_01.tres" id="1_oftii"]
-[ext_resource type="Material" uid="uid://cm3fab7bnjyqs" path="res://Art/2D Textures/M_signstand_01.tres" id="2_kdpy6"]
-[ext_resource type="Material" uid="uid://hmtbo582xjn7" path="res://Art/2D Textures/M_signweight_01.tres" id="3_3km7i"]
+[ext_resource type="Material" path="res://Art/2D Textures/M_Sign_01.tres" id="1_oftii"]
+[ext_resource type="PackedScene" uid="uid://8vgtlaja8723" path="res://Logic/PropsCollisioin/PropsCollision.tscn" id="1_wieo8"]
+[ext_resource type="Material" path="res://Art/2D Textures/M_signstand_01.tres" id="2_kdpy6"]
+[ext_resource type="Material" path="res://Art/2D Textures/M_signweight_01.tres" id="3_3km7i"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bhgly"]
+size = Vector3(197.716, 8.35498, 199.179)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_coqmc"]
 resource_name = "fallback Material"
@@ -42,8 +46,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_e4qt7")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_bhgly"]
-size = Vector3(197.716, 8.35498, 199.179)
+[sub_resource type="BoxShape3D" id="BoxShape3D_rn3mp"]
+size = Vector3(21.2764, 19.3329, 350.778)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8okmu"]
 resource_name = "fallback Material"
@@ -81,8 +85,8 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ft2g1")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_rn3mp"]
-size = Vector3(21.2764, 19.3329, 350.778)
+[sub_resource type="BoxShape3D" id="BoxShape3D_c6xug"]
+size = Vector3(83.1083, 103.652, 17.8817)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aw1b4"]
 resource_name = "fallback Material"
@@ -122,58 +126,62 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_b2ifg")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_c6xug"]
-size = Vector3(83.1083, 103.652, 17.8817)
-
 [node name="Sm_Sign_01" type="Node3D"]
+
+[node name="PropsCollision" parent="." node_paths=PackedStringArray("props") instance=ExtResource("1_wieo8")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.95368, 0)
+props = [NodePath("../SM_sign_012/Node/StaticBody3D"), NodePath("../SM_signstand_012/Node/StaticBody3D"), NodePath("../SM_signweight_01/Node/StaticBody3D")]
 
 [node name="SM_sign_012" type="Node3D" parent="."]
 
 [node name="Node" type="Node3D" parent="SM_sign_012"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 4.24245, -0.0712843)
 
-[node name="SM_sign_01" type="MeshInstance3D" parent="SM_sign_012/Node"]
+[node name="StaticBody3D" type="RigidBody3D" parent="SM_sign_012/Node"]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_sign_012/Node/StaticBody3D"]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -0.47514, 0.573001, -1.74603)
+shape = SubResource("BoxShape3D_bhgly")
+
+[node name="SM_sign_01" type="MeshInstance3D" parent="SM_sign_012/Node/StaticBody3D"]
 mesh = SubResource("ArrayMesh_mscc5")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("1_oftii")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="SM_sign_012/Node/SM_sign_01"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_sign_012/Node/SM_sign_01/StaticBody3D"]
-transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -0.47514, 0.573001, -1.74603)
-shape = SubResource("BoxShape3D_bhgly")
 
 [node name="SM_signstand_012" type="Node3D" parent="."]
 
 [node name="Node" type="Node3D" parent="SM_signstand_012"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -0.0586677, 0)
 
-[node name="SM_signstand_01" type="MeshInstance3D" parent="SM_signstand_012/Node"]
+[node name="StaticBody3D" type="RigidBody3D" parent="SM_signstand_012/Node"]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_signstand_012/Node/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.583316, 1.40966, 177.59)
+shape = SubResource("BoxShape3D_rn3mp")
+
+[node name="SM_signstand_01" type="MeshInstance3D" parent="SM_signstand_012/Node/StaticBody3D"]
 mesh = SubResource("ArrayMesh_852j4")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("2_kdpy6")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="SM_signstand_012/Node/SM_signstand_01"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_signstand_012/Node/SM_signstand_01/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.583316, 1.40966, 177.59)
-shape = SubResource("BoxShape3D_rn3mp")
 
 [node name="SM_signweight_01" type="Node3D" parent="."]
 
 [node name="Node" type="Node3D" parent="SM_signweight_01"]
 transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, -0.0586677, 0)
 
-[node name="weight_005" type="MeshInstance3D" parent="SM_signweight_01/Node"]
+[node name="StaticBody3D" type="RigidBody3D" parent="SM_signweight_01/Node"]
 transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+freeze = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_signweight_01/Node/StaticBody3D"]
+transform = Transform3D(0.986677, -0.162689, 0, 0.162689, 0.986677, 0, 0, 0, 1, 0.808154, 10.833, 8.44086)
+shape = SubResource("BoxShape3D_c6xug")
+
+[node name="weight_005" type="MeshInstance3D" parent="SM_signweight_01/Node/StaticBody3D"]
 mesh = SubResource("ArrayMesh_gp8a6")
 skeleton = NodePath("")
 surface_material_override/0 = ExtResource("3_3km7i")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="SM_signweight_01/Node/weight_005"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_signweight_01/Node/weight_005/StaticBody3D"]
-transform = Transform3D(0.986677, -0.162689, 0, 0.162689, 0.986677, 0, 0, 0, 1, 0.808154, 10.833, 8.44086)
-shape = SubResource("BoxShape3D_c6xug")
