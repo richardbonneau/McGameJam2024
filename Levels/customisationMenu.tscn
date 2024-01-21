@@ -1,7 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://dfr4lpkrp80b8"]
+[gd_scene load_steps=10 format=3 uid="uid://b7ovwrlanx2cb"]
 
-[ext_resource type="PackedScene" uid="uid://ci52bv1m15cbs" path="res://Logic/CarBase/CarBase.tscn" id="1_sequd"]
-[ext_resource type="Texture2D" uid="uid://cpwiyoo7664vj" path="res://addons/cars/Models/texture_10.png" id="2_3nkky"]
+[ext_resource type="Script" path="res://Levels/customisationMenu.gd" id="1_vmirn"]
 [ext_resource type="Script" path="res://Levels/Script/CustomisationMenu.gd" id="3_h11ey"]
 [ext_resource type="Texture2D" uid="uid://b75shy5lgkekh" path="res://Art/2D/caret-up-solid.svg" id="4_ekeme"]
 [ext_resource type="Texture2D" uid="uid://bb0ya6s8juebc" path="res://Art/2D/pngimg.com - car_wheel_PNG23302.png" id="5_cmvnq"]
@@ -11,60 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://dv0mi3mxjsyoa" path="res://Art/2D/caret-left-solid.svg" id="9_aj865"]
 [ext_resource type="Texture2D" uid="uid://cq86nwgqy212c" path="res://Art/2D/caret-right-solid.svg" id="10_o4m8c"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_13n6o"]
-albedo_texture = ExtResource("2_3nkky")
-uv1_triplanar = true
+[node name="CustomisationMenu" type="Node3D"]
+script = ExtResource("1_vmirn")
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_bkc2s"]
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_1j4wl"]
-radial_segments = 20
-rings = 1
-
-[node name="CustomisationMenu" type="Node"]
-
-[node name="car2" parent="." instance=ExtResource("1_sequd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.373932, 0.078257, 0.034923)
-script = null
-
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.80696, 0.183487, -0.56138, 0, 0.950516, 0.310677, 0.590606, -0.250704, 0.767028, 0, 43.5687, 0)
-shadow_enabled = true
-directional_shadow_max_distance = 200.0
-
-[node name="WheelCam" type="Camera3D" parent="."]
-unique_name_in_owner = true
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.87191, 1.04026, 0.729532)
-current = true
-
-[node name="BodyCam" type="Camera3D" parent="."]
-unique_name_in_owner = true
-transform = Transform3D(-0.665867, -0.250499, 0.70276, 0.000696952, 0.941739, 0.336344, -0.74607, 0.22445, -0.626898, 2.26659, 2.42306, -3.28125)
-current = true
-
-[node name="EngineCam" type="Camera3D" parent="."]
-unique_name_in_owner = true
-transform = Transform3D(-0.999908, 0.0135957, 8.46134e-08, 0.00998915, 0.734657, 0.678365, 0.00922278, 0.678302, -0.734725, -0.485317, 2.42306, -3.28125)
-
-[node name="Node3D" type="Node3D" parent="."]
-
-[node name="CSGCombiner3D2" type="CSGCombiner3D" parent="Node3D"]
-material_override = SubResource("StandardMaterial3D_13n6o")
-use_collision = true
-
-[node name="box2" type="CSGBox3D" parent="Node3D/CSGCombiner3D2"]
-transform = Transform3D(1, 0, 0, 0, 2.55802, 0, 0, 0, 1, -4.09722, 1.32642, 0)
-size = Vector3(1, 1, 10.8715)
-
-[node name="CSGMesh3D" type="CSGMesh3D" parent="Node3D/CSGCombiner3D2"]
-transform = Transform3D(82.3645, 0, 0, 0, 82.3645, 0, 0, 0, 82.3645, 0, 0, 0)
-mesh = SubResource("PlaneMesh_bkc2s")
-
-[node name="speedBreaker" type="CSGMesh3D" parent="Node3D/CSGCombiner3D2"]
-transform = Transform3D(-7.29339e-05, -4.8781, 0, 0.41788, -0.000851437, 0, 0, 0, 1.39042, 0, 0, 24.1159)
-mesh = SubResource("CylinderMesh_1j4wl")
-
-[node name="CustomisationMenu" type="Control" parent="."]
+[node name="CustomisationMenuUI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -73,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_h11ey")
 
-[node name="MarginContainer" type="MarginContainer" parent="CustomisationMenu"]
+[node name="MarginContainer" type="MarginContainer" parent="CustomisationMenuUI"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -86,13 +35,13 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 60
 theme_override_constants/margin_bottom = 60
 
-[node name="VBoxContainer" type="HBoxContainer" parent="CustomisationMenu/MarginContainer"]
+[node name="VBoxContainer" type="HBoxContainer" parent="CustomisationMenuUI/MarginContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="VBoxContainer" parent="CustomisationMenu/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="VBoxContainer" parent="CustomisationMenuUI/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Button5" type="Button" parent="CustomisationMenu/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Button5" type="Button" parent="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 0
@@ -102,7 +51,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="Obj1" type="TextureButton" parent="CustomisationMenu/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Obj1" type="TextureButton" parent="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
@@ -112,7 +61,7 @@ texture_focused = ExtResource("6_vomew")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Obj2" type="TextureButton" parent="CustomisationMenu/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Obj2" type="TextureButton" parent="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(150, 150)
 layout_mode = 2
@@ -122,7 +71,7 @@ texture_focused = ExtResource("6_vomew")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Obj3" type="TextureButton" parent="CustomisationMenu/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Obj3" type="TextureButton" parent="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
@@ -132,7 +81,7 @@ texture_focused = ExtResource("6_vomew")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Button4" type="Button" parent="CustomisationMenu/MarginContainer/VBoxContainer/HBoxContainer2"]
+[node name="Button4" type="Button" parent="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_vertical = 8
@@ -142,16 +91,16 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="MarginContainer" type="MarginContainer" parent="CustomisationMenu/MarginContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="CustomisationMenuUI/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(50, 300)
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CustomisationMenu/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CustomisationMenuUI/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 
-[node name="BackMenu" type="Button" parent="CustomisationMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="BackMenu" type="Button" parent="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -161,7 +110,7 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[node name="big_label" type="Label" parent="CustomisationMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="big_label" type="Label" parent="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 6
@@ -170,7 +119,7 @@ theme_override_font_sizes/font_size = 64
 text = "Wheels"
 horizontal_alignment = 1
 
-[node name="NextMenu" type="Button" parent="CustomisationMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="NextMenu" type="Button" parent="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -180,7 +129,24 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
-[connection signal="pressed" from="CustomisationMenu/MarginContainer/VBoxContainer/HBoxContainer2/Button5" to="CustomisationMenu" method="_on_button_5_pressed"]
-[connection signal="pressed" from="CustomisationMenu/MarginContainer/VBoxContainer/HBoxContainer2/Button4" to="CustomisationMenu" method="_on_button_4_pressed"]
-[connection signal="pressed" from="CustomisationMenu/MarginContainer/VBoxContainer/HBoxContainer/BackMenu" to="CustomisationMenu" method="_on_back_menu_pressed"]
-[connection signal="pressed" from="CustomisationMenu/MarginContainer/VBoxContainer/HBoxContainer/NextMenu" to="CustomisationMenu" method="_on_next_menu_pressed"]
+[node name="Ready" type="Button" parent="CustomisationMenuUI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -186.0
+offset_top = -96.0
+offset_right = -30.0
+offset_bottom = -19.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Ready"
+
+[connection signal="pressed" from="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer2/Button5" to="CustomisationMenuUI" method="_on_button_5_pressed"]
+[connection signal="pressed" from="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer2/Button4" to="CustomisationMenuUI" method="_on_button_4_pressed"]
+[connection signal="pressed" from="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer/BackMenu" to="CustomisationMenuUI" method="_on_back_menu_pressed"]
+[connection signal="pressed" from="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer/NextMenu" to="CustomisationMenuUI" method="_on_next_menu_pressed"]
+[connection signal="pressed" from="CustomisationMenuUI/Ready" to="CustomisationMenuUI" method="_on_ready_pressed"]

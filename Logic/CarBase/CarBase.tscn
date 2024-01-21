@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://ci52bv1m15cbs"]
+[gd_scene load_steps=10 format=3 uid="uid://ci52bv1m15cbs"]
 
+[ext_resource type="Script" path="res://addons/cars/BaseCar.gd" id="1_icgqh"]
 [ext_resource type="PackedScene" uid="uid://benmjny2guowm" path="res://addons/cars/Models/Doge/Wheel.glb" id="2_eoiid"]
 [ext_resource type="Script" path="res://addons/cars/camera/CameraFollow.gd" id="3_ahucd"]
 [ext_resource type="PackedScene" uid="uid://bty2rpvw2dh0h" path="res://addons/cars/Models/Doge/doge-body.glb" id="3_om8jj"]
@@ -24,6 +25,7 @@ center_of_mass_mode = 1
 center_of_mass = Vector3(0, -0.1, 0)
 max_contacts_reported = 20
 contact_monitor = true
+script = ExtResource("1_icgqh")
 
 [node name="wheal0" type="VehicleWheel3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.997421, 0.340338, -1.50006)
@@ -106,6 +108,14 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4, 0,
 
 [node name="BehindCam" type="Camera3D" parent="look"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -3.95542)
+
+[node name="CustomCamBody" type="Camera3D" parent="look"]
+unique_name_in_owner = true
+transform = Transform3D(-0.829023, -0.257348, 0.49648, 0.0108717, 0.880233, 0.474418, -0.559108, 0.398701, -0.726936, 1.7582, 0.537433, -2.58927)
+
+[node name="CustomCamWheels" type="Camera3D" parent="look"]
+unique_name_in_owner = true
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.1638, -0.480769, 0.0661142)
 
 [node name="Hud" type="CanvasLayer" parent="."]
 layer = 2

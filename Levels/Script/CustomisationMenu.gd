@@ -6,86 +6,52 @@ extends Control
 @onready var Obj_2 = %Obj2
 @onready var Obj_3 = %Obj3
 
-@onready var wheel_cam = %WheelCam
-@onready var body_cam = %BodyCam
-@onready var engine_cam : Camera3D = %EngineCam
-
 enum menu_types {
-	WHEEL, BODY, ENGINE
+	WHEEL, BODY,
+	 #ENGINE
 }
 @onready var current_menu : menu_types = menu_types.WHEEL
 var type_names : Dictionary = {
 	menu_types.WHEEL : "Wheel",
 	menu_types.BODY  : "Body",
-	menu_types.ENGINE : "Engine"
+	#menu_types.ENGINE : "Engine"
 }
 
 var wheels = ["res://Art/2D/pngimg.com - car_wheel_PNG23302.png", "res://Art/2D/wheel.svg", "res://Art/2D/pngimg.com - car_wheel_PNG23302.png"]
 var bodies = ["res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png", "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png", "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png"]
-var engines = ["res://Art/2D/pngimg.com - engine_PNG4.png", "res://Art/2D/pngimg.com - engine_PNG4.png", "res://Art/2D/pngimg.com - engine_PNG4.png"]
+#var engines = ["res://Art/2D/pngimg.com - engine_PNG4.png", "res://Art/2D/pngimg.com - engine_PNG4.png", "res://Art/2D/pngimg.com - engine_PNG4.png"]
 
 var type_assets : Dictionary = {
 	menu_types.WHEEL : wheels,
 	menu_types.BODY : bodies,
-	menu_types.ENGINE : engines
+	#menu_types.ENGINE : engines
 }
 
-@onready var type_cams : Dictionary = {
-	menu_types.WHEEL : wheel_cam,
-	menu_types.BODY : body_cam,
-	menu_types.ENGINE : engine_cam
-}
+@onready var player_num = get_parent().get_parent().player_index+1
 
-@onready var cams = [wheel_cam, body_cam, engine_cam]
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	wheel_cam.current = true
-	body_cam.current = false
-	engine_cam.current = false
-	
-	# CAR DEAULT ASSET WHICH WOULD BE OBJ2
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
+	GameManager.GamePhaseChange.connect(_on_game_phase_change)
 
 func _on_next_menu_pressed():
 	current_menu += 1
 	if(current_menu == menu_types.size()):
 		current_menu = 0
-
-
 	menu_label.text = type_names[current_menu]
-
 	Obj_1.texture_normal = load(type_assets[current_menu][0])
 	Obj_2.texture_normal = load(type_assets[current_menu][1])
 	Obj_3.texture_normal = load(type_assets[current_menu][2])
-	
-	for cam in cams:
-		cam.current = false
-		
-	type_cams[current_menu].current = true
+	GameManager.CustomCamSwitch.emit(player_num, current_menu)
 
 func _on_back_menu_pressed():
 	current_menu -= 1
 	if(current_menu < 0):
 		current_menu = menu_types.size() -1
-
-
 	menu_label.text = type_names[current_menu]
-
-	print(type_assets[current_menu][0])
+	
 	Obj_1.texture_normal = load(type_assets[current_menu][0])
 	Obj_2.texture_normal = load(type_assets[current_menu][1])
 	Obj_3.texture_normal = load(type_assets[current_menu][2])
-	
-	for cam in cams:
-		cam.current = false
-		
-	type_cams[current_menu].current = true
+	GameManager.CustomCamSwitch.emit(player_num, current_menu)
 
 
 func _on_button_5_pressed():
@@ -116,3 +82,11 @@ func _on_button_4_pressed():
 func changeCar():
 	pass
 	#car.changeStuff = obj2
+
+func _on_ready_pressed():
+	GameManager.player_ready(player_num-1)
+	$Ready.disabled = true
+
+func _on_game_phase_change(new_phase):
+	if new_phase == GameManager.GamePhases.READY or new_phase == GameManager.GamePhases.GAME: 
+		get_parent().queue_free()

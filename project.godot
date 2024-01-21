@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+GameManager="*res://Singletons/GameManager.gd"
 Scoring="*res://Singletons/Scoring.gd"
 
 [editor_plugins]
