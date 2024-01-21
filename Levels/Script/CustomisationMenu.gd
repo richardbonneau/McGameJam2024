@@ -34,9 +34,9 @@ var parts = {
 		"model": preload("res://Art/3D/Wheels/Pizza.tscn")
 	},
 		{
-		"name": "Pizza",
+		"name": "Creepy",
 		"avatar": "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png",
-		"model": preload("res://Art/3D/Wheels/Pizza.tscn")
+		"model":preload("res://Logic/Wheels/creepy_frontwheel_l_2.tscn")
 	},
 ],
 	MenuTypes.BODY:[
