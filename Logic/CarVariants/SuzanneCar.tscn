@@ -1,0 +1,143 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5kvhnob220t4"]
+
+[ext_resource type="Script" path="res://addons/cars/BaseCar.gd" id="1_jr6t7"]
+[ext_resource type="PackedScene" uid="uid://wdb82ssc0q7t" path="res://Art/3D/Meshes/Bodies/Monkey.glb" id="2_avsno"]
+[ext_resource type="PackedScene" uid="uid://benmjny2guowm" path="res://addons/cars/Models/Doge/Wheel.glb" id="3_oji0e"]
+[ext_resource type="Script" path="res://addons/cars/camera/CameraFollow.gd" id="4_om3mh"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yc8e5"]
+font_size = 32
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8us3u"]
+size = Vector3(1, 1, 2)
+
+[node name="SuzanneCar" type="VehicleBody3D"]
+mass = 100.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -0.1, 0)
+max_contacts_reported = 20
+contact_monitor = true
+script = ExtResource("1_jr6t7")
+STEER_SPEED = 4.0
+STEER_LIMIT = 0.8
+engine_force_value = 100
+
+[node name="Body" type="Node3D" parent="."]
+
+[node name="Monkey" parent="Body" instance=ExtResource("2_avsno")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0.69111, 0.72275, 3.02094e-08, -0.72275, 0.69111, -3.15924e-08, 0, 0, -1.01555)
+
+[node name="look" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.215, 0)
+
+[node name="Camera3D" type="Camera3D" parent="look"]
+transform = Transform3D(1, 0, 0, 0, 0.974347, 0.225053, 0, -0.225053, 0.974347, 0, 1.97324, 6.19962)
+top_level = true
+visible = false
+current = true
+script = ExtResource("4_om3mh")
+speed = 10.0
+
+[node name="LeftCam" type="Camera3D" parent="look"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 0)
+
+[node name="RightCam" type="Camera3D" parent="look"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4, 0, 0)
+
+[node name="BehindCam" type="Camera3D" parent="look"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -3.95542)
+
+[node name="CustomCamBody" type="Camera3D" parent="look"]
+unique_name_in_owner = true
+transform = Transform3D(-0.829023, -0.257348, 0.49648, 0.0108717, 0.880233, 0.474418, -0.559108, 0.398701, -0.726936, 1.7582, 0.537433, -2.58927)
+
+[node name="CustomCamWheels" type="Camera3D" parent="look"]
+unique_name_in_owner = true
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.1638, -0.480769, 0.0661142)
+
+[node name="Hud" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="speed" type="Label" parent="Hud"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+
+[node name="Label" type="Label" parent="Hud"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Arow keys to drive
+Space to drift and break
+"
+label_settings = SubResource("LabelSettings_yc8e5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.838242, -0.262665)
+shape = SubResource("BoxShape3D_8us3u")
+
+[node name="wheal0" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.583016, 0.0558557, -1.59949)
+use_as_traction = true
+use_as_steering = true
+wheel_roll_influence = 0.5
+wheel_radius = 0.37
+wheel_rest_length = 0.095
+wheel_friction_slip = 3.0
+suspension_travel = 0.357
+suspension_stiffness = 30.0
+suspension_max_force = 10000.0
+
+[node name="Wheel" parent="wheal0" instance=ExtResource("3_oji0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142656, 0, 0)
+
+[node name="wheal1" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.604875, 0.0558557, -1.59949)
+use_as_traction = true
+use_as_steering = true
+wheel_roll_influence = 0.5
+wheel_radius = 0.37
+wheel_rest_length = 0.095
+wheel_friction_slip = 3.0
+suspension_travel = 0.357
+suspension_stiffness = 30.0
+suspension_max_force = 10000.0
+
+[node name="Wheel" parent="wheal1" instance=ExtResource("3_oji0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0775136, 0, 0)
+
+[node name="wheal2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35097, 0.0176239, 0.562455)
+use_as_traction = true
+wheel_roll_influence = 0.5
+wheel_radius = 0.37
+wheel_rest_length = 0.095
+wheel_friction_slip = 3.0
+suspension_travel = 0.357
+suspension_stiffness = 30.0
+suspension_max_force = 10000.0
+
+[node name="Wheel" parent="wheal2" instance=ExtResource("3_oji0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142656, 0, 0)
+
+[node name="wheal3" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35576, 0.0176239, 0.562455)
+use_as_traction = true
+wheel_roll_influence = 0.5
+wheel_radius = 0.37
+wheel_rest_length = 0.095
+wheel_friction_slip = 3.0
+suspension_travel = 0.357
+suspension_stiffness = 30.0
+suspension_max_force = 10000.0
+
+[node name="Wheel" parent="wheal3" instance=ExtResource("3_oji0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0775136, 0, 0)

@@ -46,10 +46,11 @@ var parts = {
 		"model": preload("res://Logic/CarVariants/TardisCar.tscn")
 	},
 	{
-		"name": "Tardis",
-		"avatar": "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png",
-		"model": preload("res://Logic/CarVariants/TardisCar.tscn")
+		"name": "Suzanne",
+		"avatar": "res://Art/2D/bath.png",
+		"model": preload("res://Logic/CarVariants/SuzanneCar.tscn")
 	},
+	
 ]
 }
 
