@@ -45,6 +45,7 @@ horizontal_alignment = 1
 [node name="CustomisationMenu" parent="." instance=ExtResource("4_0x6yg")]
 
 [node name="DeskCar" parent="." instance=ExtResource("3_i04co")]
+continuous_cd = true
 
 [node name="MainTimer" type="Timer" parent="."]
 wait_time = 90.0
