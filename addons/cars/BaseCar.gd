@@ -11,6 +11,9 @@ var steer_target = 0
 @onready var player_turn_left:String = "player"+str(get_parent().player_index+1)+"_turn_left"
 @onready var player_turn_right:String = "player"+str(get_parent().player_index+1)+"_turn_right"
 @onready var player_num = get_parent().player_index + 1
+
+@onready var current_wheel_model = preload("res://addons/cars/Models/Doge/Wheel.glb")
+
 func _ready():
 	CustomizationManager.change_part.connect(_on_customization_happened)
 
@@ -44,13 +47,13 @@ func _physics_process(delta):
 	else:
 		brake = 0.0
 		
-	if Input.is_action_pressed("ui_select"):
-		brake=3
-		$wheal2.wheel_friction_slip=0.8
-		$wheal3.wheel_friction_slip=0.8
-	else:
-		$wheal2.wheel_friction_slip=3
-		$wheal3.wheel_friction_slip=3
+	#if Input.is_action_pressed("ui_select"):
+		#brake=3
+		#$wheal2.wheel_friction_slip=0.8
+		#$wheal3.wheel_friction_slip=0.8
+	#else:
+		#$wheal2.wheel_friction_slip=3
+		#$wheal3.wheel_friction_slip=3
 	steering = move_toward(steering, steer_target, STEER_SPEED * delta)
 
 func traction(speed):
@@ -63,40 +66,24 @@ func _on_customization_happened(player, type, model):
 	elif type == "Body": change_body(model)
 
 func change_wheels(model:PackedScene):
-	var wheels = [$wheal0, $wheal1, $wheal2, $wheal3 ]
-	for wheel in wheels:
-		wheel.get_child(0).queue_free()
-		var instance:Node3D = model.instantiate()
-		wheel.add_child(instance)
-		instance.global_transform.origin = wheel.global_transform.origin
+	current_wheel_model = model
+	for node in get_children():
+		if node is VehicleWheel3D:
+			if node.get_children().size() > 0: node.get_child(0).queue_free()
+			var instance:Node3D = model.instantiate()
+			node.add_child(instance)
+			instance.global_transform.origin = node.global_transform.origin
 		
 
 func change_body(model:PackedScene):
-	$Body.get_child(0).queue_free()
-	for child in self.get_children():
-		if child is CollisionShape3D:
-			child.queue_free()
-	
 	var instance:Node3D = model.instantiate()
-	$Body.add_child(instance)
-	instance.global_transform.origin = self.global_transform.origin
-	
-	var model_static_body = instance.get_node("%StaticBody3D")
-	var collision_shapes:Array[Node] = model_static_body.get_children()
-	
-	# Bring Collisions over to the car controller
-	for collision in collision_shapes:
-		model_static_body.remove_child(collision)
-		self.add_child(collision)
-	
-	var wheel_pos = instance.get_node("%WheelPositions")
-	
-	var i = 0
-	for pos in wheel_pos.get_children():
-		var wheel = get_node("wheal"+str(i))
-		wheel.global_transform.origin = Vector3.ZERO
-		print(pos.global_transform.origin)
-		print(wheel.global_transform.origin)
-		print(wheel)
-		print("----")
-		i += 1
+	get_parent().add_child(instance)
+	instance.global_transform.origin = global_transform.origin
+	change_wheels(current_wheel_model)
+	self.queue_free()
+
+func remove_all_wheels():
+	for node in get_children():
+		if node is VehicleWheel3D:
+			print(node)
+			node.queue_free()

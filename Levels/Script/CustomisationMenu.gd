@@ -38,17 +38,17 @@ var parts = {
 	{
 		"name": "Desk",
 		"avatar": "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png",
-		"model": preload("res://Art/3D/Prefabs/Bodies/Desk.tscn")
+		"model": preload("res://Logic/CarVariants/DeskCar.tscn")
 	},
 	{
 		"name": "Tardis",
 		"avatar": "res://Art/2D/pngimg.com - car_wheel_PNG23302.png",
-		"model": preload("res://Art/3D/Prefabs/Bodies/Tardis.tscn")
+		"model": preload("res://Logic/CarVariants/TardisCar.tscn")
 	},
 	{
 		"name": "Tardis",
 		"avatar": "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png",
-		"model": preload("res://Art/3D/Prefabs/Bodies/Tardis.tscn")
+		"model": preload("res://Logic/CarVariants/TardisCar.tscn")
 	},
 ]
 }

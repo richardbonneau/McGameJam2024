@@ -1,7 +1,10 @@
-[gd_scene load_steps=63 format=3 uid="uid://b8ne7hp4a6fe7"]
+[gd_scene load_steps=67 format=3 uid="uid://hydpp4c8o1mv"]
 
-[ext_resource type="Texture2D" uid="uid://dv0ig6v3ugmkf" path="res://Art/3D/Meshes/Bodies/Desk_Shrek.jpg" id="1_i483b"]
-[ext_resource type="Texture2D" uid="uid://46q0wry20s35" path="res://Art/3D/Meshes/Bodies/Desk_mcgill-logo.jpg" id="2_jsqje"]
+[ext_resource type="Script" path="res://addons/cars/BaseCar.gd" id="1_q62ek"]
+[ext_resource type="Texture2D" uid="uid://dv0ig6v3ugmkf" path="res://Art/3D/Meshes/Bodies/Desk_Shrek.jpg" id="2_e4cmt"]
+[ext_resource type="Texture2D" uid="uid://46q0wry20s35" path="res://Art/3D/Meshes/Bodies/Desk_mcgill-logo.jpg" id="3_cgyjs"]
+[ext_resource type="PackedScene" uid="uid://benmjny2guowm" path="res://addons/cars/Models/Doge/Wheel.glb" id="4_grey8"]
+[ext_resource type="Script" path="res://addons/cars/camera/CameraFollow.gd" id="5_kej2c"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_onma1"]
 resource_name = "Material.001"
@@ -476,7 +479,7 @@ shadow_mesh = SubResource("ArrayMesh_gcns1")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7hg2s"]
 resource_name = "Material.006"
 cull_mode = 2
-albedo_texture = ExtResource("1_i483b")
+albedo_texture = ExtResource("2_e4cmt")
 roughness = 0.5
 uv1_scale = Vector3(3, 4, 1)
 uv1_offset = Vector3(-4, 1, 0)
@@ -640,7 +643,7 @@ shadow_mesh = SubResource("ArrayMesh_c508v")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7i3u5"]
 resource_name = "Material.007"
 cull_mode = 2
-albedo_texture = ExtResource("2_jsqje")
+albedo_texture = ExtResource("3_cgyjs")
 roughness = 0.5
 uv1_offset = Vector3(1, 1, 0)
 
@@ -744,212 +747,313 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_niq18")
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_whkm5"]
+[sub_resource type="LabelSettings" id="LabelSettings_yc8e5"]
+font_size = 32
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t7r6s"]
 size = Vector3(1.81396, 1, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_mpqno"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_q1p1l"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_a5a8q"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_uhsdp"]
 size = Vector3(2.19739, 1, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_5nxxn"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_jmsml"]
 size = Vector3(1, 1, 0.341125)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_fb5qq"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_dr8bj"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_7bss2"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_80y0s"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_x6mfn"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_7p6vi"]
 size = Vector3(1, 1, 1.13672)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_3qbgs"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ij2f2"]
 size = Vector3(1, 1, 1.31738)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_rj4i2"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_y8lr1"]
 size = Vector3(1, 0.850311, 0.943481)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_3urur"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_dv4cc"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_yahp5"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_welsf"]
 size = Vector3(0.807495, 1.38586, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_dbsa6"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_flq5t"]
 size = Vector3(1, 1.22772, 0.848999)
 
-[node name="Desk" type="Node3D"]
+[node name="DeskCar" type="VehicleBody3D"]
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -0.1, 0)
+max_contacts_reported = 20
+contact_monitor = true
+script = ExtResource("1_q62ek")
+STEER_SPEED = 2.0
+STEER_LIMIT = 0.8
 
-[node name="Desk2" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00483608, -0.00415432, 0.468886)
+[node name="Body" type="Node3D" parent="."]
 
-[node name="Desk" type="MeshInstance3D" parent="Desk2"]
-transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, -4.65661e-10, 0.024429, -0.686628)
+[node name="Desk" type="Node3D" parent="Body"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0.339148)
+
+[node name="Desk2" type="Node3D" parent="Body/Desk"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00483608, -0.00415432, 0.00521493)
+
+[node name="Desk" type="MeshInstance3D" parent="Body/Desk/Desk2"]
+transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_gr5t7")
 skeleton = NodePath("")
 
-[node name="Desk_001" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_001" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_coslp")
 skeleton = NodePath("")
 
-[node name="Desk_002" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_002" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_kyint")
 skeleton = NodePath("")
 
-[node name="Desk_003" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_003" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_p83dl")
 skeleton = NodePath("")
 
-[node name="Desk_004" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_004" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_ryj3y")
 skeleton = NodePath("")
 
-[node name="Desk_005" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_005" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_v6p1a")
 skeleton = NodePath("")
 
-[node name="Desk_006" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_006" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_hhrbf")
 skeleton = NodePath("")
 
-[node name="Desk_007" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_007" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_ud3ju")
 skeleton = NodePath("")
 
-[node name="Desk_008" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_008" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_d6lh1")
 skeleton = NodePath("")
 
-[node name="Desk_009" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_009" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_a1srf")
 skeleton = NodePath("")
 
-[node name="Desk_010" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_010" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_xuiev")
 skeleton = NodePath("")
 
-[node name="Desk_011" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_011" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_fg0q1")
 skeleton = NodePath("")
 
-[node name="Desk_012" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_012" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_frg15")
 skeleton = NodePath("")
 
-[node name="Desk_013" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_013" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_rkv27")
 skeleton = NodePath("")
 
-[node name="Desk_014" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_014" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_t3awi")
 skeleton = NodePath("")
 
-[node name="Desk_015" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_015" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_7xn5p")
 skeleton = NodePath("")
 
-[node name="Desk_016" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_016" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_3aemr")
 skeleton = NodePath("")
 
-[node name="Desk_017" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_017" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_5txxh")
 skeleton = NodePath("")
 
-[node name="Desk_018" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_018" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_5ylaq")
 skeleton = NodePath("")
 
-[node name="Desk_019" type="MeshInstance3D" parent="Desk2"]
+[node name="Desk_019" type="MeshInstance3D" parent="Body/Desk/Desk2"]
 transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_0f5h3")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Desk2"]
-unique_name_in_owner = true
-transform = Transform3D(1.00383, 0, 0, 0, 0.987862, 0, 0, 0, 0.99478, 0, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Desk2/StaticBody3D"]
-transform = Transform3D(0.259113, 0, 0, 0, 0.0736944, 0, 0, 0, 0.491455, 1.01793, 0.0497495, 0.678209)
-shape = SubResource("BoxShape3D_whkm5")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Desk2/StaticBody3D"]
-transform = Transform3D(0.197828, 0, 0, 0, 1, 0, 0, 0, 0.174097, 1.00444, 0.524822, 0.680607)
-shape = SubResource("BoxShape3D_mpqno")
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Desk2/StaticBody3D"]
-transform = Transform3D(0.0324341, 0, 0, 0, 0.454881, 0, 0, 0, 1.67917, 1.0844, 0.845087, -0.127647)
-shape = SubResource("BoxShape3D_a5a8q")
-
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Desk2/StaticBody3D"]
-transform = Transform3D(0.487377, 0, 0, 0, 0.0691139, 0, 0, 0, 1.42039, -0.113725, 0.0196265, -0.664418)
-shape = SubResource("BoxShape3D_5nxxn")
-
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="Desk2/StaticBody3D"]
-transform = Transform3D(0.214053, 0, 0, 0, 0.481346, 0, 0, 0, 0.18126, -0.115794, 0.397832, -0.688146)
-shape = SubResource("BoxShape3D_fb5qq")
-
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="Desk2/StaticBody3D"]
-transform = Transform3D(0.0719743, 1.05866, 0.000877117, -0.154832, 0.492114, 0.000562617, 0.000146531, -0.00736538, 0.163663, 0.292405, 0.793308, -0.665248)
-shape = SubResource("BoxShape3D_7bss2")
-
-[node name="CollisionShape3D7" type="CollisionShape3D" parent="Desk2/StaticBody3D"]
-transform = Transform3D(0.0979801, 0, 0.155207, 0, 0.116489, 0, -0.0262702, 0, 0.578875, -0.023052, 0.473731, -0.247679)
-shape = SubResource("BoxShape3D_x6mfn")
-
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="Desk2/StaticBody3D"]
-transform = Transform3D(0.452625, 0, 0, 0, 0.158654, 0, 0, 0, 0.434608, 0, 0.624965, 0.0566252)
-shape = SubResource("BoxShape3D_3qbgs")
-
-[node name="CollisionShape3D9" type="CollisionShape3D" parent="Desk2/StaticBody3D"]
-transform = Transform3D(0.168131, 0, 0, 0, 0.875063, 0, 0, 0, 0.622495, -0.277926, 0.962622, 0.0481284)
-shape = SubResource("BoxShape3D_rj4i2")
-
-[node name="CollisionShape3D10" type="CollisionShape3D" parent="Desk2/StaticBody3D"]
-transform = Transform3D(1.22884, 0, 0, 0, 0.0835001, 0, 0, 0, 1.94431, 0.643729, 1.13053, -0.0103381)
-shape = SubResource("BoxShape3D_3urur")
-
-[node name="CollisionShape3D11" type="CollisionShape3D" parent="Desk2/StaticBody3D"]
-transform = Transform3D(0.644862, 0, 0, 0, 0.0172041, 0, 0, 0, 0.469264, 0.530717, 1.20743, 0.0876731)
-shape = SubResource("BoxShape3D_yahp5")
-
-[node name="CollisionShape3D12" type="CollisionShape3D" parent="Desk2/StaticBody3D"]
-transform = Transform3D(0.0511661, 0.112574, 0, -0.0119274, 0.482917, 0, 0, 0, 0.573024, 0.778434, 1.36136, 0.0749928)
-shape = SubResource("BoxShape3D_dbsa6")
-
-[node name="WheelPositions" type="Node3D" parent="Desk2"]
-unique_name_in_owner = true
-
-[node name="Node3D" type="VehicleWheel3D" parent="Desk2/WheelPositions"]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -0.128138, 0, 1.16108)
+[node name="wheal0" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.997421, 0.0558557, -0.659693)
 use_as_traction = true
 use_as_steering = true
+wheel_roll_influence = 0.5
+wheel_radius = 0.37
+wheel_rest_length = 0.095
+wheel_friction_slip = 3.0
+suspension_travel = 0.357
+suspension_stiffness = 30.0
+suspension_max_force = 10000.0
 
-[node name="Node3D2" type="VehicleWheel3D" parent="Desk2/WheelPositions"]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1.16211, 0, 1.18332)
+[node name="Wheel" parent="wheal0" instance=ExtResource("4_grey8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142656, 0, 0)
+
+[node name="wheal1" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02668, 0.0558557, -0.659693)
 use_as_traction = true
 use_as_steering = true
+wheel_roll_influence = 0.5
+wheel_radius = 0.37
+wheel_rest_length = 0.095
+wheel_friction_slip = 3.0
+suspension_travel = 0.357
+suspension_stiffness = 30.0
+suspension_max_force = 10000.0
 
-[node name="Node3D3" type="VehicleWheel3D" parent="Desk2/WheelPositions"]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1.16666, 0, -1.24981)
-use_as_traction = true
+[node name="Wheel" parent="wheal1" instance=ExtResource("4_grey8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0775136, 0, 0)
 
-[node name="Node3D4" type="VehicleWheel3D" parent="Desk2/WheelPositions"]
-transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -0.11765, 0, -1.23647)
+[node name="wheal2" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.997421, 0.0176239, 0.466154)
 use_as_traction = true
+wheel_roll_influence = 0.5
+wheel_radius = 0.37
+wheel_rest_length = 0.095
+wheel_friction_slip = 3.0
+suspension_travel = 0.357
+suspension_stiffness = 30.0
+suspension_max_force = 10000.0
+
+[node name="Wheel" parent="wheal2" instance=ExtResource("4_grey8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.142656, 0, 0)
+
+[node name="wheal3" type="VehicleWheel3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02668, 0.0176239, 0.466154)
+use_as_traction = true
+wheel_roll_influence = 0.5
+wheel_radius = 0.37
+wheel_rest_length = 0.095
+wheel_friction_slip = 3.0
+suspension_travel = 0.357
+suspension_stiffness = 30.0
+suspension_max_force = 10000.0
+
+[node name="Wheel" parent="wheal3" instance=ExtResource("4_grey8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0775136, 0, 0)
+
+[node name="look" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.215, 0)
+
+[node name="Camera3D" type="Camera3D" parent="look"]
+transform = Transform3D(1, 0, 0, 0, 0.974347, 0.225053, 0, -0.225053, 0.974347, 0, 1.97324, 6.19962)
+top_level = true
+visible = false
+current = true
+script = ExtResource("5_kej2c")
+speed = 10.0
+
+[node name="LeftCam" type="Camera3D" parent="look"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 0)
+
+[node name="RightCam" type="Camera3D" parent="look"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4, 0, 0)
+
+[node name="BehindCam" type="Camera3D" parent="look"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -3.95542)
+
+[node name="CustomCamBody" type="Camera3D" parent="look"]
+unique_name_in_owner = true
+transform = Transform3D(-0.829023, -0.257348, 0.49648, 0.0108717, 0.880233, 0.474418, -0.559108, 0.398701, -0.726936, 1.7582, 0.537433, -2.58927)
+
+[node name="CustomCamWheels" type="Camera3D" parent="look"]
+unique_name_in_owner = true
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.1638, -0.480769, 0.0661142)
+
+[node name="Hud" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="speed" type="Label" parent="Hud"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+
+[node name="Label" type="Label" parent="Hud"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Arow keys to drive
+Space to drift and break
+"
+label_settings = SubResource("LabelSettings_yc8e5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1.13696e-08, 0, 0.48889, 0, 0.0727999, 0, -0.260105, 0, -2.13701e-08, 0.733698, 0.0491456, -0.682927)
+shape = SubResource("BoxShape3D_t7r6s")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(-8.68047e-09, 0, 0.173188, 0, 0.987862, 0, -0.198586, 0, -7.57029e-09, 0.736083, 0.518452, -0.669387)
+shape = SubResource("BoxShape3D_q1p1l")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1.42317e-09, 0, 1.6704, 0, 0.44936, 0, -0.0325583, 0, -7.30155e-08, -0.0679517, 0.834829, -0.749646)
+shape = SubResource("BoxShape3D_uhsdp")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+transform = Transform3D(-2.13855e-08, 0, 1.41298, 0, 0.068275, 0, -0.489244, 0, -6.17633e-08, -0.601921, 0.0193883, 0.453065)
+shape = SubResource("BoxShape3D_jmsml")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
+transform = Transform3D(-9.3924e-09, 0, 0.180314, 0, 0.475503, 0, -0.214873, 0, -7.88178e-09, -0.625525, 0.393003, 0.455141)
+shape = SubResource("BoxShape3D_dr8bj")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.000145774, -0.00732701, 0.162809, -0.152953, 0.486141, 0.000555788, -0.07225, -1.06271, -0.000880483, -0.602746, 0.783679, 0.0453785)
+shape = SubResource("BoxShape3D_80y0s")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.0261331, 0, 0.575853, 0, 0.115075, 0, -0.0983554, 0, -0.155801, -0.187357, 0.467981, 0.362044)
+shape = SubResource("BoxShape3D_7p6vi")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1.98607e-08, 0, 0.432339, 0, 0.156728, 0, -0.454359, 0, -1.88981e-08, 0.115359, 0.617379, 0.338904)
+shape = SubResource("BoxShape3D_ij2f2")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="."]
+transform = Transform3D(-7.37739e-09, 0, 0.619246, 0, 0.864441, 0, -0.168775, 0, -2.70681e-08, 0.106907, 0.950938, 0.617894)
+shape = SubResource("BoxShape3D_y8lr1")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="."]
+transform = Transform3D(-5.39202e-08, 0, 1.93416, 0, 0.0824866, 0, -1.23355, 0, -8.45448e-08, 0.0487452, 1.11681, -0.30729)
+shape = SubResource("BoxShape3D_dv4cc")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="."]
+transform = Transform3D(-2.82958e-08, 0, 0.466814, 0, 0.0169953, 0, -0.647332, 0, -2.04051e-08, 0.146245, 1.19277, -0.193846)
+shape = SubResource("BoxShape3D_welsf")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="."]
+transform = Transform3D(-2.59626e-09, 9.27774e-09, 0.570033, -0.0117826, 0.477055, 0, -0.0513621, -0.113005, -2.49169e-08, 0.133631, 1.34484, -0.442511)
+shape = SubResource("BoxShape3D_flq5t")
