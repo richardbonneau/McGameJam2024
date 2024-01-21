@@ -74,6 +74,7 @@ var part_indexes = {
 @onready var change_asset_down:String = "player"+str(player_num)+"_change_asset_down"
 @onready var change_menu_left:String = "player"+str(player_num)+"_change_menu_left"
 @onready var change_menu_right:String = "player"+str(player_num)+"_change_menu_right"
+@onready var player_ready:String = "player"+str(player_num)+"_gas"
 
 func _ready():
 	GameManager.GamePhaseChange.connect(_on_game_phase_change)
@@ -87,6 +88,8 @@ func _input(event):
 		_on_next_menu_pressed()
 	if event.is_action_pressed(change_menu_left):
 		_on_back_menu_pressed()
+	if event.is_action_pressed((player_ready)):
+		_on_ready_pressed()
 
 func display_avatars():
 	var avatars = []

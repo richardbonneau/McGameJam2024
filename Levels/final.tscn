@@ -25,9 +25,9 @@
 [ext_resource type="PackedScene" uid="uid://dew1ub0hy5d07" path="res://Art/3D/Prefabs/sm_concreteblock_01.tscn" id="33_j3yqe"]
 [ext_resource type="PackedScene" uid="uid://bd5yvcdut8fd5" path="res://Art/3D/Prefabs/SM_Trashcan_01.tscn" id="34_4fh3p"]
 [ext_resource type="PackedScene" uid="uid://d253mw8a7bc8q" path="res://Art/3D/Prefabs/DestructibleProps/Barrel.tscn" id="34_ed4ko"]
-[ext_resource type="PackedScene" path="res://terrain_test_123_col.tscn" id="34_ooqed"]
+[ext_resource type="PackedScene" uid="uid://b5c2tgy36dak5" path="res://terrain_test_123_col.tscn" id="34_ooqed"]
 [ext_resource type="PackedScene" uid="uid://bbp7plmbiahgr" path="res://Art/3D/Prefabs/SM_Sign_01.tscn" id="34_vhlht"]
-[ext_resource type="PackedScene" path="res://Art/Shaders/Water Shader/plane_test_col.tscn" id="35_5s006"]
+[ext_resource type="PackedScene" uid="uid://bkxeeebkr36rx" path="res://Art/Shaders/Water Shader/plane_test_col.tscn" id="35_5s006"]
 [ext_resource type="PackedScene" uid="uid://cxhto27saxqj6" path="res://Art/3D/Prefabs/DestructibleProps/Cone.tscn" id="35_342ly"]
 [ext_resource type="PackedScene" uid="uid://dymdolkmjxvoh" path="res://Art/3D/Meshes/Beach/Props/beach-towel.glb" id="35_wdxr7"]
 [ext_resource type="PackedScene" uid="uid://c2gpwc7tqyar8" path="res://Art/3D/Meshes/DestructibleProps/Cone.glb" id="37_477rn"]
@@ -36,11 +36,11 @@
 [ext_resource type="PackedScene" uid="uid://cj86v00wpuffb" path="res://Art/3D/Prefabs/DestructibleProps/Parasol.tscn" id="38_rrd0y"]
 [ext_resource type="PackedScene" uid="uid://qn8g1nar7fwv" path="res://Art/3D/Prefabs/DestructibleProps/Bench.tscn" id="39_7jq8y"]
 [ext_resource type="PackedScene" uid="uid://bbobit2bkgqt6" path="res://Art/3D/Prefabs/sm_speedbump_01.tscn" id="39_dt0i1"]
-[ext_resource type="PackedScene" path="res://Art/3D/Prefabs/sm_ramp_012.tscn" id="40_yook5"]
+[ext_resource type="PackedScene" uid="uid://duoandt737xuc" path="res://Art/3D/Prefabs/sm_ramp_012.tscn" id="40_yook5"]
 [ext_resource type="PackedScene" uid="uid://bfpql5ijpn3fm" path="res://Art/3D/Prefabs/lounge-col.tscn" id="41_6n48t"]
 [ext_resource type="PackedScene" uid="uid://b5w6okxah8pia" path="res://Art/3D/Prefabs/sm_blockadesign_012.tscn" id="41_45q0h"]
 [ext_resource type="PackedScene" uid="uid://b8aa67eq1dwba" path="res://Art/3D/Prefabs/fence_steel_col.tscn" id="41_h1k2s"]
-[ext_resource type="PackedScene" uid="uid://blla2h0fmjb18" path="res://Art/3D/Prefabs/DestructibleProps/SM_Constructioncone_01.tscn" id="41_idk2d"]
+[ext_resource type="PackedScene" uid="uid://b20ft5og3pgo8" path="res://Logic/WinScene.tscn" id="41_oks43"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_otjqn"]
 
@@ -2891,3 +2891,5 @@ shape = SubResource("BoxShape3D_tv0cl")
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
 transform = Transform3D(17.2869, 0, 9.77707e-12, 0, 25.3696, 0, -8.6402e-12, 0, 14.696, -0.090332, 7.04439, 0.0722046)
 shape = SubResource("BoxShape3D_rn62x")
+
+[node name="ColorRect" parent="." instance=ExtResource("41_oks43")]
