@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=3 uid="uid://dslk3p0i4c6sp"]
+[gd_scene load_steps=78 format=3 uid="uid://dslk3p0i4c6sp"]
 
 [ext_resource type="Texture2D" uid="uid://t6ss6jmy1fav" path="res://Art/2D Textures/Prototyping_Textures/Green/texture_01.png" id="1_pv02d"]
 [ext_resource type="Texture2D" uid="uid://csfoxj3ksam8o" path="res://Art/2D Textures/Prototyping_Textures/Purple/texture_01.png" id="3_hj63j"]
@@ -171,6 +171,20 @@ material = SubResource("StandardMaterial3D_6o4hj")
 [sub_resource type="PlaneMesh" id="PlaneMesh_4gpxa"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_b33rx"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ynunx"]
+
+[sub_resource type="Sky" id="Sky_kyi0d"]
+sky_material = SubResource("ProceduralSkyMaterial_ynunx")
+
+[sub_resource type="Environment" id="Environment_2pnem"]
+background_mode = 2
+sky = SubResource("Sky_kyi0d")
+ssao_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
 
 [node name="Final" type="Node3D"]
 
@@ -2731,3 +2745,6 @@ render_target_update_mode = 4
 [node name="Player2" parent="VBoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("10_xmfmd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
 player_index = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2pnem")
