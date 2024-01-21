@@ -1,4 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxhto27saxqj6"]
+[gd_scene load_steps=8 format=3 uid="uid://cxhto27saxqj6"]
+
+[ext_resource type="PackedScene" uid="uid://8vgtlaja8723" path="res://Logic/PropsCollisioin/PropsCollision.tscn" id="1_kqn8n"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hx7f"]
 resource_name = "Material"
@@ -68,26 +70,33 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_d6c1p")
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_046ef"]
-radius = 0.655222
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_dpief"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5nptx"]
 
 [node name="Cone" type="Node3D"]
 
+[node name="PropsCollision" parent="." node_paths=PackedStringArray("props") instance=ExtResource("1_kqn8n")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 5.23486, 0)
+props = [NodePath("../Cone/StaticBody3D")]
+
 [node name="Cone" type="Node3D" parent="."]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Cone"]
+[node name="StaticBody3D" type="RigidBody3D" parent="Cone"]
 
 [node name="Cube" type="MeshInstance3D" parent="Cone/StaticBody3D"]
 transform = Transform3D(1.32336, 0, 0, 0, 0.155755, 0, 0, 0, 1.32336, 0, 0.155578, 0)
 mesh = SubResource("ArrayMesh_hg3cy")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Cone/StaticBody3D"]
-transform = Transform3D(0.703581, -0.000158365, 0.000110138, 0.000100841, 1.10493, -2.55759e-05, -8.75429e-05, 3.19254e-05, 0.885174, -0.00155699, 2.15681, 0.0104909)
-shape = SubResource("CylinderShape3D_046ef")
-
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Cone/StaticBody3D"]
-transform = Transform3D(2.57382, 0, 0, 0, 1, 0, 0, 0, 2.49793, 0.0101008, 0.480626, -0.128282)
+transform = Transform3D(1.8, 0, 0, 0, 2, 0, 0, 0, 2, 0.0101008, 0.473228, -0.128282)
 shape = SubResource("BoxShape3D_dpief")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Cone/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0101008, 2.83775, -0.128282)
+shape = SubResource("BoxShape3D_5nptx")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Cone/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0101008, 1.82325, -0.128282)
+shape = SubResource("BoxShape3D_5nptx")

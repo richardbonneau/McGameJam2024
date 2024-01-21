@@ -6,15 +6,39 @@ var player_1_score:int = 0
 var player_2_score:int = 0
 
 var score_zones:Array[Area3D]
-var current_score_zone_index:int = 0
 var current_multiplier:int = 2
 var players_in_zone:Dictionary = {
 	"player1": false,
 	"player2": false
 }
 
+var time_per_zone:int = 2
+var current_score_zone_index:int = 0
+@onready var score_multiply_timer = Timer.new()
+
+func _on_score_timer_multiplier_timeout():
+	move_on_to_next_zone()
+	# Emit a signal or call
+
+func _on_game_phase_changed(new_phase:GameManager.GamePhases):
+	if new_phase == GameManager.GamePhases.GAME:
+		score_zones.shuffle()
+		score_multiply_timer.start(time_per_zone)
+
 func _ready()->void:
 	player_scored.connect(on_player_scored)
+	GameManager.GamePhaseChange.connect(_on_game_phase_changed)
+	add_child(score_multiply_timer)
+	score_multiply_timer.connect("timeout", _on_score_timer_multiplier_timeout)
+
+func move_on_to_next_zone():
+	if current_score_zone_index > score_zones.size() - 1: current_score_zone_index += 1
+	else: 
+		score_zones.shuffle()
+		current_score_zone_index = 0
+	
+	
+	score_multiply_timer.start(time_per_zone)
 
 func on_player_scored(player_index:int, score_to_add:int):
 	if player_index == 0: player_1_score += score_to_add
