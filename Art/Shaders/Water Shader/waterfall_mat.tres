@@ -7,12 +7,12 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_v2q56")
-shader_parameter/top_light_color = Color(0.356863, 1, 0.996078, 1)
-shader_parameter/top_dark_color = Color(0, 0.384314, 0.8, 1)
-shader_parameter/bot_light_color = null
-shader_parameter/bot_dark_color = null
-shader_parameter/displ_amount = 0.02
-shader_parameter/bottom_foam_threshold = 0.48
-shader_parameter/speed = 0.25
+shader_parameter/top_light_color = Color(0.423529, 0.658824, 1, 1)
+shader_parameter/top_dark_color = Color(5.31363e-05, 0.438846, 0.932522, 1)
+shader_parameter/bot_light_color = Color(0, 0.270588, 0.596078, 1)
+shader_parameter/bot_dark_color = Color(0, 0.270588, 0.596078, 1)
+shader_parameter/displ_amount = 0.05
+shader_parameter/bottom_foam_threshold = 1.0
+shader_parameter/speed = 1.0
 shader_parameter/noise_tex = ExtResource("3_e400y")
 shader_parameter/displ_tex = ExtResource("2_ksjbj")

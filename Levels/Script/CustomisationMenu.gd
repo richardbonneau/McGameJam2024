@@ -33,23 +33,34 @@ var parts = {
 		"avatar": "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png",
 		"model": preload("res://Art/3D/Wheels/Pizza.tscn")
 	},
+		{
+		"name": "Pizza",
+		"avatar": "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png",
+		"model": preload("res://Art/3D/Wheels/Pizza.tscn")
+	},
 ],
 	MenuTypes.BODY:[
 	{
 		"name": "Desk",
 		"avatar": "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png",
-		"model": preload("res://Art/3D/Prefabs/Bodies/Desk.tscn")
+		"model": preload("res://Logic/CarVariants/DeskCar.tscn")
 	},
 	{
 		"name": "Tardis",
 		"avatar": "res://Art/2D/pngimg.com - car_wheel_PNG23302.png",
-		"model": preload("res://Art/3D/Prefabs/Bodies/Tardis.tscn")
+		"model": preload("res://Logic/CarVariants/TardisCar.tscn")
 	},
 	{
-		"name": "Tardis",
-		"avatar": "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png",
-		"model": preload("res://Art/3D/Prefabs/Bodies/Tardis.tscn")
+		"name": "Suzanne",
+		"avatar": "res://Art/2D/bath.png",
+		"model": preload("res://Logic/CarVariants/SuzanneCar.tscn")
 	},
+		{
+		"name": "BeanCar",
+		"avatar": "res://Art/2D/pizza.png",
+		"model": preload("res://Logic/CarVariants/BeanCar.tscn")
+	},
+	
 ]
 }
 
@@ -103,12 +114,13 @@ func _on_back_menu_pressed():
 
 func _on_button_5_pressed():
 	if part_indexes[current_menu] > 0: part_indexes[current_menu] -= 1
-	else: part_indexes[current_menu] = parts[current_menu][part_indexes[current_menu]].size() - 1
+	else: part_indexes[current_menu] = parts[current_menu][part_indexes[current_menu]].size()
+	print("part_indexes[current_menu] part_indexes[current_menu] ",part_indexes[current_menu])
 	display_avatars()
 
 
 func _on_button_4_pressed():
-	if part_indexes[current_menu] < parts[current_menu][part_indexes[current_menu]].size() - 1: part_indexes[current_menu] += 1
+	if part_indexes[current_menu] < parts[current_menu][part_indexes[current_menu]].size(): part_indexes[current_menu] += 1
 	else: part_indexes[current_menu] = 0
 	print("part_indexes[current_menu]",part_indexes[current_menu])
 	display_avatars()

@@ -1,0 +1,18 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5c2tgy36dak5"]
+
+[ext_resource type="PackedScene" uid="uid://cx43dyakybh2d" path="res://Art/3D/Terrain-test123-col.glb" id="1_d0yja"]
+[ext_resource type="Texture2D" uid="uid://d3m3mwkcc1gh5" path="res://Art/2D Textures/TerrainTextures/Terrain-test123-col_Material.001_BaseColor.png" id="2_437k7"]
+[ext_resource type="Texture2D" uid="uid://b8kncvkaxrx0x" path="res://Art/2D Textures/TerrainTextures/Terrain-test123-col_Material.001_Emissive.png" id="3_x1pgr"]
+[ext_resource type="Texture2D" uid="uid://dw3g1giu0sddu" path="res://Art/2D Textures/TerrainTextures/Terrain-test123-col_Material.001_OcclusionRoughnessMetallic.png" id="4_04ljb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ccsst"]
+albedo_texture = ExtResource("2_437k7")
+roughness_texture = ExtResource("4_04ljb")
+emission_enabled = true
+emission_texture = ExtResource("3_x1pgr")
+normal_enabled = true
+
+[node name="Terrain-test123-col" instance=ExtResource("1_d0yja")]
+
+[node name="Test" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_ccsst")

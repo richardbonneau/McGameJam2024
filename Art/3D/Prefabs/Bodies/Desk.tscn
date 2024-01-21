@@ -779,10 +779,10 @@ size = Vector3(1, 1.22772, 0.848999)
 [node name="Desk" type="Node3D"]
 
 [node name="Desk2" type="Node3D" parent="."]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.00483608, -0.00415432, 0.00521493)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.00483608, -0.00415432, 0.468886)
 
 [node name="Desk" type="MeshInstance3D" parent="Desk2"]
-transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, 0, 0.024429, -0.686628)
+transform = Transform3D(0.246235, 0, 0, 0, 0.0240973, 0, 0, 0, 0.240973, -4.65661e-10, 0.024429, -0.686628)
 mesh = SubResource("ArrayMesh_gr5t7")
 skeleton = NodePath("")
 
@@ -936,14 +936,20 @@ shape = SubResource("BoxShape3D_dbsa6")
 [node name="WheelPositions" type="Node3D" parent="Desk2"]
 unique_name_in_owner = true
 
-[node name="Node3D" type="Node3D" parent="Desk2/WheelPositions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.118568, 0, -1.23683)
+[node name="Node3D" type="VehicleWheel3D" parent="Desk2/WheelPositions"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -0.128138, 0, 1.16108)
+use_as_traction = true
+use_as_steering = true
 
-[node name="Node3D2" type="Node3D" parent="Desk2/WheelPositions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.118568, 0, 1.14278)
+[node name="Node3D2" type="VehicleWheel3D" parent="Desk2/WheelPositions"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1.16211, 0, 1.18332)
+use_as_traction = true
+use_as_steering = true
 
-[node name="Node3D3" type="Node3D" parent="Desk2/WheelPositions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16134, 0, 1.14278)
+[node name="Node3D3" type="VehicleWheel3D" parent="Desk2/WheelPositions"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 1.16666, 0, -1.24981)
+use_as_traction = true
 
-[node name="Node3D4" type="Node3D" parent="Desk2/WheelPositions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16134, 0, -1.20887)
+[node name="Node3D4" type="VehicleWheel3D" parent="Desk2/WheelPositions"]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -0.11765, 0, -1.23647)
+use_as_traction = true

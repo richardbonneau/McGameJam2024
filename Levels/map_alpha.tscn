@@ -10,7 +10,7 @@
 [ext_resource type="Material" uid="uid://b11i6simv8xf6" path="res://Art/Shaders/Water Shader/water_mat.tres" id="11_45064"]
 [ext_resource type="Texture2D" uid="uid://crmx5h11mmb3k" path="res://Art/2D Textures/Prototyping_Textures/Red/texture_01.png" id="11_w424d"]
 [ext_resource type="Shader" path="res://Art/Shaders/Water Shader/Water.gdshader" id="12_qb13f"]
-[ext_resource type="PackedScene" path="res://Art/3D/Terrain-test123-col.glb" id="14_u1hp5"]
+[ext_resource type="PackedScene" uid="uid://cx43dyakybh2d" path="res://Art/3D/Terrain-test123-col.glb" id="14_u1hp5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_53trb"]
 albedo_texture = ExtResource("5_b8t3f")

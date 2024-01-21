@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://b7ol2txgmcrwf"]
 
 [ext_resource type="Script" path="res://Logic/Players/Scripts/Player1.gd" id="1_0dqci"]
-[ext_resource type="PackedScene" uid="uid://ci52bv1m15cbs" path="res://Logic/CarBase/CarBase.tscn" id="1_kkdoe"]
-[ext_resource type="PackedScene" uid="uid://blviphndeqdbe" path="res://Logic/ScoreMultiplierZone/PointingArrow.tscn" id="3_sg177"]
+[ext_resource type="PackedScene" uid="uid://hydpp4c8o1mv" path="res://Logic/CarVariants/DeskCar.tscn" id="3_i04co"]
 [ext_resource type="PackedScene" uid="uid://b7ovwrlanx2cb" path="res://Levels/customisationMenu.tscn" id="4_0x6yg"]
+[ext_resource type="Script" path="res://Logic/Players/Respawner.gd" id="4_ube04"]
 
 [node name="Player" type="Node3D"]
 script = ExtResource("1_0dqci")
@@ -35,9 +35,21 @@ theme_override_font_sizes/font_size = 50
 text = "x2"
 horizontal_alignment = 1
 
+[node name="TimeLeft" type="Label" parent="."]
+offset_right = 57.0
+offset_bottom = 69.0
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
 [node name="CustomisationMenu" parent="." instance=ExtResource("4_0x6yg")]
 
-[node name="CarBase" parent="." instance=ExtResource("1_kkdoe")]
+[node name="DeskCar" parent="." instance=ExtResource("3_i04co")]
+continuous_cd = true
 
-[node name="PointingArrow" parent="CarBase" instance=ExtResource("3_sg177")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.59033, 0)
+[node name="MainTimer" type="Timer" parent="."]
+wait_time = 90.0
+one_shot = true
+
+[node name="Respawner" type="Node3D" parent="."]
+script = ExtResource("4_ube04")

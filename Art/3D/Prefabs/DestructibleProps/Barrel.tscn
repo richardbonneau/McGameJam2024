@@ -1,7 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://d253mw8a7bc8q"]
+[gd_scene load_steps=10 format=3 uid="uid://d253mw8a7bc8q"]
 
 [ext_resource type="Texture2D" uid="uid://cl1lidoivj8ff" path="res://Art/3D/Meshes/DestructibleProps/Barrel_dirty red.jpg" id="1_euwgg"]
+[ext_resource type="PackedScene" uid="uid://8vgtlaja8723" path="res://Logic/PropsCollisioin/PropsCollision.tscn" id="1_ns4sl"]
 [ext_resource type="Texture2D" uid="uid://c2plgewo7m3jk" path="res://Art/3D/Meshes/DestructibleProps/Barrel_dirty white.webp" id="2_r86nl"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fbvw3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xxhpf"]
 resource_name = "Material.001"
@@ -101,19 +104,22 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_7w5ty")
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_fbvw3"]
-
 [node name="Barrel" type="Node3D"]
+
+[node name="PropsCollision" parent="." node_paths=PackedStringArray("props") instance=ExtResource("1_ns4sl")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 5.13748, 0)
+props = [NodePath("../Barrel/StaticBody3D")]
 
 [node name="Barrel" type="Node3D" parent="."]
 
-[node name="Cylinder" type="MeshInstance3D" parent="Barrel"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00205, 0)
-mesh = SubResource("ArrayMesh_e0kke")
-skeleton = NodePath("")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Barrel"]
+[node name="StaticBody3D" type="RigidBody3D" parent="Barrel"]
+mass = 0.5
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barrel/StaticBody3D"]
 transform = Transform3D(2.00774, 0, 0, 0, 1.94567, 0, 0, 0, 2.04147, 0, 1.96885, 0)
 shape = SubResource("CylinderShape3D_fbvw3")
+
+[node name="Cylinder" type="MeshInstance3D" parent="Barrel/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00205, 0)
+mesh = SubResource("ArrayMesh_e0kke")
+skeleton = NodePath("")

@@ -635,10 +635,10 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_o53hl")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3hfw4"]
-size = Vector3(3.85162, 5.42413, 3.8833)
+size = Vector3(3.85162, 6.46683, 3.8833)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_5lruu"]
-size = Vector3(0.802204, 1.88402, 2000.57)
+[sub_resource type="BoxShape3D" id="BoxShape3D_2g2gf"]
+size = Vector3(0.699965, 1.82193, 0.839477)
 
 [node name="Tardis" type="Node3D"]
 
@@ -718,20 +718,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0235291, 3.41797, -0.039306
 shape = SubResource("BoxShape3D_3hfw4")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="Tardis/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000318527, 7.08191, 999.644)
-shape = SubResource("BoxShape3D_5lruu")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0146717, 7.03201, -0.0248411)
+shape = SubResource("BoxShape3D_2g2gf")
 
 [node name="WheelPositions" type="Node3D" parent="Tardis"]
 unique_name_in_owner = true
 
-[node name="Node3D" type="Node3D" parent="Tardis/WheelPositions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 0, -2)
+[node name="wheal0" type="VehicleWheel3D" parent="Tardis/WheelPositions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.12605, 0, -2)
+use_as_traction = true
+use_as_steering = true
 
-[node name="Node3D2" type="Node3D" parent="Tardis/WheelPositions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 0, 1.985)
+[node name="wheal1" type="VehicleWheel3D" parent="Tardis/WheelPositions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08067, 0, 1.985)
+use_as_traction = true
 
-[node name="Node3D3" type="Node3D" parent="Tardis/WheelPositions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, 0, 2)
+[node name="wheal2" type="VehicleWheel3D" parent="Tardis/WheelPositions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.03277, 0, 2)
+use_as_traction = true
 
-[node name="Node3D4" type="Node3D" parent="Tardis/WheelPositions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, 0, -2)
+[node name="wheal03" type="VehicleWheel3D" parent="Tardis/WheelPositions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.06303, 0, -2)
+use_as_traction = true
+use_as_steering = true

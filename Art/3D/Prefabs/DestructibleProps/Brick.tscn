@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://chknl0ji51ww0"]
+[gd_scene load_steps=9 format=3 uid="uid://chknl0ji51ww0"]
 
 [ext_resource type="Texture2D" uid="uid://bk4uklnljg5br" path="res://Art/3D/Meshes/DestructibleProps/Brick_white-color-wall.jpg" id="1_kvs3v"]
+[ext_resource type="PackedScene" uid="uid://8vgtlaja8723" path="res://Logic/PropsCollisioin/PropsCollision.tscn" id="1_t4vpy"]
 [ext_resource type="Texture2D" uid="uid://b7mmdfjqqprep" path="res://Art/3D/Meshes/DestructibleProps/Brick_racked-concrete-wall.jpg" id="2_ic6rp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f1vrd"]
@@ -74,9 +75,13 @@ size = Vector3(1, 0.959106, 1)
 
 [node name="Brick" type="Node3D"]
 
+[node name="PropsCollision" parent="." node_paths=PackedStringArray("props") instance=ExtResource("1_t4vpy")]
+transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, 0, 0.74156, 0)
+props = [NodePath("../Brick/StaticBody3D")]
+
 [node name="Brick" type="Node3D" parent="."]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Brick"]
+[node name="StaticBody3D" type="RigidBody3D" parent="Brick"]
 
 [node name="Cube" type="MeshInstance3D" parent="Brick/StaticBody3D"]
 mesh = SubResource("ArrayMesh_61rhd")
