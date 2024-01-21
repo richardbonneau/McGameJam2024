@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://duoandt737xuc"]
+
+[ext_resource type="PackedScene" uid="uid://drh4e7yk8285f" path="res://Art/3D/Meshes/SM_Ramp_01.glb" id="1_nas8p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4qdx1"]
+size = Vector3(7.85855, 2.60004, 0.460693)
+
+[node name="SM_Ramp_012" instance=ExtResource("1_nas8p")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.387146, -0.922019, 0, 0.922019, 0.387146, 0.0098114, 0.478583, 1.2492)
+shape = SubResource("BoxShape3D_4qdx1")
