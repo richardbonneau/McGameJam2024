@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://we5ac4kcjtse"
-path="res://.godot/imported/SM_Speedbump_01.glb-f98074164bc3a39b9b3c0b8e1cc7a92b.scn"
+path="res://.godot/imported/SM_Speedbump_01.glb-965f9eba0edec5cdff3aa6261f229451.scn"
 
 [deps]
 
-source_file="res://Art/3D/Meshes/Bodies/SM_Speedbump_01.glb"
-dest_files=["res://.godot/imported/SM_Speedbump_01.glb-f98074164bc3a39b9b3c0b8e1cc7a92b.scn"]
+source_file="res://Art/3D/Meshes/SM_Speedbump_01.glb"
+dest_files=["res://.godot/imported/SM_Speedbump_01.glb-965f9eba0edec5cdff3aa6261f229451.scn"]
 
 [params]
 

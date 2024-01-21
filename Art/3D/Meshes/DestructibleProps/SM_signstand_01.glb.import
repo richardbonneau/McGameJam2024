@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://bgpeagqfwumpg"
-path="res://.godot/imported/SM_signstand_01.glb-d69cac3bc24651cdfd0ff9bed004330c.scn"
+path="res://.godot/imported/SM_signstand_01.glb-89ac2baa0d833139e652eeed6be91e13.scn"
 
 [deps]
 
-source_file="res://Art/3D/Meshes/Bodies/SM_signstand_01.glb"
-dest_files=["res://.godot/imported/SM_signstand_01.glb-d69cac3bc24651cdfd0ff9bed004330c.scn"]
+source_file="res://Art/3D/Meshes/DestructibleProps/SM_signstand_01.glb"
+dest_files=["res://.godot/imported/SM_signstand_01.glb-89ac2baa0d833139e652eeed6be91e13.scn"]
 
 [params]
 
