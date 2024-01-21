@@ -1493,6 +1493,105 @@ transform = Transform3D(0.401525, 0, 2.36617, 0, 2.4, 0, -2.36617, 0, 0.401525, 
 [node name="fence-steel-col35" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
 transform = Transform3D(0.401525, 0, 2.36617, 0, 2.4, 0, -2.36617, 0, 0.401525, 312.37, 0.9509, 633.365)
 
+[node name="fence-steel-col216" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 198.906, 2.68659, 414.898)
+
+[node name="fence-steel-col217" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 208.482, 2.68659, 414.898)
+
+[node name="fence-steel-col218" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 218.112, 2.68659, 414.898)
+
+[node name="fence-steel-col219" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 227.607, 2.68659, 414.898)
+
+[node name="fence-steel-col220" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 237.228, 2.68659, 414.898)
+
+[node name="fence-steel-col221" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 246.8, 2.68659, 414.898)
+
+[node name="fence-steel-col222" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.31822, -0.621166, 0, 0.621166, 2.31822, 0, 0, 0, 2.4, 258.184, 3.98156, 414.779)
+
+[node name="fence-steel-col223" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.31822, -0.621166, 0, 0.621166, 2.31822, 0, 0, 0, 2.4, 267.606, 6.5469, 414.779)
+
+[node name="fence-steel-col224" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.31822, -0.621166, 0, 0.621166, 2.31822, 0, 0, 0, 2.4, 276.986, 9.03257, 414.779)
+
+[node name="fence-steel-col225" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.32487, -0.595801, 0, 0.595801, 2.32487, 0, 0, 0, 2.4, 285.912, 13.9488, 414.432)
+
+[node name="fence-steel-col226" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.2043, -0.564903, -0.762842, 0.595801, 2.32487, 0, 0.738962, -0.189376, 2.27554, 295.862, 17.2089, 416.043)
+
+[node name="fence-steel-col227" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.2043, -0.564903, -0.762842, 0.595801, 2.32487, 0, 0.738962, -0.189376, 2.27554, 305.202, 19.6762, 419.159)
+
+[node name="fence-steel-col228" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.2043, -0.564903, -0.762842, 0.595801, 2.32487, 0, 0.738962, -0.189376, 2.27554, 314.479, 22.2938, 422.127)
+
+[node name="fence-steel-col229" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.27551, -0.137565, -0.750403, 0.189643, 2.38856, 0.137197, 0.738961, -0.189376, 2.27554, 323.555, 23.8806, 425.239)
+
+[node name="fence-steel-col230" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.15341, -0.110439, -1.05386, 0.189643, 2.38856, 0.137197, 1.04253, -0.206374, 2.15187, 332.751, 23.8806, 429.386)
+
+[node name="fence-steel-col231" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.15341, -0.110439, -1.05386, 0.189643, 2.38856, 0.137197, 1.04253, -0.206374, 2.15187, 341.044, 23.8806, 433.984)
+
+[node name="fence-steel-col232" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(1.33055, 0.00908692, -1.99738, 0.189643, 2.38856, 0.137197, 1.98838, -0.23389, 1.32349, 347.91, 23.8806, 440.372)
+
+[node name="fence-steel-col233" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(0.158104, 0.124815, -2.39153, 0.0201875, 2.39658, 0.126413, 2.3947, -0.0284438, 0.156829, 350.804, 24.2045, 449.471)
+
+[node name="fence-steel-col234" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(0.158104, 0.124815, -2.39153, 0.0201875, 2.39658, 0.126413, 2.3947, -0.0284438, 0.156829, 351.751, 24.2045, 459.227)
+
+[node name="fence-steel-col235" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(0.158104, 0.124815, -2.39153, 0.0201875, 2.39658, 0.126413, 2.3947, -0.0284438, 0.156829, 352.599, 24.2045, 468.88)
+
+[node name="fence-steel-col236" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(0.158104, 0.124815, -2.39153, 0.247579, 2.38304, 0.140739, 2.38195, -0.255977, 0.144112, 353.451, 26.8128, 478.658)
+
+[node name="fence-steel-col237" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(0.158104, 0.124815, -2.39153, 0.247579, 2.38304, 0.140739, 2.38195, -0.255977, 0.144112, 354.298, 27.7298, 488.268)
+
+[node name="fence-steel-col238" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(0.158104, 0.124815, -2.39153, 0.247579, 2.38304, 0.140739, 2.38195, -0.255977, 0.144112, 354.813, 28.8368, 497.944)
+
+[node name="fence-steel-col239" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(0.158104, 0.124815, -2.39153, 0.101786, 2.39422, 0.131684, 2.39262, -0.110102, 0.15243, 355.66, 29.4019, 507.553)
+
+[node name="fence-steel-col240" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(0.158104, 0.124815, -2.39153, 0.00902794, 2.39669, 0.125681, 2.39477, -0.0172754, 0.157417, 356.09, 29.6269, 517.459)
+
+[node name="fence-steel-col241" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(0.158104, 0.124815, -2.39153, -0.0198953, 2.39672, 0.12377, 2.3947, 0.0116716, 0.158923, 356.937, 29.7469, 527.37)
+
+[node name="fence-steel-col242" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(0.158104, 0.124815, -2.39153, -0.0198953, 2.39672, 0.12377, 2.3947, 0.0116716, 0.158923, 357.323, 29.7469, 537.151)
+
+[node name="fence-steel-col244" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.4, 0, 0, 0, 2.4, 0, 0, 0, 2.4, 375.591, 29.7469, 564.643)
+
+[node name="fence-steel-col245" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.35565, 0.459257, 0, -0.459257, 2.35565, 0, 0, 0, 2.4, 385.619, 28.9537, 564.643)
+
+[node name="fence-steel-col246" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.26193, 0.802281, 0, -0.802281, 2.26193, 0, 0, 0, 2.4, 395.349, 26.656, 564.643)
+
+[node name="fence-steel-col247" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.32057, 0.612341, 0, -0.612341, 2.32057, 0, 0, 0, 2.4, 404.928, 24.063, 564.643)
+
+[node name="fence-steel-col248" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.32057, 0.612341, 0, -0.612341, 2.32057, 0, 0, 0, 2.4, 414.575, 21.9421, 564.643)
+
+[node name="fence-steel-col249" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
+transform = Transform3D(2.32057, 0.612341, 0, -0.612341, 2.32057, 0, 0, 0, 2.4, 423.523, 19.5791, 564.557)
+
 [node name="fence-steel-col36" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
 transform = Transform3D(0.401525, 0, 2.36617, 0, 2.4, 0, -2.36617, 0, 0.401525, 313.692, 2.10726, 623.948)
 
