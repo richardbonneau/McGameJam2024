@@ -192,7 +192,7 @@ shadow_mesh = SubResource("ArrayMesh_1bv1d")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_k4smv"]
 
-[node name="Tire" type="Node2D"]
+[node name="Tire" type="Node3D"]
 
 [node name="Tire" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00216103, 0.00532141, -0.00624681)

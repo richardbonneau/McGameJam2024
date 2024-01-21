@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://4j00slo0ewos"]
+
+[ext_resource type="PackedScene" uid="uid://crjwr1cyitn2n" path="res://Art/3D/cursedwheels/Backwheel_L.glb" id="1_8rrpy"]
+
+[node name="Backwheel_L" instance=ExtResource("1_8rrpy")]

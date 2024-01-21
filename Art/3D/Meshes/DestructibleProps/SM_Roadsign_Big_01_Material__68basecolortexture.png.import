@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm14lhkie8yrw"
+uid="uid://bginmluruf605"
 path.s3tc="res://.godot/imported/SM_Roadsign_Big_01_Material__68basecolortexture.png-42141f25e993962f7da4870dbcf0dd2a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
