@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=3 uid="uid://dslk3p0i4c6sp"]
+[gd_scene load_steps=65 format=3 uid="uid://dslk3p0i4c6sp"]
 
 [ext_resource type="Texture2D" uid="uid://t6ss6jmy1fav" path="res://Art/2D Textures/Prototyping_Textures/Green/texture_01.png" id="1_pv02d"]
 [ext_resource type="Texture2D" uid="uid://csfoxj3ksam8o" path="res://Art/2D Textures/Prototyping_Textures/Purple/texture_01.png" id="3_hj63j"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://dfo11pj5cqqti" path="res://Art/3D/Meshes/Buildings/BigBuilding6/building-6-col.glb" id="23_snw6q"]
 [ext_resource type="PackedScene" uid="uid://dmggiulkofpr6" path="res://Art/3D/Meshes/Waterfall_Assets/stone-flat-col.glb" id="24_5qupq"]
 [ext_resource type="PackedScene" uid="uid://nlprt22sbkm4" path="res://Art/3D/Meshes/RoadFull/FullRoad-col.glb" id="24_48na8"]
+[ext_resource type="Material" uid="uid://cmki30syutrlq" path="res://Art/Shaders/Water Shader/waterfall_mat.tres" id="25_ium0f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u75fd"]
 albedo_texture = ExtResource("1_pv02d")
@@ -155,6 +156,11 @@ uv1_world_triplanar = true
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_fatal"]
 material = SubResource("StandardMaterial3D_6o4hj")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_avjti"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tn6wu"]
+material = ExtResource("25_ium0f")
 
 [node name="Final" type="Node3D"]
 
@@ -1300,3 +1306,31 @@ transform = Transform3D(-4.94128, 0, -0.764066, 0, 5, 0, 0.764066, 0, -4.94128, 
 
 [node name="stone-flat-col54" parent="Final_envrinment/Waterfall/Rocks" instance=ExtResource("24_5qupq")]
 transform = Transform3D(-4.94128, 0, -0.764066, 0, 5, 0, 0.764066, 0, -4.94128, 351.739, 4.11386, 713.731)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="Final_envrinment/Waterfall"]
+transform = Transform3D(-128.586, 27.5903, 9.37019, 18.917, 1.86812, 93.9143, 68.0228, 51.6357, -8.40446, 345.954, -32.6287, 776.461)
+mesh = SubResource("CylinderMesh_avjti")
+material = ExtResource("7_abi5m")
+
+[node name="CSGMesh3D2" type="CSGMesh3D" parent="Final_envrinment/Waterfall"]
+transform = Transform3D(-16.6472, 62.4332, 1.2635, 6.44773, 2.11187, 96.4873, 46.7044, 21.962, -12.8701, 231.371, -41.1542, 728.084)
+mesh = SubResource("CylinderMesh_avjti")
+material = ExtResource("7_abi5m")
+
+[node name="CSGMesh3D3" type="CSGMesh3D" parent="Final_envrinment/Waterfall"]
+transform = Transform3D(-13.0567, 94.8345, 2.67902, 5.51365, 1.67127, 97.1299, 38.4374, 31.9744, -13.0228, 90.2627, -43.8944, 680.4)
+mesh = SubResource("CylinderMesh_avjti")
+material = ExtResource("7_abi5m")
+
+[node name="Waterfall" type="CSGMesh3D" parent="Final_envrinment/Waterfall"]
+transform = Transform3D(-151.211, 19.9451, -38.4156, -47.6427, 47.604, 62.5064, 82.2826, 64.2166, -34.4046, 367.624, -27.6069, 827.183)
+mesh = SubResource("CylinderMesh_avjti")
+material = ExtResource("7_abi5m")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Final_envrinment/Waterfall"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -93.8221, 2.02158, 465.65)
+mesh = SubResource("PlaneMesh_tn6wu")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Final_envrinment/Waterfall"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -93.8221, 2.02158, 665.693)
+mesh = SubResource("PlaneMesh_tn6wu")
