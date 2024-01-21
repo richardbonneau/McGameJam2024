@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Scoring="*res://Singletons/Scoring.gd"
 GameManager="*res://Singletons/GameManager.gd"
+CustomizationManager="*res://Singletons/CustomizationManager.gd"
 
 [editor_plugins]
 

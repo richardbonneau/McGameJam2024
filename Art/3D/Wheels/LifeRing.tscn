@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://co33y7dxsus4l"]
+[gd_scene load_steps=14 format=3 uid="uid://co33y7dxsus4l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cvoly"]
 resource_name = "Material.001"
@@ -176,37 +176,29 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_puldh")
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_d1a0e"]
-
 [node name="LifeRing" type="Node3D"]
 
 [node name="lifering2Spline" type="Node3D" parent="."]
 
 [node name="Torus" type="MeshInstance3D" parent="lifering2Spline"]
-transform = Transform3D(0, 0.5, 0, -0.262392, 0, 0, 0, 0, 0.262392, 0, 0.328938, 0)
+transform = Transform3D(0, 0.5, 0, -0.262392, 0, 0, 0, 0, 0.262392, 0, 0.0196545, 0)
 mesh = SubResource("ArrayMesh_a7ryc")
 skeleton = NodePath("")
 
 [node name="Circle_001" type="Node3D" parent="lifering2Spline"]
-transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0.328938, 0)
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0.0196545, 0)
 
 [node name="Torus Knot 2 x 3" type="MeshInstance3D" parent="lifering2Spline"]
-transform = Transform3D(0.3, 0, 0, 0, 0.4, 0, 0, 0, 0.3, 0, 0.328938, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.4, 0, 0, 0, 0.3, 0, 0.0196545, 0)
 mesh = SubResource("ArrayMesh_eopra")
 skeleton = NodePath("")
 
 [node name="Cylinder" type="MeshInstance3D" parent="lifering2Spline"]
-transform = Transform3D(0, 0.024, 0, -0.024, 0, 0, 0, 0, 0.024, 0, 0.328938, 0)
+transform = Transform3D(0, 0.024, 0, -0.024, 0, 0, 0, 0, 0.024, 0, 0.0196545, 0)
 mesh = SubResource("ArrayMesh_4ukwg")
 skeleton = NodePath("")
 
 [node name="Torus Knot 2 x 3_002" type="MeshInstance3D" parent="lifering2Spline"]
-transform = Transform3D(0.3, 0, 0, 0, 0.4, 0, 0, 0, 0.3, 0, 0.328938, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.4, 0, 0, 0, 0.3, 0, 0.0196545, 0)
 mesh = SubResource("ArrayMesh_ljxxs")
 skeleton = NodePath("")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="lifering2Spline"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="lifering2Spline/StaticBody3D"]
-transform = Transform3D(0.00166152, 0.0966261, 0, -0.638898, 0.000251287, 0, 0, 0, 0.647845, -5.96046e-08, 0.338292, -0.00339365)
-shape = SubResource("CylinderShape3D_d1a0e")
