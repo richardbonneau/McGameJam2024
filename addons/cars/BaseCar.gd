@@ -67,19 +67,26 @@ func traction(speed):
 
 func _on_customization_happened(player, type, model):
 	if not player == player_num: return
-	
 	if type == "Wheel": change_wheels(model)
 	elif type == "Body": change_body(model)
 
 func change_wheels(model:PackedScene):
+	
 	current_wheel_model = model
+	var is_creepy_limbs:bool = false
+	var limbs = [preload("res://Logic/Wheels/creepy_frontwheel_r_2.tscn"),preload("res://Logic/Wheels/creepy_backwheel_l.tscn"),preload("res://Logic/Wheels/creepy_backwheel_r.tscn")]
+	var wheel_index:int = -1
 	for node in get_children():
 		if node is VehicleWheel3D:
+			print("yo", wheel_index)
 			if node.get_children().size() > 0: node.get_child(0).queue_free()
 			var instance:Node3D = model.instantiate()
+			if is_creepy_limbs: instance = limbs[wheel_index].instantiate()
+			
 			node.add_child(instance)
 			instance.global_transform.origin = node.global_transform.origin
-		
+			if instance.name == "frontwheel_L2": is_creepy_limbs = true
+			wheel_index += 1
 
 func change_body(model:PackedScene):
 	var instance:Node3D = model.instantiate()

@@ -20,7 +20,6 @@
 [ext_resource type="PackedScene" uid="uid://chknl0ji51ww0" path="res://Art/3D/Prefabs/DestructibleProps/Brick.tscn" id="27_b2b2v"]
 [ext_resource type="PackedScene" uid="uid://drh4e7yk8285f" path="res://Art/3D/Meshes/SM_Ramp_01.glb" id="28_6pqgr"]
 [ext_resource type="PackedScene" uid="uid://cwy6gq30rsuds" path="res://Art/3D/Prefabs/SM_Maison_02.tscn" id="28_jr1sh"]
-[ext_resource type="PackedScene" uid="uid://cfuhkqsi2anll" path="res://Art/3D/Meshes/SM_Constructioncone_01.glb" id="29_0nk1f"]
 [ext_resource type="PackedScene" uid="uid://cdwk18jepqvdn" path="res://Art/3D/Meshes/DestructibleProps/SM_Concreteblock_01.glb" id="29_wbqjg"]
 [ext_resource type="PackedScene" uid="uid://c1b1htpnjtvqt" path="res://Art/3D/Meshes/SM_Trashcan_01.glb" id="33_iis3l"]
 [ext_resource type="PackedScene" uid="uid://dew1ub0hy5d07" path="res://Art/3D/Prefabs/sm_concreteblock_01.tscn" id="33_j3yqe"]
@@ -41,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://bfpql5ijpn3fm" path="res://Art/3D/Prefabs/lounge-col.tscn" id="41_6n48t"]
 [ext_resource type="PackedScene" uid="uid://b5w6okxah8pia" path="res://Art/3D/Prefabs/sm_blockadesign_012.tscn" id="41_45q0h"]
 [ext_resource type="PackedScene" uid="uid://b8aa67eq1dwba" path="res://Art/3D/Prefabs/fence_steel_col.tscn" id="41_h1k2s"]
+[ext_resource type="PackedScene" uid="uid://blla2h0fmjb18" path="res://Art/3D/Prefabs/DestructibleProps/SM_Constructioncone_01.tscn" id="41_idk2d"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_otjqn"]
 
@@ -118,7 +118,7 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 274.278, 2.07866, 600.3
 transform = Transform3D(0.10868, 0, -1.99705, 0, 2, 0, 1.99705, 0, 0.10868, 193.876, 1.25289, 562.251)
 
 [node name="SmMaison02" parent="Final_envrinment/Buildings" instance=ExtResource("28_jr1sh")]
-transform = Transform3D(3.24512e-07, 0, -1.66667, 0, 1.66667, 0, 1.66667, 0, 3.24512e-07, 133.414, 1.24257, 450.618)
+transform = Transform3D(3.24512e-07, 0, -1.66667, 0, 1.66667, 0, 1.66667, 0, 3.24512e-07, 139.008, 5.63636, 385.25)
 
 [node name="Beach" type="Node3D" parent="Final_envrinment"]
 
@@ -179,6 +179,18 @@ transform = Transform3D(0.0398938, 0, -1.49947, 0, 1.5, 0, 1.49947, 0, 0.0398938
 
 [node name="SM_Roadsign_Big_10" parent="Final_envrinment/Road/RoadSigns" instance=ExtResource("26_p0mc3")]
 transform = Transform3D(0.0398938, 0, -1.49947, 0, 1.5, 0, 1.49947, 0, 0.0398938, 171, 1, 526.204)
+
+[node name="SM_Roadsign_Big_15" parent="Final_envrinment/Road/RoadSigns" instance=ExtResource("26_p0mc3")]
+transform = Transform3D(0.838594, 0, 1.24369, 0, 1.5, 0, -1.24369, 0, 0.838594, 137.14, 1, 431.893)
+
+[node name="SM_Roadsign_Big_16" parent="Final_envrinment/Road/RoadSigns" instance=ExtResource("26_p0mc3")]
+transform = Transform3D(0.0398938, 0, -1.49947, 0, 1.5, 0, 1.49947, 0, 0.0398938, 137.14, 1, 439.993)
+
+[node name="SM_Roadsign_Big_17" parent="Final_envrinment/Road/RoadSigns" instance=ExtResource("26_p0mc3")]
+transform = Transform3D(0.0398938, 0, -1.49947, 0, 1.5, 0, 1.49947, 0, 0.0398938, 137.14, 1, 448.271)
+
+[node name="SM_Roadsign_Big_18" parent="Final_envrinment/Road/RoadSigns" instance=ExtResource("26_p0mc3")]
+transform = Transform3D(0.0398938, 0, -1.49947, 0, 1.5, 0, 1.49947, 0, 0.0398938, 137.14, 1, 456.169)
 
 [node name="SM_Roadsign_Big_11" parent="Final_envrinment/Road/RoadSigns" instance=ExtResource("26_p0mc3")]
 transform = Transform3D(0.84085, 0, -1.24216, 0, 1.5, 0, 1.24216, 0, 0.84085, 173.147, 1, 536.204)
@@ -1082,21 +1094,6 @@ transform = Transform3D(0.613644, -0.269684, 1.88433, -0.0151946, 1.97907, 0.288
 [node name="Props" type="Node3D" parent="Final_envrinment"]
 
 [node name="ConstructionCones" type="Node3D" parent="Final_envrinment/Props"]
-
-[node name="SM_Constructioncone_012" parent="Final_envrinment/Props/ConstructionCones" instance=ExtResource("29_0nk1f")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 172.72, 2.16649, 497.181)
-
-[node name="SM_Constructioncone_013" parent="Final_envrinment/Props/ConstructionCones" instance=ExtResource("29_0nk1f")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 167.166, 1.42442, 449.939)
-
-[node name="SM_Constructioncone_014" parent="Final_envrinment/Props/ConstructionCones" instance=ExtResource("29_0nk1f")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 162.708, 1.42442, 449.939)
-
-[node name="SM_Constructioncone_015" parent="Final_envrinment/Props/ConstructionCones" instance=ExtResource("29_0nk1f")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 162.708, 1.42442, 443.25)
-
-[node name="SM_Constructioncone_016" parent="Final_envrinment/Props/ConstructionCones" instance=ExtResource("29_0nk1f")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 166.327, 1.42442, 443.073)
 
 [node name="BrickBlock" type="Node3D" parent="Final_envrinment/Props"]
 transform = Transform3D(1, 0, 2.84217e-14, 0, 1, 0, -2.84217e-14, 0, 1, 5.04498, 0, 117.278)
@@ -2340,7 +2337,7 @@ size = Vector2i(1152, 322)
 render_target_update_mode = 4
 
 [node name="Player1" parent="VBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("10_xmfmd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.183, 0, 312.553)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 114.183, -1.40121, 312.553)
 
 [node name="SubViewportContainer2" type="SubViewportContainer" parent="VBoxContainer"]
 layout_mode = 2
