@@ -1,3 +1,7 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://brnq71gwp7wov"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://brnq71gwp7wov"]
+
+[ext_resource type="Texture2D" uid="uid://bvtry4ar6x5bs" path="res://Art/2D Textures/stopsign_DefaultMaterial_BaseColor.tga" id="1_gpftb"]
 
 [resource]
+albedo_texture = ExtResource("1_gpftb")
+albedo_texture_force_srgb = true

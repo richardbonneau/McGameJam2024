@@ -1,3 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://xno1uahcwr3p"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://xno1uahcwr3p"]
+
+[ext_resource type="Texture2D" uid="uid://coe0rlencul7n" path="res://Art/2D Textures/sign1_DefaultMaterial_BaseColor.tga" id="1_dhu22"]
 
 [resource]
+albedo_texture = ExtResource("1_dhu22")

@@ -1,3 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://b0t3ecc028h0t"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b0t3ecc028h0t"]
+
+[ext_resource type="Texture2D" uid="uid://d1dmxq2kth3su" path="res://Art/2D Textures/speedbump_DefaultMaterial_BaseColor.tga" id="1_41xmo"]
 
 [resource]
+albedo_texture = ExtResource("1_41xmo")
