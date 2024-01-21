@@ -20,8 +20,8 @@ var type_names : Dictionary = {
 	menu_types.ENGINE : "Engine"
 }
 
-var wheels = ["res://Art/2D/pngimg.com - car_wheel_PNG23302.png", "res://Art/2D/wheel.svg", "res://Art/2D/pngimg.com - car_wheel_PNG23302.png"]
-var bodies = ["res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png", "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png", "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png"]
+var wheels = ["res://Art/2D/lifeRing-removebg-preview.png", "res://Art/2D/wheel.svg", "res://Art/2D/pngimg.com - car_wheel_PNG23302.png"]
+var bodies = ["res://Art/2D/Screenshot_2024-01-20_155145-removebg-preview.png", "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png", "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png"]
 var engines = ["res://Art/2D/pngimg.com - engine_PNG4.png", "res://Art/2D/pngimg.com - engine_PNG4.png", "res://Art/2D/pngimg.com - engine_PNG4.png"]
 
 var type_assets : Dictionary = {

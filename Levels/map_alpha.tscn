@@ -1,0 +1,1196 @@
+[gd_scene load_steps=56 format=3 uid="uid://cbbftlbhdd4yi"]
+
+[ext_resource type="PackedScene" uid="uid://b7ol2txgmcrwf" path="res://Logic/Players/Player.tscn" id="5_3035y"]
+[ext_resource type="Texture2D" uid="uid://t6ss6jmy1fav" path="res://Art/2D Textures/Prototyping_Textures/Green/texture_01.png" id="5_b8t3f"]
+[ext_resource type="Texture2D" uid="uid://bq4k15d7oygys" path="res://Art/2D Textures/Prototyping_Textures/Dark/texture_01.png" id="6_f2ce6"]
+[ext_resource type="Texture2D" uid="uid://csfoxj3ksam8o" path="res://Art/2D Textures/Prototyping_Textures/Purple/texture_01.png" id="7_ux6wn"]
+[ext_resource type="Texture2D" uid="uid://dnoo58ob7qq5p" path="res://Art/2D Textures/Prototyping_Textures/Purple/texture_13.png" id="8_faivx"]
+[ext_resource type="Texture2D" uid="uid://cow2052lhftoh" path="res://Art/2D Textures/Prototyping_Textures/Orange/texture_13.png" id="9_q811l"]
+[ext_resource type="Texture2D" uid="uid://cnb1gdtdbrxwq" path="res://Art/2D Textures/Prototyping_Textures/Orange/texture_01.png" id="10_bpkv3"]
+[ext_resource type="Material" uid="uid://b11i6simv8xf6" path="res://Art/Shaders/Water Shader/water_mat.tres" id="11_45064"]
+[ext_resource type="Texture2D" uid="uid://crmx5h11mmb3k" path="res://Art/2D Textures/Prototyping_Textures/Red/texture_01.png" id="11_w424d"]
+[ext_resource type="Shader" path="res://Art/Shaders/Water Shader/Water.gdshader" id="12_qb13f"]
+[ext_resource type="PackedScene" path="res://Art/3D/Terrain-test123-col.glb" id="14_u1hp5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_53trb"]
+albedo_texture = ExtResource("5_b8t3f")
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_stpbc"]
+size = Vector3(33.8479, 0.709839, 536)
+
+[sub_resource type="BoxMesh" id="BoxMesh_htdcw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3jctg"]
+albedo_texture = ExtResource("6_f2ce6")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_somik"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vs40f"]
+albedo_texture = ExtResource("7_ux6wn")
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qcku4"]
+size = Vector3(1.45745, 4.2717, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dbhln"]
+albedo_texture = ExtResource("8_faivx")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8vu2j"]
+size = Vector3(1, 5.03717, 33.498)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0o107"]
+size = Vector3(1, 5.12592, 235.526)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wxhw2"]
+albedo_texture = ExtResource("7_ux6wn")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_6srqb"]
+material = SubResource("StandardMaterial3D_wxhw2")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_scbgi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1b6df"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_31w6j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gsg64"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m0rwr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hrwf2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j5434"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_3rmuq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ifs8t"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2r1r5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2uuyq"]
+albedo_texture = ExtResource("9_q811l")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_ldx5m"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_g8khp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p6dvh"]
+albedo_texture = ExtResource("10_bpkv3")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_7rtxv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1yo20"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dy46l"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_u4mdi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tgag3"]
+render_priority = 0
+shader = ExtResource("12_qb13f")
+shader_parameter/main_color = Color(0.406208, 0.78359, 0.968676, 1)
+shader_parameter/intersection_color = Color(1, 1, 1, 1)
+shader_parameter/intersection_max_threshold = 0.5
+shader_parameter/displ_amount = 0.6
+shader_parameter/near = 0.15
+shader_parameter/far = 300.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x0ckm"]
+render_priority = 0
+shader = ExtResource("12_qb13f")
+shader_parameter/main_color = Color(0.406208, 0.78359, 0.968676, 1)
+shader_parameter/intersection_color = Color(1, 1, 1, 1)
+shader_parameter/intersection_max_threshold = 0.5
+shader_parameter/displ_amount = 0.6
+shader_parameter/near = 0.15
+shader_parameter/far = 300.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_p1l5v"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oi3p3"]
+albedo_texture = ExtResource("11_w424d")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ulr4"]
+albedo_texture = ExtResource("11_w424d")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ajcdq"]
+albedo_texture = ExtResource("11_w424d")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ba24e"]
+albedo_texture = ExtResource("11_w424d")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_siiec"]
+albedo_texture = ExtResource("11_w424d")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_f3n5b"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ci7g3"]
+size = Vector3(0.758301, 1, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_at5ok"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0awv6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6o4hj"]
+albedo_texture = ExtResource("11_w424d")
+uv1_triplanar = true
+uv1_world_triplanar = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ovnhh"]
+material = SubResource("StandardMaterial3D_6o4hj")
+
+[node name="Map_Alpha" type="Node3D"]
+
+[node name="EnvironmentBaseModel" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.074, 0, 456.462)
+
+[node name="Base" type="CSGCombiner3D" parent="EnvironmentBaseModel"]
+
+[node name="Floor1" type="CSGBox3D" parent="EnvironmentBaseModel/Base"]
+transform = Transform3D(11.0604, 0, 0, 0, 1, 0, 0, 0, 1, 187.349, 1.02583, 188.32)
+size = Vector3(33.8462, 0.25, 536)
+material = SubResource("StandardMaterial3D_53trb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/Base/Floor1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.145264, -0.145081, 0.0921326)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/Base/Floor1/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.138, -0.00800002, -0.149994)
+shape = SubResource("BoxShape3D_stpbc")
+
+[node name="Road" type="CSGMesh3D" parent="EnvironmentBaseModel/Base"]
+transform = Transform3D(16, 0, 0, 0, 0.25, 0, 0, 0, 540.738, 132.68, 1.284, 190.746)
+mesh = SubResource("BoxMesh_htdcw")
+material = SubResource("StandardMaterial3D_3jctg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/Base/Road"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/Base/Road/StaticBody3D"]
+shape = SubResource("BoxShape3D_somik")
+
+[node name="SpawnSide" type="Node3D" parent="EnvironmentBaseModel"]
+
+[node name="GatePillar" type="CSGBox3D" parent="EnvironmentBaseModel/SpawnSide"]
+transform = Transform3D(1, 0, 0, 0, 1.66781, 0, 0, 0, 1, 126.23, 4.69878, -79.1571)
+size = Vector3(1.47052, 4.28894, 0.99173)
+material = SubResource("StandardMaterial3D_vs40f")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/GatePillar"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/GatePillar/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000305176, -0.000976563, 0)
+shape = SubResource("BoxShape3D_qcku4")
+
+[node name="GatePillar2" type="CSGBox3D" parent="EnvironmentBaseModel/SpawnSide"]
+transform = Transform3D(1, 0, 0, 0, 1.66781, 0, 0, 0, 1, 138.23, 4.69878, -79.1571)
+size = Vector3(1.47052, 4.28894, 0.99173)
+material = SubResource("StandardMaterial3D_vs40f")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/GatePillar2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/GatePillar2/StaticBody3D"]
+transform = Transform3D(0.999989, 0, 0, 0, 1, 0, 0, 0, 0.999989, 0.000946045, 0.00428796, 0)
+shape = SubResource("BoxShape3D_qcku4")
+
+[node name="Wall-Boundry" type="CSGBox3D" parent="EnvironmentBaseModel/SpawnSide"]
+transform = Transform3D(-4.37114e-08, 0, 3.74634, 0, 1, 0, -1, 0, -1.63758e-07, 62.7605, 3.65845, -79.1807)
+size = Vector3(1, 5.02045, 33.5)
+material = SubResource("StandardMaterial3D_dbhln")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/Wall-Boundry"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/Wall-Boundry/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00790405, -0.00217247)
+shape = SubResource("BoxShape3D_8vu2j")
+
+[node name="Wall-Boundry5" type="CSGBox3D" parent="EnvironmentBaseModel/SpawnSide"]
+transform = Transform3D(-4.37114e-08, 0, 3.74634, 0, 1, 0, -1, 0, -1.63758e-07, 2.45547, 77.2754, 468.066)
+size = Vector3(1, 5.02045, 33.5)
+material = SubResource("StandardMaterial3D_dbhln")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/Wall-Boundry5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/Wall-Boundry5/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00790405, -0.00217247)
+shape = SubResource("BoxShape3D_8vu2j")
+
+[node name="Wall-Boundry6" type="CSGBox3D" parent="EnvironmentBaseModel/SpawnSide"]
+transform = Transform3D(-4.37114e-08, 0, 3.74634, 0, 1, 0, -1, 0, -1.63758e-07, 2.45547, 77.2754, 468.066)
+size = Vector3(1, 5.02045, 33.5)
+material = SubResource("StandardMaterial3D_dbhln")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/Wall-Boundry6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/Wall-Boundry6/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00790405, -0.00217247)
+shape = SubResource("BoxShape3D_8vu2j")
+
+[node name="Wall-Boundry3" type="CSGBox3D" parent="EnvironmentBaseModel/SpawnSide"]
+transform = Transform3D(1, 0, 2.84217e-13, 0, 1, 0, -1.06581e-14, 0, 3.74634, 0.398396, 3.65845, -142.552)
+size = Vector3(1, 5.02045, 33.5)
+material = SubResource("StandardMaterial3D_dbhln")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/Wall-Boundry3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/Wall-Boundry3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00790405, -0.00217247)
+shape = SubResource("BoxShape3D_8vu2j")
+
+[node name="Wall-Boundry4" type="CSGBox3D" parent="EnvironmentBaseModel/SpawnSide"]
+transform = Transform3D(1, 0, 2.84217e-13, 0, 1, 0, -1.06581e-14, 0, 3.74634, 0.398396, 3.65845, -268.094)
+size = Vector3(1, 5.02045, 33.5)
+material = SubResource("StandardMaterial3D_dbhln")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/Wall-Boundry4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/Wall-Boundry4/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00790405, -0.00217247)
+shape = SubResource("BoxShape3D_8vu2j")
+
+[node name="Wall-Boundry2" type="CSGBox3D" parent="EnvironmentBaseModel/SpawnSide"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 256.747, 3.68229, -79.1571)
+size = Vector3(1, 5.02045, 235.507)
+material = SubResource("StandardMaterial3D_dbhln")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/Wall-Boundry2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/Wall-Boundry2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0298767, -0.00906372)
+shape = SubResource("BoxShape3D_0o107")
+
+[node name="OuterCliffBoundry" type="Node3D" parent="EnvironmentBaseModel/SpawnSide"]
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry"]
+transform = Transform3D(27.6437, -3.1643, -0.0781622, 9.31591, 9.47744, 0.0166693, 2.01184, -0.406612, 0.996801, 76.8838, 80.535, 468.508)
+mesh = SubResource("BoxMesh_6srqb")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry/MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_scbgi")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry"]
+transform = Transform3D(27.6437, -3.1643, -0.0781622, 9.31591, 9.47744, 0.0166693, 2.01184, -0.406612, 0.996801, 104.114, 89.7318, 470.29)
+mesh = SubResource("BoxMesh_6srqb")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry/MeshInstance3D2/StaticBody3D"]
+shape = SubResource("BoxShape3D_1b6df")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry"]
+transform = Transform3D(29.1253, -0.532505, -0.0709241, 1.63641, 9.97753, 0.0368372, 2.01184, -0.406612, 0.996801, 132.503, 95.2949, 471.93)
+mesh = SubResource("BoxMesh_6srqb")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry/MeshInstance3D3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry/MeshInstance3D3/StaticBody3D"]
+shape = SubResource("BoxShape3D_31w6j")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry"]
+transform = Transform3D(29.1253, -0.532505, -0.0709241, 1.63641, 9.97753, 0.0368372, 2.01184, -0.406612, 0.996801, 313.391, 94.6162, 483.737)
+mesh = SubResource("BoxMesh_6srqb")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry/MeshInstance3D5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry/MeshInstance3D5/StaticBody3D"]
+shape = SubResource("BoxShape3D_gsg64")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry"]
+transform = Transform3D(29.1253, -0.532505, -0.0709241, 1.63641, 9.97753, 0.0368372, 2.01184, -0.406612, 0.996801, 341.997, 94.6162, 483.737)
+mesh = SubResource("BoxMesh_6srqb")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry/MeshInstance3D6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry/MeshInstance3D6/StaticBody3D"]
+shape = SubResource("BoxShape3D_m0rwr")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry"]
+transform = Transform3D(22.0116, -0.664029, 0.654918, 1.63641, 9.97753, 0.0368372, -19.1786, 0.0892171, 0.754802, 366.384, 96.077, 475.065)
+mesh = SubResource("BoxMesh_6srqb")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry/MeshInstance3D7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry/MeshInstance3D7/StaticBody3D"]
+shape = SubResource("BoxShape3D_hrwf2")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry"]
+transform = Transform3D(154.39, 0.196161, -0.0479316, -2.76281, 9.47522, 0.0295891, 10.6494, -0.385675, 0.702562, 222.106, 95.7792, 477.993)
+mesh = SubResource("BoxMesh_6srqb")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry/MeshInstance3D4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/SpawnSide/OuterCliffBoundry/MeshInstance3D4/StaticBody3D"]
+shape = SubResource("BoxShape3D_j5434")
+
+[node name="Hills_Blockout" type="Node3D" parent="EnvironmentBaseModel"]
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 217.92, 48.7453, -131.303)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 272.253, 48.7453, -131.303)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 325.112, 48.7453, -131.303)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(70.7107, 0, -70.7107, 0, 100, 0, 70.7107, 0, 70.7107, 404.439, 58.4369, -114.813)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(4.45087, 0, -99.9009, 0, 100, 0, 99.9009, 0, 4.45087, 420.809, 52.9167, -43.4657)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(4.45087, 0, -99.9009, 0, 100, 0, 99.9009, 0, 4.45087, 421.395, 52.9167, 18.7141)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(4.45087, 0, -99.9009, 0, 100, 0, 99.9009, 0, 4.45087, 424.087, 52.9167, 79.1459)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(4.45087, 0, -99.9009, 0, 100, 0, 99.9009, 0, 4.45087, 427.742, 52.9167, 161.184)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(4.45087, 0, -99.9009, 0, 100, 0, 99.9009, 0, 4.45087, 430.46, 52.9167, 222.178)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(4.45087, 0, -99.9009, 0, 100, 0, 99.9009, 0, 4.45087, 432.87, 52.9167, 276.281)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(4.45087, 0, -99.9009, 0, 100, 0, 99.9009, 0, 4.45087, 434.834, 52.9167, 320.352)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(-4.45012, 0.0812509, -99.9009, -1.82551, -99.9833, 0, -99.8843, 1.8237, 4.45086, 436.749, 52.9167, 363.345)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(-4.45012, 0.0812509, -99.9009, -1.82551, -99.9833, 0, -99.8843, 1.8237, 4.45086, 424.79, 46.8284, 422.497)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(-4.45012, 0.0812509, -99.9009, -1.82551, -99.9833, 0, -99.8843, 1.8237, 4.45086, 410.683, -4.41542, 399.2)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(-4.45012, 0.0812509, -99.9009, -1.82551, -99.9833, 0, -99.8843, 1.8237, 4.45086, 393.351, -3.74184, 436.902)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(-4.45012, 0.0812509, -99.9009, -1.82551, -99.9833, 0, -99.8843, 1.8237, 4.45086, 294.177, -3.74184, 436.902)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="EnvironmentBaseModel/Hills_Blockout"]
+transform = Transform3D(-4.52943, 0.0812245, -139.869, -1.85804, -99.9508, 0, -101.664, 1.82311, 6.23154, 315.293, 34.4826, 459.427)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/Hills_Blockout/MeshInstance3D17"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/Hills_Blockout/MeshInstance3D17/StaticBody3D"]
+shape = SubResource("BoxShape3D_ifs8t")
+
+[node name="Grass_Trees_area" type="CSGMesh3D" parent="EnvironmentBaseModel"]
+transform = Transform3D(150, 0, 0, 0, 1.464, 0, 0, 0, 143.038, 296.443, 1.6178, -5.71421)
+mesh = SubResource("BoxMesh_2r1r5")
+material = SubResource("StandardMaterial3D_2uuyq")
+
+[node name="CityBlock_LessDeveloped" type="Node3D" parent="EnvironmentBaseModel"]
+
+[node name="Building" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 164.514, 8.59891, -58.8714)
+mesh = SubResource("BoxMesh_ldx5m")
+
+[node name="Building2" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 164.514, 8.59891, -40.2844)
+mesh = SubResource("BoxMesh_ldx5m")
+
+[node name="Building3" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 164.514, 8.59891, -22.9229)
+mesh = SubResource("BoxMesh_ldx5m")
+
+[node name="Building10" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 111.26, 8.59891, -58.8714)
+mesh = SubResource("BoxMesh_ldx5m")
+
+[node name="Building11" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 111.26, 8.59891, -40.2844)
+mesh = SubResource("BoxMesh_ldx5m")
+
+[node name="Building12" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 111.26, 8.59891, -22.9229)
+mesh = SubResource("BoxMesh_ldx5m")
+
+[node name="Building4" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 181.42, 8.59891, 15.523)
+mesh = SubResource("BoxMesh_ldx5m")
+
+[node name="Building5" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 181.42, 8.59891, 34.6088)
+mesh = SubResource("BoxMesh_ldx5m")
+
+[node name="Building6" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 181.42, 8.59891, 52.2848)
+mesh = SubResource("BoxMesh_ldx5m")
+
+[node name="Building7" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 112.388, 8.59891, 15.523)
+mesh = SubResource("BoxMesh_ldx5m")
+
+[node name="Building8" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 112.388, 8.59891, 34.6088)
+mesh = SubResource("BoxMesh_ldx5m")
+
+[node name="Building9" type="CSGMesh3D" parent="EnvironmentBaseModel/CityBlock_LessDeveloped"]
+transform = Transform3D(15, 0, 0, 0, 15, 0, 0, 0, 15, 112.388, 8.59891, 52.2848)
+mesh = SubResource("BoxMesh_ldx5m")
+
+[node name="Beach Area" type="Node3D" parent="EnvironmentBaseModel"]
+
+[node name="Sand" type="CSGMesh3D" parent="EnvironmentBaseModel/Beach Area"]
+transform = Transform3D(100, 0, 0, 0, 0.25, 0, 0, 0, 236.916, 50.4397, 1.17549, 40.7563)
+mesh = SubResource("BoxMesh_g8khp")
+material = SubResource("StandardMaterial3D_p6dvh")
+
+[node name="DockArea" type="CSGMesh3D" parent="EnvironmentBaseModel/Beach Area"]
+transform = Transform3D(50, 0, 0, 0, 10, 0, 0, 0, 20, 81.9097, 6.18606, 99.9869)
+mesh = SubResource("BoxMesh_7rtxv")
+
+[node name="DockArea2" type="CSGMesh3D" parent="EnvironmentBaseModel/Beach Area"]
+transform = Transform3D(50, 0, 0, 0, 10, 0, 0, 0, 20, 81.9097, 6.18606, 121.516)
+mesh = SubResource("BoxMesh_7rtxv")
+
+[node name="DockArea3" type="CSGMesh3D" parent="EnvironmentBaseModel/Beach Area"]
+transform = Transform3D(50, 0, 0, 0, 10, 0, 0, 0, 20, 81.9097, 6.18606, 143.395)
+mesh = SubResource("BoxMesh_7rtxv")
+
+[node name="Container" type="Node3D" parent="EnvironmentBaseModel/Beach Area"]
+
+[node name="Containers" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container"]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 5, 24.5442, 3.99538, 102.732)
+mesh = SubResource("BoxMesh_1yo20")
+skeleton = NodePath("../..")
+
+[node name="Containers2" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container"]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 5, 24.5442, 3.99538, 108.59)
+mesh = SubResource("BoxMesh_1yo20")
+skeleton = NodePath("../..")
+
+[node name="Containers3" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container"]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 5, 24.5442, 3.99538, 114.134)
+mesh = SubResource("BoxMesh_1yo20")
+skeleton = NodePath("../..")
+
+[node name="Containers4" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container"]
+transform = Transform3D(-4.37114e-07, 0, 5, 0, 5, 0, -10, 0, -2.18557e-07, 26.9804, 9.07068, 109.485)
+mesh = SubResource("BoxMesh_1yo20")
+skeleton = NodePath("../..")
+
+[node name="Containers5" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container"]
+transform = Transform3D(-4.37114e-07, 0, 4, 0, 5, 0, -10, 0, -1.74846e-07, 21.8336, 9.07068, 109.485)
+mesh = SubResource("BoxMesh_1yo20")
+skeleton = NodePath("../..")
+
+[node name="Container2" type="Node3D" parent="EnvironmentBaseModel/Beach Area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 36.0059)
+
+[node name="Containers" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container2"]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 5, 24.5442, 3.99538, 102.732)
+mesh = SubResource("BoxMesh_1yo20")
+skeleton = NodePath("../..")
+
+[node name="Containers2" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container2"]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 5, 24.5442, 3.99538, 108.59)
+mesh = SubResource("BoxMesh_1yo20")
+skeleton = NodePath("../..")
+
+[node name="Containers3" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container2"]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 5, 24.5442, 3.99538, 114.134)
+mesh = SubResource("BoxMesh_1yo20")
+skeleton = NodePath("../..")
+
+[node name="Containers4" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container2"]
+transform = Transform3D(-4.37114e-07, 0, 5, 0, 5, 0, -10, 0, -2.18557e-07, 26.9804, 9.07068, 109.485)
+mesh = SubResource("BoxMesh_1yo20")
+skeleton = NodePath("../..")
+
+[node name="Containers5" type="MeshInstance3D" parent="EnvironmentBaseModel/Beach Area/Container2"]
+transform = Transform3D(-4.37114e-07, 0, 4, 0, 5, 0, -10, 0, -1.74846e-07, 21.8336, 9.07068, 109.485)
+mesh = SubResource("BoxMesh_1yo20")
+skeleton = NodePath("../..")
+
+[node name="CityBlock_MoreDeveloped" type="Node3D" parent="EnvironmentBaseModel"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -23.5223)
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(23.3784, 0, 0, 0, 25.0466, 0, 0, 0, 10.0187, 197.458, 13.5885, 139.106)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 214.081, 13.7499, 139.036)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 235.438, 13.7499, 139.036)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 257.688, 13.7499, 139.036)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10.0201, 0, 0, 0, 25.0504, 0, 0, 0, 10.0201, 278.854, 13.7499, 139.036)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D29" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 298.926, 13.7499, 139.036)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D30" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 320.283, 13.7499, 139.036)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D31" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 342.533, 13.7499, 139.036)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D32" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 45, 0, 0, 0, 10, 363.699, 13.7499, 139.036)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="Stunt_Parking Building" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 80, 0, 0, 0, 34.5777, 190.908, 13.5885, 161.39)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 213.901, 13.7499, 173.657)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 235.438, 6.01114, 173.657)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D33" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(12.9692, 0, 0, 0, 19.7582, 0, 0, 0, 10, 202.401, 10.7548, 173.657)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 257.484, 13.7499, 173.657)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 278.854, 13.7499, 173.657)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D25" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 45, 0, 0, 0, 10, 301.583, 13.7499, 173.657)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D26" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(28.9012, 0, 0, 0, 30.5002, 0, 0, 0, 10, 331.819, 16.4779, 173.657)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D28" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 366.356, 13.7499, 173.657)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 190.908, 13.5885, 210.013)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 214.081, 13.7499, 209.943)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 235.438, 13.7499, 209.943)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D34" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 26.7429, 257.509, 21.2338, 191.834)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 26.3814, 0, 0, 0, 10, 257.688, 13.1517, 209.943)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 278.854, 13.7499, 209.943)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 300.89, 6.04322, 210.013)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D22" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 323.568, 13.7499, 209.943)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D23" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 345.218, 13.7499, 209.943)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="MeshInstance3D24" type="MeshInstance3D" parent="EnvironmentBaseModel/CityBlock_MoreDeveloped"]
+transform = Transform3D(10, 0, 0, 0, 25, 0, 0, 0, 10, 362.757, 13.7499, 209.943)
+mesh = SubResource("BoxMesh_dy46l")
+
+[node name="Waterfall and River" type="Node3D" parent="EnvironmentBaseModel"]
+
+[node name="Waterfall" type="CSGMesh3D" parent="EnvironmentBaseModel/Waterfall and River"]
+transform = Transform3D(134.335, 0, 0, 0, 43.79, -7.74231, 0, 20.9168, 16.2088, 309.037, 49.3234, 393.343)
+mesh = SubResource("CylinderMesh_u4mdi")
+material = ExtResource("11_45064")
+
+[node name="WaterfallDropBase" type="CSGMesh3D" parent="EnvironmentBaseModel/Waterfall and River"]
+transform = Transform3D(137.888, 0, 0, 0, 3.11609, -19.9392, 0, 39.8784, 1.55804, 305.369, 2.40844, 374.928)
+mesh = SubResource("CylinderMesh_u4mdi")
+material = SubResource("ShaderMaterial_tgag3")
+
+[node name="WaterfallDropCollectionBase" type="CSGMesh3D" parent="EnvironmentBaseModel/Waterfall and River"]
+transform = Transform3D(89.0728, 14.8125, 0.803057, 0, 2.18719, -19.4205, -55.553, 23.7502, 1.28761, 292.893, 3.52781, 324.079)
+mesh = SubResource("CylinderMesh_u4mdi")
+material = SubResource("ShaderMaterial_x0ckm")
+
+[node name="WaterfallToRiver" type="CSGMesh3D" parent="EnvironmentBaseModel/Waterfall and River"]
+transform = Transform3D(37.2793, 15.3382, 0.714637, -4.82371e-07, 1.86801, -14.2546, -31.1825, 18.3371, 0.854363, 268.837, 0.631134, 296.68)
+mesh = SubResource("BoxMesh_p1l5v")
+material = SubResource("StandardMaterial3D_oi3p3")
+
+[node name="River" type="CSGMesh3D" parent="EnvironmentBaseModel/Waterfall and River"]
+transform = Transform3D(11.7722, 66.8462, 0.447116, -3.36748e-07, 6.1613, -6.74989, -18.8154, 41.8237, 0.279747, 245.8, 3.90401, 278.394)
+mesh = SubResource("BoxMesh_p1l5v")
+material = SubResource("StandardMaterial3D_3ulr4")
+
+[node name="River2" type="CSGMesh3D" parent="EnvironmentBaseModel/Waterfall and River"]
+transform = Transform3D(6.49611, 75.5796, 0.233465, -0.260457, 3.13594, -6.76467, -21.2212, 23.0975, 0.154493, 180.929, -0.140624, 249.554)
+mesh = SubResource("BoxMesh_p1l5v")
+material = SubResource("StandardMaterial3D_ajcdq")
+
+[node name="River3" type="CSGMesh3D" parent="EnvironmentBaseModel/Waterfall and River"]
+transform = Transform3D(6.48261, 75.6434, -0.00902161, -0.493006, 0.426372, -6.76869, -21.2212, 23.0975, 0.154493, 109.576, -1.8325, 228.166)
+mesh = SubResource("BoxMesh_p1l5v")
+material = SubResource("StandardMaterial3D_ba24e")
+
+[node name="River4" type="CSGMesh3D" parent="EnvironmentBaseModel/Waterfall and River"]
+transform = Transform3D(4.37204, 77.5426, 0.00864082, 0.185701, -0.0300058, -6.77023, -21.759, 15.5804, -0.0560439, 34.9975, -2.11625, 209.159)
+mesh = SubResource("BoxMesh_p1l5v")
+material = SubResource("StandardMaterial3D_siiec")
+
+[node name="Rocks" type="Node3D" parent="EnvironmentBaseModel/Waterfall and River"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 351.16, 6.01147, 289.929)
+
+[node name="Rocks" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19256, -0.463805, 0.330896)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks2" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.82676, -0.463805, -0.747208)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks3" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57681, -0.463805, -1.45376)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks4" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.61018, -0.463805, -1.45376)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks5" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.62792, -0.463805, -1.27201)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks6" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.10293, -0.382682, -0.865936)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks7" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.12996, -0.382682, -0.865936)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks8" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -6.76884, -0.411315, -1.64594)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks9" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -7.819, -0.437189, -1.52481)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks10" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -8.51935, -0.40407, -1.64492)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks11" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -9.32083, -0.40407, -2.18624)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks12" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -9.98061, -0.40407, -2.3536)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks13" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -10.7826, -0.40407, -2.67352)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks14" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -11.4928, -0.487427, -3.04752)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks15" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -11.4928, -0.487427, -0.173754)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks16" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -10.7736, -0.487427, 0.5581)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks17" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -10.7736, -0.487427, 2.0886)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks18" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -10.7736, -0.487427, 2.69655)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks19" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -11.5331, -0.502697, 3.38546)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks20" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -11.5331, -0.502697, 4.38993)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks21" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -11.5331, -0.502697, 5.45245)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks22" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -11.5331, -0.502697, 6.42408)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks23" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -11.5331, -0.502697, 7.24677)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks24" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -11.5331, -0.502697, 8.06885)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="Rocks25" type="MeshInstance3D" parent="EnvironmentBaseModel/Waterfall and River/Rocks"]
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, -11.5331, -0.502697, 8.94555)
+mesh = SubResource("BoxMesh_f3n5b")
+skeleton = NodePath("../..")
+
+[node name="StuntJumpCliff" type="Node3D" parent="EnvironmentBaseModel"]
+visible = false
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="EnvironmentBaseModel/StuntJumpCliff"]
+transform = Transform3D(-4.52943, 0.0812244, -139.869, -32.5937, -94.6935, 1.88931, -96.3159, 32.0409, 5.93823, 7.45221, -9.56797, 380.554)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="EnvironmentBaseModel/StuntJumpCliff"]
+transform = Transform3D(-4.52943, 0.0812245, -139.869, -1.85804, -99.9508, 0, -101.664, 1.82311, 6.23154, 11.3123, 18.7176, 484.985)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D22" type="MeshInstance3D" parent="EnvironmentBaseModel/StuntJumpCliff"]
+transform = Transform3D(-4.52943, 0.0812244, -139.869, -35.7675, -93.5798, 2.08505, -95.1829, 35.1612, 5.87237, 10.9905, 1.15825, 409.069)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="MeshInstance3D23" type="MeshInstance3D" parent="EnvironmentBaseModel/StuntJumpCliff"]
+transform = Transform3D(-3.51654, -2.93897, -139.863, -77.5098, 64.7883, 1.01708, 65.8747, 76.0745, -6.26951, 5.58398, -4.44973, 317.588)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="EnvironmentBaseModel/StuntJumpCliff/MeshInstance3D23"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="EnvironmentBaseModel/StuntJumpCliff/MeshInstance3D23/StaticBody3D"]
+transform = Transform3D(0.898342, 0.439272, -0.00667428, -0.439172, 0.898311, 0.0131787, 0.0117845, -0.00890768, 0.999891, 0.0663028, -0.206694, 0.0150803)
+shape = SubResource("BoxShape3D_ci7g3")
+
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="EnvironmentBaseModel/StuntJumpCliff"]
+transform = Transform3D(-1.85804, -99.9508, -3.8147e-06, 101.664, -1.8231, -6.23154, 4.52943, -0.0812263, 139.869, 69.5461, 41.6706, 376.146)
+mesh = SubResource("PrismMesh_3rmuq")
+skeleton = NodePath("../../SpawnSide")
+
+[node name="Trees_ForestArea" type="Node3D" parent="EnvironmentBaseModel"]
+
+[node name="Trees" type="Node3D" parent="EnvironmentBaseModel/Trees_ForestArea"]
+
+[node name="TreesMeshInstance3D" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 168.112, 5.91236, 423.163)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D2" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 185.977, 5.91236, 423.163)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D3" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 205.555, 5.91236, 423.163)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D4" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 223.245, 5.91236, 423.163)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D31" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 168.112, 5.91236, 446.266)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D32" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 185.977, 5.91236, 446.266)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D33" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 205.555, 5.91236, 446.266)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D34" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 223.245, 5.91236, 446.266)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D5" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 168.112, 5.91236, 401.835)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D6" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 185.977, 5.91236, 401.835)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D7" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 205.555, 5.91236, 401.835)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D8" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 223.245, 5.91236, 401.835)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D9" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 168.112, 5.91236, 381.183)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D10" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 185.977, 5.91236, 381.183)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D11" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 205.555, 5.91236, 381.183)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D12" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 223.245, 5.91236, 381.183)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D13" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 168.112, 5.91236, 364.762)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D14" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 185.977, 5.91236, 364.762)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D15" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 205.555, 5.91236, 364.762)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D16" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 223.245, 5.91236, 364.762)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D17" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 168.112, 5.91236, 345.815)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D21" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 150.597, 5.91236, 423.163)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D22" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 150.597, 5.91236, 401.835)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D23" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 150.597, 5.91236, 381.183)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D24" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 150.597, 5.91236, 364.762)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D25" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 150.597, 5.91236, 345.815)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D26" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 132.103, 5.91236, 423.163)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D35" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 150.722, 6.00935, 446.201)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D36" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 132.228, 6.00935, 446.201)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D27" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 132.103, 5.91236, 401.835)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D28" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 132.103, 5.91236, 381.183)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D29" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 132.103, 5.91236, 364.762)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D30" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 132.103, 5.91236, 345.815)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D18" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 185.977, 5.91236, 345.815)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D19" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 205.555, 5.91236, 345.815)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="TreesMeshInstance3D20" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Trees"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 223.245, 5.91236, 345.815)
+mesh = SubResource("CylinderMesh_at5ok")
+skeleton = NodePath("../..")
+
+[node name="Grass" type="Node3D" parent="EnvironmentBaseModel/Trees_ForestArea"]
+
+[node name="GrassMesh" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 180.193, 1.64801, 339.08)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh2" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 180.193, 1.64801, 352.674)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh23" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 180.193, 1.64801, 372.962)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh24" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 180.193, 1.64801, 392.348)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh25" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 181.086, 2.17824, 415.871)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh26" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 179.021, 6.10276, 428.689)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh3" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 194.761, 1.64801, 352.674)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh4" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 194.761, 1.64801, 338.332)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh19" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 194.761, 1.64801, 367.195)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh20" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 194.761, 1.64801, 397.959)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh21" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 194.761, 1.64801, 428.125)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh22" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 194.761, 1.64801, 446.697)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh5" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 212.572, 1.64801, 338.332)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh13" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 212.572, 1.64801, 358.359)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh14" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 212.572, 1.64801, 377.593)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh15" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 212.572, 1.64801, 398.276)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh16" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 212.572, 1.64801, 420.04)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh17" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 212.572, 1.64801, 447.05)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh18" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 212.572, 1.64801, 447.05)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh6" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 159.228, 1.64801, 338.332)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh7" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 142.064, 1.64801, 338.332)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh8" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 142.064, 1.64801, 356.329)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh9" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 142.064, 1.64801, 390.14)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh10" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 142.064, 1.64801, 414.577)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh11" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 142.064, 1.64801, 436.635)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="GrassMesh12" type="MeshInstance3D" parent="EnvironmentBaseModel/Trees_ForestArea/Grass"]
+transform = Transform3D(3, 0, 0, 0, 2, 0, 0, 0, 1, 142.064, 1.64801, 436.635)
+mesh = SubResource("BoxMesh_0awv6")
+
+[node name="Ocean" type="Node3D" parent="EnvironmentBaseModel"]
+
+[node name="Ocean" type="MeshInstance3D" parent="EnvironmentBaseModel/Ocean"]
+transform = Transform3D(250, 0, 0, 0, 10, 0, 0, 0, 600, -248.756, 0, 278.519)
+mesh = SubResource("PlaneMesh_ovnhh")
+
+[node name="Player" parent="." instance=ExtResource("5_3035y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 161.024, 3.34794, 462.715)
+
+[node name="Terrain-test123-col" parent="." instance=ExtResource("14_u1hp5")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 165.303, 1.22766, 710.067)

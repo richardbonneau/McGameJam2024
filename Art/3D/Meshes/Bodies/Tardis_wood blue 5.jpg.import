@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bi3p7nplpvfc4"
+uid="uid://b4jruy7h7v585"
 path.s3tc="res://.godot/imported/Tardis_wood blue 5.jpg-a2ed45c8589e44652959ecc7a7482a21.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
