@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://dslk3p0i4c6sp"]
+[gd_scene load_steps=80 format=3 uid="uid://dslk3p0i4c6sp"]
 
 [ext_resource type="Texture2D" uid="uid://t6ss6jmy1fav" path="res://Art/2D Textures/Prototyping_Textures/Green/texture_01.png" id="1_pv02d"]
 [ext_resource type="Texture2D" uid="uid://csfoxj3ksam8o" path="res://Art/2D Textures/Prototyping_Textures/Purple/texture_01.png" id="3_hj63j"]
@@ -28,7 +28,14 @@
 [ext_resource type="PackedScene" uid="uid://ctf303i6yrtxo" path="res://Art/3D/Prefabs/sm_roadsign_big_01.tscn" id="26_p0mc3"]
 [ext_resource type="Shader" path="res://Art/Shaders/GrassShader/grass.gdshader" id="27_cb2ck"]
 [ext_resource type="ArrayMesh" path="res://Art/Shaders/GrassShader/Grass_Stylized.res" id="27_jpoju"]
+[ext_resource type="PackedScene" uid="uid://drh4e7yk8285f" path="res://Art/3D/Meshes/SM_Ramp_01.glb" id="28_6pqgr"]
+[ext_resource type="PackedScene" uid="uid://cfuhkqsi2anll" path="res://Art/3D/Meshes/SM_Constructioncone_01.glb" id="29_0nk1f"]
 [ext_resource type="PackedScene" uid="uid://cubpyr83q7g1y" path="res://Art/3D/Meshes/fence-steel-col.glb" id="29_h02el"]
+[ext_resource type="PackedScene" uid="uid://we5ac4kcjtse" path="res://Art/3D/Meshes/SM_Speedbump_01.glb" id="32_4tc1b"]
+[ext_resource type="PackedScene" uid="uid://c1b1htpnjtvqt" path="res://Art/3D/Meshes/SM_Trashcan_01.glb" id="33_iis3l"]
+[ext_resource type="PackedScene" uid="uid://bbp7plmbiahgr" path="res://Art/3D/Prefabs/SM_Sign_01.tscn" id="34_vhlht"]
+[ext_resource type="PackedScene" uid="uid://dymdolkmjxvoh" path="res://Art/3D/Meshes/Beach/Props/beach-towel.glb" id="35_wdxr7"]
+[ext_resource type="PackedScene" uid="uid://dhi5xwppqnwqu" path="res://Art/3D/Meshes/Beach/Props/beach-ball.glb" id="36_eufhf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u75fd"]
 albedo_texture = ExtResource("1_pv02d")
@@ -1061,6 +1068,15 @@ transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, 60.788
 [node name="building-dock-col" parent="Final_envrinment/Beach" instance=ExtResource("17_dgyxr")]
 transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 123.73, 1.12477, 581.374)
 
+[node name="beach-towel" parent="Final_envrinment/Beach" instance=ExtResource("35_wdxr7")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 60.5559, 1.22768, 480.105)
+
+[node name="beach-towel2" parent="Final_envrinment/Beach" instance=ExtResource("35_wdxr7")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 60.5559, 1.22768, 484.386)
+
+[node name="beach-towel3" parent="Final_envrinment/Beach" instance=ExtResource("35_wdxr7")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 36.446, 1.22768, 488.352)
+
 [node name="Road" type="Node3D" parent="Final_envrinment"]
 
 [node name="FullRoad-col" parent="Final_envrinment/Road" instance=ExtResource("24_48na8")]
@@ -1079,6 +1095,27 @@ transform = Transform3D(5.54329e-07, 0, -1.5, 0, 1.5, 0, 1.5, 0, 5.54329e-07, 29
 
 [node name="SM_Roadsign_Big_04" parent="Final_envrinment/Road/RoadSigns" instance=ExtResource("26_p0mc3")]
 transform = Transform3D(5.54329e-07, 0, -1.5, 0, 1.5, 0, 1.5, 0, 5.54329e-07, 291.615, 1, 633.456)
+
+[node name="SM_Speedbump_012" parent="Final_envrinment/Road" instance=ExtResource("32_4tc1b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 164.763, 1.45895, 508.3)
+
+[node name="SM_Speedbump_013" parent="Final_envrinment/Road" instance=ExtResource("32_4tc1b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 155.016, 1.45895, 508.3)
+
+[node name="SM_Speedbump_014" parent="Final_envrinment/Road" instance=ExtResource("32_4tc1b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 155.016, 1.45895, 556.305)
+
+[node name="SM_Speedbump_015" parent="Final_envrinment/Road" instance=ExtResource("32_4tc1b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 165.443, 1.45895, 556.305)
+
+[node name="SM_Trashcan_01" parent="Final_envrinment/Road" instance=ExtResource("33_iis3l")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 180.975, 2.16648, 544.219)
+
+[node name="SM_Trashcan_02" parent="Final_envrinment/Road" instance=ExtResource("33_iis3l")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 180.975, 2.16648, 505.553)
+
+[node name="Sm_Sign_01" parent="Final_envrinment/Road" instance=ExtResource("34_vhlht")]
+transform = Transform3D(0.914614, 0, 0.404328, 0, 1, 0, -0.404328, 0, 0.914614, 175.355, 2.16649, 586.936)
 
 [node name="Waterfall" type="Node3D" parent="Final_envrinment"]
 
@@ -2159,6 +2196,39 @@ transform = Transform3D(2.35489, -0.463121, 0, 0.463121, 2.35489, 0, 0, 0, 2.4, 
 [node name="fence-steel-col28" parent="Final_envrinment/Fences" instance=ExtResource("29_h02el")]
 transform = Transform3D(2.35489, -0.463121, 0, 0.463121, 2.35489, 0, 0, 0, 2.4, 332.947, 9.73261, 612.547)
 
+[node name="Ramps" type="Node3D" parent="Final_envrinment"]
+
+[node name="SM_Ramp_012" parent="Final_envrinment/Ramps" instance=ExtResource("28_6pqgr")]
+transform = Transform3D(2.11004, 0, -2.13255, 0, 3, 0, 2.13255, 0, 2.11004, 355.362, 28.6305, 563.12)
+
+[node name="SM_Ramp_013" parent="Final_envrinment/Ramps" instance=ExtResource("28_6pqgr")]
+transform = Transform3D(-1.73508, -0.151158, 0.983178, -0.0261387, 1.98302, 0.258749, -0.994386, 0.211626, -1.72233, 215.772, 33.8153, 805.968)
+
+[node name="SM_Ramp_015" parent="Final_envrinment/Ramps" instance=ExtResource("28_6pqgr")]
+transform = Transform3D(-2.91763, 0.124971, -0.686868, -0.0129196, 2.94137, 0.59004, 0.698025, 0.576799, -2.86008, 416.203, 50.5132, 884.082)
+
+[node name="SM_Ramp_014" parent="Final_envrinment/Ramps" instance=ExtResource("28_6pqgr")]
+transform = Transform3D(0.613644, -0.269684, 1.88433, -0.0151946, 1.97907, 0.288191, -1.90347, -0.102739, 0.605173, 185.472, 38.0954, 887.669)
+
+[node name="Props" type="Node3D" parent="Final_envrinment"]
+
+[node name="ConstructionCones" type="Node3D" parent="Final_envrinment/Props"]
+
+[node name="SM_Constructioncone_012" parent="Final_envrinment/Props/ConstructionCones" instance=ExtResource("29_0nk1f")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 172.72, 2.16649, 497.181)
+
+[node name="SM_Constructioncone_013" parent="Final_envrinment/Props/ConstructionCones" instance=ExtResource("29_0nk1f")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 167.166, 1.42442, 449.939)
+
+[node name="SM_Constructioncone_014" parent="Final_envrinment/Props/ConstructionCones" instance=ExtResource("29_0nk1f")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 162.708, 1.42442, 449.939)
+
+[node name="SM_Constructioncone_015" parent="Final_envrinment/Props/ConstructionCones" instance=ExtResource("29_0nk1f")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 162.708, 1.42442, 443.25)
+
+[node name="SM_Constructioncone_016" parent="Final_envrinment/Props/ConstructionCones" instance=ExtResource("29_0nk1f")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 166.327, 1.42442, 443.073)
+
 [node name="Grass" type="MultiMeshInstance3D" parent="."]
 material_override = SubResource("ShaderMaterial_oqlfl")
 multimesh = SubResource("MultiMesh_3osn4")
@@ -2184,3 +2254,6 @@ multimesh = SubResource("MultiMesh_3osn4")
 [node name="GrassPlane" type="MeshInstance3D" parent="Grass/Grass3"]
 transform = Transform3D(49.5824, -6.44843, 0, 6.44843, 49.5824, 0, 0, 0, 50, 285.335, 5.03514, 507.004)
 mesh = SubResource("PlaneMesh_x56fu")
+
+[node name="beach-ball" parent="." instance=ExtResource("36_eufhf")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 60.8355, 1.76367, 490.171)
