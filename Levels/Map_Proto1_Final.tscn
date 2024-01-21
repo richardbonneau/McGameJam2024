@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://d3etd2gg2qv1x"]
+[gd_scene load_steps=17 format=3 uid="uid://d3etd2gg2qv1x"]
 
 [ext_resource type="PackedScene" uid="uid://dsi7wqtnaek1q" path="res://Levels/map-proto-final.glb" id="1_xvnwl"]
 [ext_resource type="PackedScene" uid="uid://b7ol2txgmcrwf" path="res://Logic/Players/Player.tscn" id="2_oeo7p"]
+[ext_resource type="Script" path="res://Singletons/GameManager.gd" id="3_am8kc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_fr723"]
 size = Vector3(177.092, 1, 215.806)
@@ -139,6 +140,7 @@ transform = Transform3D(0.994837, 0.0860791, 0.0537547, -0.0389161, 0.812765, -0
 shape = SubResource("BoxShape3D_7gaeo")
 
 [node name="Player1" parent="." instance=ExtResource("2_oeo7p")]
+script = ExtResource("3_am8kc")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.890014, -0.115851, -0.440969, 0.455933, 0.226149, 0.860803, 0, -0.967179, 0.254096, 0, 0, 0)

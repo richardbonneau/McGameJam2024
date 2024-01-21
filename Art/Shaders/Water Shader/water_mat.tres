@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://b11i6simv8xf6"]
+
+[ext_resource type="Shader" path="res://Art/Shaders/Water Shader/waterfall.gdshader" id="1_cx0f0"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_cx0f0")
+shader_parameter/top_light_color = null
+shader_parameter/top_dark_color = null
+shader_parameter/bot_light_color = null
+shader_parameter/bot_dark_color = null
+shader_parameter/displ_amount = 0.02
+shader_parameter/bottom_foam_threshold = 0.48
+shader_parameter/speed = 0.25
