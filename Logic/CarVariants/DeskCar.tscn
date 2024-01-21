@@ -790,9 +790,8 @@ center_of_mass = Vector3(0, -0.1, 0)
 max_contacts_reported = 20
 contact_monitor = true
 script = ExtResource("1_q62ek")
-STEER_SPEED = 1.0
-STEER_LIMIT = 0.5
-engine_force_value = 150
+STEER_SPEED = 2.0
+STEER_LIMIT = 0.8
 
 [node name="PointingArrow" parent="." instance=ExtResource("2_u774e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.02599, 0)
