@@ -107,6 +107,14 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4, 0,
 [node name="BehindCam" type="Camera3D" parent="look"]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -3.95542)
 
+[node name="CustomCamBody" type="Camera3D" parent="look"]
+unique_name_in_owner = true
+transform = Transform3D(-0.829023, -0.257348, 0.49648, 0.0108717, 0.880233, 0.474418, -0.559108, 0.398701, -0.726936, 1.7582, 0.537433, -2.58927)
+
+[node name="CustomCamWheels" type="Camera3D" parent="look"]
+unique_name_in_owner = true
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.1638, -0.480769, 0.0661142)
+
 [node name="Hud" type="CanvasLayer" parent="."]
 layer = 2
 
