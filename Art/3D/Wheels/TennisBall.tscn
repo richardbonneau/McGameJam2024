@@ -79,7 +79,7 @@ _data = {
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_3yul4"]
 
-[node name="TennisBall" type="Node2D"]
+[node name="TennisBall" type="Node3D"]
 
 [node name="TennisBall" type="Node3D" parent="."]
 
