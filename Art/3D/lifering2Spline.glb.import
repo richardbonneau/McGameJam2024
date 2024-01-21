@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b08s24p4aht3g"
-path="res://.godot/imported/lifering2Spline.glb-b28888317a8caedf499875de77455aea.scn"
+path="res://.godot/imported/lifering2Spline.glb-cc45a5683da6ddb11d0db0529dcfb01c.scn"
 
 [deps]
 
-source_file="res://Art/3D/Meshes/Wheels/lifering2Spline.glb"
-dest_files=["res://.godot/imported/lifering2Spline.glb-b28888317a8caedf499875de77455aea.scn"]
+source_file="res://Art/3D/lifering2Spline.glb"
+dest_files=["res://.godot/imported/lifering2Spline.glb-cc45a5683da6ddb11d0db0529dcfb01c.scn"]
 
 [params]
 
