@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c70rq2ly2rgxi"
-path="res://.godot/imported/SM_Bathtub_01.glb-57b187598f830cb67c7d72af8c951485.scn"
+path="res://.godot/imported/SM_bathtub_01.glb-581edbcdcaaf06e3d8b3783c599780a0.scn"
 
 [deps]
 
-source_file="res://Art/3D/Meshes/Bodies/SM_Bathtub_01.glb"
-dest_files=["res://.godot/imported/SM_Bathtub_01.glb-57b187598f830cb67c7d72af8c951485.scn"]
+source_file="res://Art/3D/Meshes/Bodies/SM_bathtub_01.glb"
+dest_files=["res://.godot/imported/SM_bathtub_01.glb-581edbcdcaaf06e3d8b3783c599780a0.scn"]
 
 [params]
 

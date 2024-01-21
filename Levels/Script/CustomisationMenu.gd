@@ -38,6 +38,12 @@ var parts = {
 		"avatar": "res://Art/2D/79a61c0f5e18328537e1a765859b3d5b.png",
 		"model":preload("res://Logic/Wheels/creepy_frontwheel_l_2.tscn")
 	},
+		{
+		"name": "Pizza",
+		"avatar": "res://Art/2D/pngimg.com - car_wheel_PNG23302.png",
+		"model": preload("res://Art/3D/Wheels/Pizza.tscn")
+	},
+	
 ],
 	MenuTypes.BODY:[
 	{
@@ -59,6 +65,11 @@ var parts = {
 		"name": "BeanCar",
 		"avatar": "res://Art/2D/pizza.png",
 		"model": preload("res://Logic/CarVariants/BeanCar.tscn")
+	},
+	{
+		"name": "BathMobile",
+		"avatar": "res://Art/2D/pizza.png",
+		"model": preload("res://Logic/CarVariants/BathMobile.tscn")
 	},
 	
 ]
@@ -103,11 +114,11 @@ func display_avatars():
 	else: first_avatar = load(parts[current_menu][part_indexes[current_menu] -1].avatar)
 	
 	second_avatar = load(parts[current_menu][part_indexes[current_menu]].avatar)
-
+	
 	if part_indexes[current_menu] > parts[current_menu].size() - 2:
 		third_avatar = load(parts[current_menu][0].avatar)
 	else: third_avatar = load(parts[current_menu][part_indexes[current_menu] +1].avatar)
-	
+	print(parts[current_menu])
 	Obj_1.texture_normal = first_avatar
 	Obj_2.texture_normal = second_avatar
 	Obj_3.texture_normal = third_avatar
@@ -130,16 +141,22 @@ func _on_back_menu_pressed():
 
 
 func _on_button_5_pressed():
-	if part_indexes[current_menu] > 0: part_indexes[current_menu] -= 1
-	else: part_indexes[current_menu] = parts[current_menu][part_indexes[current_menu]].size()
+	if part_indexes[current_menu] > 0: 
+		part_indexes[current_menu] -= 1
+	else: 
+		part_indexes[current_menu] = parts[current_menu][part_indexes[current_menu]].size() + 1
 	_on_apply_change_to_car_pressed()
 	print("part_indexes[current_menu] part_indexes[current_menu] ",part_indexes[current_menu])
 	display_avatars()
 
 
 func _on_button_4_pressed():
-	if part_indexes[current_menu] < parts[current_menu][part_indexes[current_menu]].size(): part_indexes[current_menu] += 1
-	else: part_indexes[current_menu] = 0
+	if part_indexes[current_menu] < parts[current_menu][part_indexes[current_menu]].size(): 
+		print(1)
+		part_indexes[current_menu] += 1
+	else: 
+		print(2)
+		part_indexes[current_menu] = 0
 	_on_apply_change_to_car_pressed()
 	print("part_indexes[current_menu]",part_indexes[current_menu])
 	display_avatars()
