@@ -34,6 +34,23 @@ theme_override_font_sizes/font_size = 50
 text = "x2"
 horizontal_alignment = 1
 
+[node name="TimeLeft" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1138.0
+offset_top = 12.0
+offset_right = -1081.0
+offset_bottom = 81.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 50
+horizontal_alignment = 1
+
 [node name="CustomisationMenu" parent="." instance=ExtResource("4_0x6yg")]
 
 [node name="DeskCar" parent="." instance=ExtResource("3_i04co")]
+
+[node name="MainTimer" type="Timer" parent="."]
+wait_time = 90.0
+one_shot = true
