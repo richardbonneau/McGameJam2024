@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dslk3p0i4c6sp"]
+[gd_scene load_steps=45 format=3 uid="uid://dslk3p0i4c6sp"]
 
 [ext_resource type="Material" uid="uid://b11i6simv8xf6" path="res://Art/Shaders/Water Shader/water_mat.tres" id="7_abi5m"]
 [ext_resource type="PackedScene" uid="uid://b7ol2txgmcrwf" path="res://Logic/Players/Player.tscn" id="10_xmfmd"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://we5ac4kcjtse" path="res://Art/3D/Meshes/SM_Speedbump_01.glb" id="32_4tc1b"]
 [ext_resource type="PackedScene" uid="uid://c1b1htpnjtvqt" path="res://Art/3D/Meshes/SM_Trashcan_01.glb" id="33_iis3l"]
 [ext_resource type="PackedScene" uid="uid://dew1ub0hy5d07" path="res://Art/3D/Prefabs/sm_concreteblock_01.tscn" id="33_j3yqe"]
+[ext_resource type="PackedScene" uid="uid://bd5yvcdut8fd5" path="res://Art/3D/Prefabs/SM_Trashcan_01.tscn" id="34_4fh3p"]
 [ext_resource type="PackedScene" uid="uid://d253mw8a7bc8q" path="res://Art/3D/Prefabs/DestructibleProps/Barrel.tscn" id="34_ed4ko"]
 [ext_resource type="PackedScene" uid="uid://b5c2tgy36dak5" path="res://terrain_test_123_col.tscn" id="34_ooqed"]
 [ext_resource type="PackedScene" uid="uid://bbp7plmbiahgr" path="res://Art/3D/Prefabs/SM_Sign_01.tscn" id="34_vhlht"]
@@ -35,6 +36,8 @@
 [ext_resource type="PackedScene" uid="uid://cxhto27saxqj6" path="res://Art/3D/Prefabs/DestructibleProps/Cone.tscn" id="35_342ly"]
 [ext_resource type="PackedScene" uid="uid://dymdolkmjxvoh" path="res://Art/3D/Meshes/Beach/Props/beach-towel.glb" id="35_wdxr7"]
 [ext_resource type="PackedScene" uid="uid://dhi5xwppqnwqu" path="res://Art/3D/Meshes/Beach/Props/beach-ball.glb" id="36_eufhf"]
+[ext_resource type="PackedScene" uid="uid://c2gpwc7tqyar8" path="res://Art/3D/Meshes/DestructibleProps/Cone.glb" id="37_477rn"]
+[ext_resource type="PackedScene" uid="uid://b2s7gas16ulhy" path="res://Art/3D/Meshes/DestructibleProps/SM_Roadsign_Big_01.glb" id="38_l68fl"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_otjqn"]
 
@@ -106,7 +109,7 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 274.278, 2.07866, 600.3
 transform = Transform3D(0.10868, 0, -1.99705, 0, 2, 0, 1.99705, 0, 0.10868, 193.876, 1.25289, 562.251)
 
 [node name="SmMaison02" parent="Final_envrinment/Buildings" instance=ExtResource("28_jr1sh")]
-transform = Transform3D(3.24512e-07, 0, -1.66667, 0, 1.66667, 0, 1.66667, 0, 3.24512e-07, 133.414, 2.79243, 450.618)
+transform = Transform3D(3.24512e-07, 0, -1.66667, 0, 1.66667, 0, 1.66667, 0, 3.24512e-07, 133.414, 1.24257, 450.618)
 
 [node name="Beach" type="Node3D" parent="Final_envrinment"]
 
@@ -2333,6 +2336,489 @@ transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07,
 [node name="Brick160" parent="Final_envrinment/Props/BrickBlock" instance=ExtResource("27_b2b2v")]
 transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 1.25731, 423.756)
 
+[node name="BrickBlock2" type="Node3D" parent="Final_envrinment/Props"]
+transform = Transform3D(1, 0, 2.84217e-14, 0, 1, 0, -2.84217e-14, 0, 1, 213.654, -1.23978e-05, 203.109)
+
+[node name="Brick" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 1.22966, 421.127)
+
+[node name="Brick2" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 2.61101, 421.127)
+
+[node name="Brick3" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 2.61101, 423.756)
+
+[node name="Brick5" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 4.05348, 421.127)
+
+[node name="Brick6" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 4.05348, 423.756)
+
+[node name="Brick7" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 5.46307, 421.127)
+
+[node name="Brick8" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 5.46307, 423.756)
+
+[node name="Brick9" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 6.98139, 421.127)
+
+[node name="Brick10" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 6.98139, 423.756)
+
+[node name="Brick11" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 8.44389, 421.127)
+
+[node name="Brick12" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 8.44389, 423.756)
+
+[node name="Brick13" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 9.75943, 421.127)
+
+[node name="Brick14" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 9.75943, 423.756)
+
+[node name="Brick15" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 11.1816, 421.127)
+
+[node name="Brick16" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 11.1816, 423.756)
+
+[node name="Brick17" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 1.22966, 426.449)
+
+[node name="Brick18" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 2.61101, 426.449)
+
+[node name="Brick19" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 1.22735, 429.078)
+
+[node name="Brick20" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 4.05348, 426.449)
+
+[node name="Brick21" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 2.55193, 429.078)
+
+[node name="Brick22" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 5.46307, 426.449)
+
+[node name="Brick23" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 4.07511, 429.078)
+
+[node name="Brick24" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 6.98139, 426.449)
+
+[node name="Brick25" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 5.51516, 429.078)
+
+[node name="Brick26" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 8.44389, 426.449)
+
+[node name="Brick27" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 6.93258, 429.078)
+
+[node name="Brick28" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 9.75943, 426.449)
+
+[node name="Brick29" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 8.41187, 429.078)
+
+[node name="Brick30" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 11.1816, 426.449)
+
+[node name="Brick31" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 9.88378, 429.078)
+
+[node name="Brick32" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 11.1933, 429.078)
+
+[node name="Brick4" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 92.5631, 1.25731, 423.756)
+
+[node name="Brick33" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 1.22966, 421.127)
+
+[node name="Brick34" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 2.61101, 421.127)
+
+[node name="Brick35" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 2.61101, 423.756)
+
+[node name="Brick36" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 4.05348, 421.127)
+
+[node name="Brick37" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 4.05348, 423.756)
+
+[node name="Brick38" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 5.46307, 421.127)
+
+[node name="Brick39" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 5.46307, 423.756)
+
+[node name="Brick40" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 6.98139, 421.127)
+
+[node name="Brick41" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 6.98139, 423.756)
+
+[node name="Brick42" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 8.44389, 421.127)
+
+[node name="Brick43" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 8.44389, 423.756)
+
+[node name="Brick44" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 9.75943, 421.127)
+
+[node name="Brick45" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 9.75943, 423.756)
+
+[node name="Brick46" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 11.1816, 421.127)
+
+[node name="Brick47" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 11.1816, 423.756)
+
+[node name="Brick48" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 1.22966, 426.449)
+
+[node name="Brick49" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 2.61101, 426.449)
+
+[node name="Brick50" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 1.22735, 429.078)
+
+[node name="Brick51" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 4.05348, 426.449)
+
+[node name="Brick52" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 2.55193, 429.078)
+
+[node name="Brick53" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 5.46307, 426.449)
+
+[node name="Brick54" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 4.07511, 429.078)
+
+[node name="Brick55" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 6.98139, 426.449)
+
+[node name="Brick56" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 5.51516, 429.078)
+
+[node name="Brick57" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 8.44389, 426.449)
+
+[node name="Brick58" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 6.93258, 429.078)
+
+[node name="Brick59" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 9.75943, 426.449)
+
+[node name="Brick60" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 8.41187, 429.078)
+
+[node name="Brick61" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 11.1816, 426.449)
+
+[node name="Brick62" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 9.88377, 429.078)
+
+[node name="Brick63" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 11.1933, 429.078)
+
+[node name="Brick64" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 90.8369, 1.25731, 423.756)
+
+[node name="Brick65" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 1.22966, 421.127)
+
+[node name="Brick66" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 2.61101, 421.127)
+
+[node name="Brick67" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 2.61101, 423.756)
+
+[node name="Brick68" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 4.05348, 421.127)
+
+[node name="Brick69" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 4.05348, 423.756)
+
+[node name="Brick70" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 5.46307, 421.127)
+
+[node name="Brick71" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 5.46307, 423.756)
+
+[node name="Brick72" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 6.98139, 421.127)
+
+[node name="Brick73" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 6.98139, 423.756)
+
+[node name="Brick74" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 8.44389, 421.127)
+
+[node name="Brick75" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 8.44389, 423.756)
+
+[node name="Brick76" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 9.75943, 421.127)
+
+[node name="Brick77" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 9.75943, 423.756)
+
+[node name="Brick78" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 11.1816, 421.127)
+
+[node name="Brick79" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 11.1816, 423.756)
+
+[node name="Brick80" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 1.22966, 426.449)
+
+[node name="Brick81" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 2.61101, 426.449)
+
+[node name="Brick82" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 1.22735, 429.078)
+
+[node name="Brick83" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 4.05348, 426.449)
+
+[node name="Brick84" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 2.55193, 429.078)
+
+[node name="Brick85" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 5.46307, 426.449)
+
+[node name="Brick86" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 4.07511, 429.078)
+
+[node name="Brick87" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 6.98139, 426.449)
+
+[node name="Brick88" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 5.51516, 429.078)
+
+[node name="Brick89" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 8.44389, 426.449)
+
+[node name="Brick90" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 6.93258, 429.078)
+
+[node name="Brick91" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 9.75943, 426.449)
+
+[node name="Brick92" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 8.41187, 429.078)
+
+[node name="Brick93" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 11.1816, 426.449)
+
+[node name="Brick94" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 9.88377, 429.078)
+
+[node name="Brick95" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 11.1933, 429.078)
+
+[node name="Brick96" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 89.1653, 1.25731, 423.756)
+
+[node name="Brick97" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 1.22966, 421.127)
+
+[node name="Brick98" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 2.61101, 421.127)
+
+[node name="Brick99" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 2.61101, 423.756)
+
+[node name="Brick100" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 4.05348, 421.127)
+
+[node name="Brick101" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 4.05348, 423.756)
+
+[node name="Brick102" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 5.46307, 421.127)
+
+[node name="Brick103" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 5.46307, 423.756)
+
+[node name="Brick104" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 6.98139, 421.127)
+
+[node name="Brick105" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 6.98139, 423.756)
+
+[node name="Brick106" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 8.44389, 421.127)
+
+[node name="Brick107" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 8.44389, 423.756)
+
+[node name="Brick108" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 9.75943, 421.127)
+
+[node name="Brick109" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 9.75943, 423.756)
+
+[node name="Brick110" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 11.1816, 421.127)
+
+[node name="Brick111" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 11.1816, 423.756)
+
+[node name="Brick112" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 1.22966, 426.449)
+
+[node name="Brick113" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 2.61101, 426.449)
+
+[node name="Brick114" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 1.22735, 429.078)
+
+[node name="Brick115" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 4.05348, 426.449)
+
+[node name="Brick116" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 2.55193, 429.078)
+
+[node name="Brick117" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 5.46307, 426.449)
+
+[node name="Brick118" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 4.07511, 429.078)
+
+[node name="Brick119" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 6.98139, 426.449)
+
+[node name="Brick120" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 5.51516, 429.078)
+
+[node name="Brick121" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 8.44389, 426.449)
+
+[node name="Brick122" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 6.93258, 429.078)
+
+[node name="Brick123" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 9.75943, 426.449)
+
+[node name="Brick124" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 8.41187, 429.078)
+
+[node name="Brick125" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 11.1816, 426.449)
+
+[node name="Brick126" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 9.88377, 429.078)
+
+[node name="Brick127" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 11.1933, 429.078)
+
+[node name="Brick128" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 87.4116, 1.25731, 423.756)
+
+[node name="Brick129" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 1.22966, 421.127)
+
+[node name="Brick130" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 2.61101, 421.127)
+
+[node name="Brick131" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 2.61101, 423.756)
+
+[node name="Brick132" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 4.05348, 421.127)
+
+[node name="Brick133" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 4.05348, 423.756)
+
+[node name="Brick134" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 5.46307, 421.127)
+
+[node name="Brick135" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 5.46307, 423.756)
+
+[node name="Brick136" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 6.98139, 421.127)
+
+[node name="Brick137" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 6.98139, 423.756)
+
+[node name="Brick138" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 8.44389, 421.127)
+
+[node name="Brick139" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 8.44389, 423.756)
+
+[node name="Brick140" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 9.75943, 421.127)
+
+[node name="Brick141" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 9.75943, 423.756)
+
+[node name="Brick142" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 11.1816, 421.127)
+
+[node name="Brick143" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 11.1816, 423.756)
+
+[node name="Brick144" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 1.22966, 426.449)
+
+[node name="Brick145" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 2.61101, 426.449)
+
+[node name="Brick146" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 1.22735, 429.078)
+
+[node name="Brick147" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 4.05348, 426.449)
+
+[node name="Brick148" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 2.55193, 429.078)
+
+[node name="Brick149" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 5.46307, 426.449)
+
+[node name="Brick150" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 4.07511, 429.078)
+
+[node name="Brick151" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 6.98139, 426.449)
+
+[node name="Brick152" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 5.51516, 429.078)
+
+[node name="Brick153" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 8.44389, 426.449)
+
+[node name="Brick154" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 6.93258, 429.078)
+
+[node name="Brick155" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 9.75943, 426.449)
+
+[node name="Brick156" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 8.41187, 429.078)
+
+[node name="Brick157" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 11.1816, 426.449)
+
+[node name="Brick158" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 9.88377, 429.078)
+
+[node name="Brick159" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 11.1933, 429.078)
+
+[node name="Brick160" parent="Final_envrinment/Props/BrickBlock2" instance=ExtResource("27_b2b2v")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 85.7041, 1.25731, 423.756)
+
 [node name="SM_Concreteblock_012" parent="Final_envrinment/Props" instance=ExtResource("29_wbqjg")]
 transform = Transform3D(-0.252599, -0.0643254, 3.32313, 0.65548, 3.26629, 0.11305, -3.25847, 0.66204, -0.23487, 334.436, 28.1754, 394.52)
 
@@ -2384,6 +2870,69 @@ transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07,
 [node name="Cone10" parent="Final_envrinment/Props" instance=ExtResource("35_342ly")]
 transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 124.07, 1.22764, 532.213)
 
+[node name="Barrel5" parent="Final_envrinment/Props" instance=ExtResource("34_ed4ko")]
+transform = Transform3D(-0.666667, 0, -1.00664e-07, 0, 0.666667, 0, 1.00664e-07, 0, -0.666667, 179.407, 2.40642, 408.536)
+
+[node name="Barrel6" parent="Final_envrinment/Props" instance=ExtResource("34_ed4ko")]
+transform = Transform3D(2.91409e-08, 0.666667, -1.00664e-07, 0.666667, -2.91409e-08, 0, -4.40016e-15, -1.00664e-07, -0.666667, 180.208, 3.14284, 408.536)
+
+[node name="SmTrashcan01" parent="Final_envrinment/Props" instance=ExtResource("34_4fh3p")]
+transform = Transform3D(-1.66667, 0, -2.5166e-07, 0, 1.66667, 0, 2.5166e-07, 0, -1.66667, 172.319, 2.16649, 444.313)
+
+[node name="SmTrashcan02" parent="Final_envrinment/Props" instance=ExtResource("34_4fh3p")]
+transform = Transform3D(-1.66667, 0, -2.5166e-07, 0, 1.66667, 0, 2.5166e-07, 0, -1.66667, 172.319, 2.16649, 476.255)
+
+[node name="SmTrashcan03" parent="Final_envrinment/Props" instance=ExtResource("34_4fh3p")]
+transform = Transform3D(-1.66667, 0, -2.5166e-07, 0, 1.66667, 0, 2.5166e-07, 0, -1.66667, 176.605, 2.16649, 591.565)
+
+[node name="Cone11" parent="Final_envrinment/Props" instance=ExtResource("37_477rn")]
+transform = Transform3D(-0.663489, -0.0644939, -0.00816702, -0.0650089, 0.658233, 0.0833526, 1.00184e-07, 0.0837517, -0.661385, 181.202, 4.82798, 386.182)
+
+[node name="Cone12" parent="Final_envrinment/Props" instance=ExtResource("37_477rn")]
+transform = Transform3D(-0.663489, -0.0644939, -0.00816702, -0.0650089, 0.658233, 0.0833526, 1.00184e-07, 0.0837517, -0.661385, 181.202, 5.36852, 382.617)
+
+[node name="Cone13" parent="Final_envrinment/Props" instance=ExtResource("37_477rn")]
+transform = Transform3D(-0.663489, -0.0644939, -0.00816702, -0.0650089, 0.658233, 0.0833526, 1.00184e-07, 0.0837517, -0.661385, 181.202, 6.07395, 378.798)
+
+[node name="Cone14" parent="Final_envrinment/Props" instance=ExtResource("37_477rn")]
+transform = Transform3D(-0.663489, -0.0644939, -0.00816702, -0.0650089, 0.658233, 0.0833526, 1.00184e-07, 0.0837517, -0.661385, 181.202, 4.32196, 389.849)
+
+[node name="Cone15" parent="Final_envrinment/Props" instance=ExtResource("37_477rn")]
+transform = Transform3D(-0.663489, -0.0644939, -0.00816702, -0.0649518, 0.661166, 0.0555488, 0.00272579, 0.0560797, -0.664298, 181.202, 3.80768, 393.757)
+
+[node name="Cone16" parent="Final_envrinment/Props" instance=ExtResource("37_477rn")]
+transform = Transform3D(-0.663489, -0.0644939, -0.00816702, -0.0649518, 0.661166, 0.0555488, 0.00272579, 0.0560797, -0.664298, 181.202, 3.28569, 397.708)
+
+[node name="Cone17" parent="Final_envrinment/Props" instance=ExtResource("37_477rn")]
+transform = Transform3D(-0.663489, -0.0644939, -0.00816702, -0.0649518, 0.661166, 0.0555488, 0.00272579, 0.0560797, -0.664298, 181.202, 2.83482, 401.959)
+
+[node name="SM_Concreteblock_015" parent="Final_envrinment/Props" instance=ExtResource("29_wbqjg")]
+transform = Transform3D(-2.89791, 0, 1.64718, 0, 3.33333, 0, -1.64718, 0, -2.89791, 180.545, 0.904623, 643.906)
+
+[node name="SM_Roadsign_Big_01" parent="Final_envrinment/Props" instance=ExtResource("38_l68fl")]
+transform = Transform3D(0.603911, -3.67116e-08, -2.25383, 0.234846, 2.32063, 0.0629267, 2.24156, -0.24313, 0.600624, 298.63, 42.4273, 929.174)
+
+[node name="SM_Roadsign_Big_02" parent="Final_envrinment/Props" instance=ExtResource("38_l68fl")]
+transform = Transform3D(0.30713, 0.0669662, -2.31206, 0.0955582, 2.33, 0.0801794, 2.31106, -0.105241, 0.303949, 299.547, 44.6799, 942.491)
+
+[node name="SM_Roadsign_Big_03" parent="Final_envrinment/Props" instance=ExtResource("38_l68fl")]
+transform = Transform3D(-0.889546, 0.110615, -2.15428, 0.0955582, 2.33, 0.0801794, 2.155, -0.0576579, -0.892804, 299.547, 45.8104, 955.51)
+
+[node name="SM_Roadsign_Big_04" parent="Final_envrinment/Props" instance=ExtResource("38_l68fl")]
+transform = Transform3D(-1.28718, 0.119635, -1.9425, 0.0955582, 2.33, 0.0801794, 1.94383, -0.0353211, -1.29024, 293.288, 46.6058, 968.115)
+
+[node name="SM_Roadsign_Big_05" parent="Final_envrinment/Props" instance=ExtResource("38_l68fl")]
+transform = Transform3D(-1.28718, 0.119635, -1.9425, 0.0955582, 2.33, 0.0801794, 1.94383, -0.0353211, -1.29024, 285.234, 46.9027, 980.308)
+
+[node name="SM_Concreteblock_016" parent="Final_envrinment/Props" instance=ExtResource("29_wbqjg")]
+transform = Transform3D(-2.81112, -0.0269743, 1.79109, 0.0425618, 3.33101, 0.116967, -1.79079, 0.121512, -2.80881, 368.68, 29.0888, 561.046)
+
+[node name="SM_Concreteblock_017" parent="Final_envrinment/Props" instance=ExtResource("29_wbqjg")]
+transform = Transform3D(-1.53911, -0.0841164, 2.95553, 0.0425618, 3.33101, 0.116967, -2.95643, 0.0917453, -1.53696, 363.9, 29.0888, 555.341)
+
+[node name="SM_Concreteblock_018" parent="Final_envrinment/Props" instance=ExtResource("29_wbqjg")]
+transform = Transform3D(-1.53911, -0.0841164, 2.95553, 0.0425618, 3.33101, 0.116967, -2.95643, 0.0917453, -1.53696, 359.462, 29.0888, 547.046)
+
 [node name="Terrain-test123-col2" parent="Final_envrinment" instance=ExtResource("34_ooqed")]
 transform = Transform3D(10, 0, -5.68434e-14, 0, 10, 0, 5.68434e-14, 0, 10, 165.303, 1.22766, 710.067)
 
@@ -2424,8 +2973,14 @@ player_index = 1
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_2pnem")
 
-[node name="Barrel" parent="." instance=ExtResource("34_ed4ko")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 109.361, -3.11262, 335.684)
+[node name="Cone" parent="." instance=ExtResource("37_477rn")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 103.9, 6.31108, 215.313)
 
-[node name="Barrel2" parent="." instance=ExtResource("34_ed4ko")]
-transform = Transform3D(-8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, 109.121, -2.8917, 335.684)
+[node name="Cone2" parent="." instance=ExtResource("37_477rn")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 102.025, 6.41522, 214.89)
+
+[node name="Cone3" parent="." instance=ExtResource("37_477rn")]
+transform = Transform3D(0.234662, 0, -0.186906, 0, 0.3, 0, 0.186906, 0, 0.234662, 100.062, 6.41522, 214.89)
+
+[node name="Cone4" parent="." instance=ExtResource("37_477rn")]
+transform = Transform3D(0.234662, 0, -0.186906, 0, 0.3, 0, 0.186906, 0, 0.234662, 98.1272, 6.41522, 213.861)
