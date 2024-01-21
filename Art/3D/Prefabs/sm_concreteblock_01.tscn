@@ -1,15 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dew1ub0hy5d07"]
+[gd_scene load_steps=3 format=3 uid="uid://dew1ub0hy5d07"]
 
 [ext_resource type="PackedScene" uid="uid://cdwk18jepqvdn" path="res://Art/3D/Meshes/DestructibleProps/SM_Concreteblock_01.glb" id="1_ch2iu"]
-[ext_resource type="Material" path="res://Art/2D Textures/M_Concreteblock_01.tres" id="2_so0k6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bl27j"]
 size = Vector3(61.607, 208.544, 133.479)
 
 [node name="SM_Concreteblock_012" instance=ExtResource("1_ch2iu")]
-
-[node name="SM_Concreteblock_01" parent="Node" index="0"]
-surface_material_override/0 = ExtResource("2_so0k6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Node/SM_Concreteblock_01" index="0"]
 

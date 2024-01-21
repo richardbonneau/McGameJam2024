@@ -1,3 +1,6 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://cxqifykpaimsx"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cxqifykpaimsx"]
+
+[ext_resource type="Texture2D" uid="uid://csa3fp2gjpghk" path="res://Art/2D Textures/roadsign_big_DefaultMaterial_BaseColor.tga" id="1_j4d42"]
 
 [resource]
+albedo_texture = ExtResource("1_j4d42")
