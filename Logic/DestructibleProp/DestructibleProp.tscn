@@ -14,7 +14,7 @@ script = ExtResource("1_dpk2n")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-max_contacts_reported = 1
+max_contacts_reported = 10
 contact_monitor = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
