@@ -29,6 +29,9 @@ var type_assets : Dictionary = {
 
 @onready var player_num = get_parent().get_parent().player_index+1
 
+func _ready():
+	GameManager.GamePhaseChange.connect(_on_game_phase_change)
+
 func _on_next_menu_pressed():
 	current_menu += 1
 	if(current_menu == menu_types.size()):
@@ -79,3 +82,11 @@ func _on_button_4_pressed():
 func changeCar():
 	pass
 	#car.changeStuff = obj2
+
+func _on_ready_pressed():
+	GameManager.player_ready(player_num-1)
+	$Ready.disabled = true
+
+func _on_game_phase_change(new_phase):
+	if new_phase == GameManager.GamePhases.READY or new_phase == GameManager.GamePhases.GAME: 
+		get_parent().queue_free()

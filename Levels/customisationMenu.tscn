@@ -13,11 +13,6 @@
 [node name="CustomisationMenu" type="Node3D"]
 script = ExtResource("1_vmirn")
 
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.80696, 0.183487, -0.56138, 0, 0.950516, 0.310677, 0.590606, -0.250704, 0.767028, 0, 43.5687, 0)
-shadow_enabled = true
-directional_shadow_max_distance = 200.0
-
 [node name="CustomisationMenuUI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -134,7 +129,24 @@ flat = true
 icon_alignment = 1
 expand_icon = true
 
+[node name="Ready" type="Button" parent="CustomisationMenuUI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -186.0
+offset_top = -96.0
+offset_right = -30.0
+offset_bottom = -19.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "Ready"
+
 [connection signal="pressed" from="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer2/Button5" to="CustomisationMenuUI" method="_on_button_5_pressed"]
 [connection signal="pressed" from="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer2/Button4" to="CustomisationMenuUI" method="_on_button_4_pressed"]
 [connection signal="pressed" from="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer/BackMenu" to="CustomisationMenuUI" method="_on_back_menu_pressed"]
 [connection signal="pressed" from="CustomisationMenuUI/MarginContainer/VBoxContainer/HBoxContainer/NextMenu" to="CustomisationMenuUI" method="_on_next_menu_pressed"]
+[connection signal="pressed" from="CustomisationMenuUI/Ready" to="CustomisationMenuUI" method="_on_ready_pressed"]
