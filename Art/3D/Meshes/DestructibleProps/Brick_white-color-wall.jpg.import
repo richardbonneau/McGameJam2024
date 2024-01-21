@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bk4uklnljg5br"
-path.s3tc="res://.godot/imported/Brick_white-color-wall.jpg-7ba6b9e10db7e6164d45d52d9abf4903.s3tc.ctex"
+path.s3tc="res://.godot/imported/Brick_white-color-wall.jpg-c76c517422b24f5f2e012c51d68d84bd.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Art/3D/DestructibleProps/Brick_white-color-wall.jpg"
-dest_files=["res://.godot/imported/Brick_white-color-wall.jpg-7ba6b9e10db7e6164d45d52d9abf4903.s3tc.ctex"]
+source_file="res://Art/3D/Meshes/DestructibleProps/Brick_white-color-wall.jpg"
+dest_files=["res://.godot/imported/Brick_white-color-wall.jpg-c76c517422b24f5f2e012c51d68d84bd.s3tc.ctex"]
 
 [params]
 

@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://d0h0lgs8n0mkd"
-path="res://.godot/imported/Barrel.glb-101186ff7e500e5bcb508c0f70440385.scn"
+path="res://.godot/imported/Barrel.glb-b95d21125e8b0af0fea70ecc6b118f4e.scn"
 
 [deps]
 
-source_file="res://Art/3D/DestructibleProps/Barrel.glb"
-dest_files=["res://.godot/imported/Barrel.glb-101186ff7e500e5bcb508c0f70440385.scn"]
+source_file="res://Art/3D/Meshes/DestructibleProps/Barrel.glb"
+dest_files=["res://.godot/imported/Barrel.glb-b95d21125e8b0af0fea70ecc6b118f4e.scn"]
 
 [params]
 

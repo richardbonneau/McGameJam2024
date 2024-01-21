@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cdwk18jepqvdn"
-path="res://.godot/imported/SM_Concreteblock_01.glb-2b1211e87e95c83b54f2f6cc132a65f1.scn"
+path="res://.godot/imported/SM_Concreteblock_01.glb-5de31e7797c5b244b34dc5b89f8aacd9.scn"
 
 [deps]
 
-source_file="res://Art/3D/Meshes/SM_Concreteblock_01.glb"
-dest_files=["res://.godot/imported/SM_Concreteblock_01.glb-2b1211e87e95c83b54f2f6cc132a65f1.scn"]
+source_file="res://Art/3D/Meshes/DestructibleProps/SM_Concreteblock_01.glb"
+dest_files=["res://.godot/imported/SM_Concreteblock_01.glb-5de31e7797c5b244b34dc5b89f8aacd9.scn"]
 
 [params]
 

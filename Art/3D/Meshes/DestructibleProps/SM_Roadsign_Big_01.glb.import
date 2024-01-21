@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b2s7gas16ulhy"
-path="res://.godot/imported/SM_Roadsign_Big_01.glb-b6505458ce2fa771baa830edd36e12f6.scn"
+path="res://.godot/imported/SM_Roadsign_Big_01.glb-9746bdde84b93453423523eca2dea7ff.scn"
 
 [deps]
 
-source_file="res://Art/3D/Meshes/SM_Roadsign_Big_01.glb"
-dest_files=["res://.godot/imported/SM_Roadsign_Big_01.glb-b6505458ce2fa771baa830edd36e12f6.scn"]
+source_file="res://Art/3D/Meshes/DestructibleProps/SM_Roadsign_Big_01.glb"
+dest_files=["res://.godot/imported/SM_Roadsign_Big_01.glb-9746bdde84b93453423523eca2dea7ff.scn"]
 
 [params]
 

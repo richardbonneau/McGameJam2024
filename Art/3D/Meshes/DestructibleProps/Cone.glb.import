@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c2gpwc7tqyar8"
-path="res://.godot/imported/Cone.glb-c0ee5a3ca364f26123d26e34f368a5cb.scn"
+path="res://.godot/imported/Cone.glb-98613415559777d54dd93eacba809efe.scn"
 
 [deps]
 
-source_file="res://Art/3D/DestructibleProps/Cone.glb"
-dest_files=["res://.godot/imported/Cone.glb-c0ee5a3ca364f26123d26e34f368a5cb.scn"]
+source_file="res://Art/3D/Meshes/DestructibleProps/Cone.glb"
+dest_files=["res://.godot/imported/Cone.glb-98613415559777d54dd93eacba809efe.scn"]
 
 [params]
 
