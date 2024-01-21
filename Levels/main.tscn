@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://budh13b2gu3b0"]
+[gd_scene load_steps=13 format=3 uid="uid://budh13b2gu3b0"]
 
 [ext_resource type="Texture2D" uid="uid://cpwiyoo7664vj" path="res://addons/cars/Models/texture_10.png" id="2_ho6lt"]
 [ext_resource type="PackedScene" uid="uid://cq0s7u8yng7bi" path="res://Logic/DestructibleProp/DestructibleProp.tscn" id="3_icc3y"]
 [ext_resource type="PackedScene" uid="uid://b7ol2txgmcrwf" path="res://Logic/Players/Player.tscn" id="3_tgjuq"]
 [ext_resource type="Script" path="res://UI/UI.gd" id="4_hak0q"]
 [ext_resource type="PackedScene" uid="uid://bbp7plmbiahgr" path="res://Art/3D/Prefabs/SM_Sign_01.tscn" id="5_ooaeu"]
+[ext_resource type="PackedScene" uid="uid://cubpyr83q7g1y" path="res://Art/3D/Meshes/fence-steel-col.glb" id="6_5xwcm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_b7tlo"]
 sky_top_color = Color(0.419608, 0.54902, 0.619608, 1)
@@ -251,3 +252,6 @@ script = ExtResource("4_hak0q")
 
 [node name="Sm_Sign_01" parent="." instance=ExtResource("5_ooaeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.25277, 0.0102715, -16.8319)
+
+[node name="fence-steel-col" parent="." instance=ExtResource("6_5xwcm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.47876, -4.76837e-06, -4.5057)
