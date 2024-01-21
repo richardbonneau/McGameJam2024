@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://cmrscb6xwujy0"]
+[gd_scene load_steps=15 format=3 uid="uid://cmrscb6xwujy0"]
 
 [ext_resource type="Material" uid="uid://brnq71gwp7wov" path="res://Art/2D Textures/sm_stopsign_01.tres" id="1_b46d8"]
+[ext_resource type="PackedScene" uid="uid://8vgtlaja8723" path="res://Logic/PropsCollisioin/PropsCollision.tscn" id="1_i3l4o"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_rn3mp"]
 size = Vector3(21.2764, 19.3329, 350.778)
@@ -124,6 +125,10 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_q1d2j")
 
 [node name="SM_Stopsign_01" type="Node3D"]
+
+[node name="PropsCollision" parent="." node_paths=PackedStringArray("props") instance=ExtResource("1_i3l4o")]
+transform = Transform3D(2.593, 0, 0, 0, 3, 0, 0, 0, 2.512, 0, 3.07123, 0)
+props = [NodePath("../SM_signstand_012/Node/StaticBody3D"), NodePath("../SM_signweight_01/Node/RigidBody3D"), NodePath("../SM_sign_052/Node/RigidBody3D")]
 
 [node name="SM_signstand_012" type="Node3D" parent="."]
 
