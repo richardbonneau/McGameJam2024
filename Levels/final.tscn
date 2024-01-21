@@ -31,7 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://c1b1htpnjtvqt" path="res://Art/3D/Meshes/SM_Trashcan_01.glb" id="33_iis3l"]
 [ext_resource type="PackedScene" uid="uid://b5c2tgy36dak5" path="res://terrain_test_123_col.tscn" id="34_ooqed"]
 [ext_resource type="PackedScene" uid="uid://bbp7plmbiahgr" path="res://Art/3D/Prefabs/SM_Sign_01.tscn" id="34_vhlht"]
-[ext_resource type="PackedScene" uid="uid://bkxeeebkr36rx" path="res://Art/Shaders/Water Shader/plane_test_col.tscn" id="35_5s006"]
+[ext_resource type="PackedScene" path="res://Art/Shaders/Water Shader/plane_test_col.tscn" id="35_5s006"]
 [ext_resource type="PackedScene" uid="uid://dymdolkmjxvoh" path="res://Art/3D/Meshes/Beach/Props/beach-towel.glb" id="35_wdxr7"]
 [ext_resource type="PackedScene" uid="uid://dhi5xwppqnwqu" path="res://Art/3D/Meshes/Beach/Props/beach-ball.glb" id="36_eufhf"]
 
@@ -175,7 +175,7 @@ material = SubResource("StandardMaterial3D_6o4hj")
 [node name="Final" type="Node3D"]
 
 [node name="EnvironmentBaseModel" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.074, 0, 456.462)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 137.109, -3.83455, 1.78309)
 visible = false
 
 [node name="Base" type="CSGCombiner3D" parent="EnvironmentBaseModel"]
@@ -960,10 +960,8 @@ mesh = SubResource("BoxMesh_4lcae")
 transform = Transform3D(250, 0, 0, 0, 10, 0, 0, 0, 600, -248.756, 0, 278.519)
 mesh = SubResource("PlaneMesh_fatal")
 
-[node name="Player" parent="." instance=ExtResource("10_xmfmd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135.361, 10.1652, 470.555)
-
 [node name="Final_envrinment" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 163.183, -3.83455, 458.245)
 
 [node name="Buildings" type="Node3D" parent="Final_envrinment"]
 
@@ -2696,7 +2694,40 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 162.708, 1.42442, 443.2
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 166.327, 1.42442, 443.073)
 
 [node name="beach-ball" parent="." instance=ExtResource("36_eufhf")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 60.8355, 1.76367, 490.171)
+transform = Transform3D(-3, 0, 2.62268e-07, 0, 3, 0, -2.62268e-07, 0, -3, 102.348, -2.07088, -31.9259)
 
 [node name="Terrain-test123-col2" parent="." instance=ExtResource("34_ooqed")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 165.303, 1.22766, 710.067)
+transform = Transform3D(-10, 0, 8.74228e-07, 0, 10, 0, -8.74228e-07, 0, -10, -2.1196, -2.60689, -251.822)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(1152, 322)
+render_target_update_mode = 4
+
+[node name="Player1" parent="VBoxContainer/SubViewportContainer/SubViewport" instance=ExtResource("10_xmfmd")]
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="VBoxContainer/SubViewportContainer2"]
+handle_input_locally = false
+size = Vector2i(1152, 322)
+render_target_update_mode = 4
+
+[node name="Player2" parent="VBoxContainer/SubViewportContainer2/SubViewport" instance=ExtResource("10_xmfmd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+player_index = 1
