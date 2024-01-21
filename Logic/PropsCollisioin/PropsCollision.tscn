@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://8vgtlaja8723"]
+
+[ext_resource type="Script" path="res://Logic/PropsCollisioin/PropsCollision.gd" id="1_g6qwj"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_b6awc"]
+
+[node name="PropsCollision" type="Area3D"]
+priority = 1
+script = ExtResource("1_g6qwj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_b6awc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
