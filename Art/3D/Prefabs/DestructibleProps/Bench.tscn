@@ -80,31 +80,33 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_2748j")
 
-[node name="Bench" type="Node3D"]
+[node name="Bench" type="Node2D"]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="Bench" type="Node3D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Bench"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bench/StaticBody3D"]
 transform = Transform3D(2.15412, 0, 0, 0, 0.720487, 0, 0, 0, 6.02222, 2.53374, 1.57298, -0.00544965)
 shape = SubResource("BoxShape3D_0527a")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Bench/StaticBody3D"]
 transform = Transform3D(0.499448, 0, 0, 0, 1.472, 0, 0, 0, 5.96098, 1.64926, 2.63511, 0)
 shape = SubResource("BoxShape3D_rwgpq")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Bench/StaticBody3D"]
 transform = Transform3D(-0.185695, 1.34729, 0, -0.765582, -0.32679, 0, 0, 0, 6.17129, 0.89098, 3.4532, 0)
 shape = SubResource("BoxShape3D_eo3ct")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Bench/StaticBody3D"]
 transform = Transform3D(2.72257, 0, 0, 0, 1.17267, 0, 0, 0, 0.324694, 2.59277, 0.598245, 2.59269)
 shape = SubResource("BoxShape3D_oqchh")
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Bench/StaticBody3D"]
 transform = Transform3D(2.61663, 0, 0, 0, 1.14337, 0, 0, 0, 0.260379, 2.59744, 0.627384, -2.60907)
 shape = SubResource("BoxShape3D_1q5wn")
 
-[node name="Torus" type="MeshInstance3D" parent="."]
+[node name="Torus" type="MeshInstance3D" parent="Bench"]
 transform = Transform3D(0, 0, -1.1, -0.9, 0, 0, 0, 0.6, 0, 2.6, -0.000476182, 2.61755)
 mesh = SubResource("ArrayMesh_q8ojk")
 skeleton = NodePath("")

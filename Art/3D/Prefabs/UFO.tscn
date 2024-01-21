@@ -306,7 +306,7 @@ shadow_mesh = SubResource("ArrayMesh_aj6jf")
 [node name="Ufo" type="Node2D"]
 
 [node name="UFO" type="Node3D" parent="."]
-transform = Transform3D(1.00006, 0, 0, 0, 1.00006, 0, 0, 0, 1.00006, -0.00614834, -0.0258188, 0.0194311)
+transform = Transform3D(1.00006, 0, 0, 0, 1.00006, 0, 0, 0, 1.00006, 0.0183585, -0.0364842, 0.040967)
 
 [node name="Sphere" type="MeshInstance3D" parent="UFO"]
 transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0)
