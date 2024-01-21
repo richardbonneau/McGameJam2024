@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b60j82xf7y0bb"]
+
+[ext_resource type="PackedScene" uid="uid://drjqcovnbxahm" path="res://Art/3D/Meshes/SM_Maison_03.glb" id="1_bo8q2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kfca4"]
+size = Vector3(32.4357, 30.398, 26.7174)
+
+[node name="SmMaison03" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.281342, 14.699, 0.146805)
+shape = SubResource("BoxShape3D_kfca4")
+
+[node name="SM_Maison_03" parent="StaticBody3D" instance=ExtResource("1_bo8q2")]
