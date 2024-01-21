@@ -911,7 +911,7 @@ size = Vector3(1, 0.973877, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_3t636"]
 size = Vector3(1.17859, 1, 1)
 
-[node name="BeachChair" type="Node2D"]
+[node name="BeachChair" type="Node3D"]
 
 [node name="BeachChair" type="Node3D" parent="."]
 
