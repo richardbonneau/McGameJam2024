@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://dexoj0ju4vh1n" path="res://Art/3D/Meshes/Beach/LifeGaurd/lifegaurd-col.glb" id="15_kf8v2"]
 [ext_resource type="PackedScene" uid="uid://bcgqf2rr1ve5d" path="res://Art/3D/Meshes/Beach/Dock/building-dock-col.glb" id="17_dgyxr"]
 [ext_resource type="PackedScene" uid="uid://cuo2ajiqv3ypw" path="res://Art/3D/Meshes/Buildings/BigBuilding1/big-house3-col.glb" id="18_cc8cs"]
-[ext_resource type="PackedScene" uid="uid://bfc3k6h0skavs" path="res://Art/3D/Prefabs/sm_sign_02.tscn" id="19_hbwnc"]
 [ext_resource type="PackedScene" uid="uid://c5jrjbmscqqsq" path="res://Art/3D/Meshes/Buildings/BigBuilding2/big-house4-col.glb" id="19_sqw5e"]
 [ext_resource type="PackedScene" uid="uid://die6l7hfocn88" path="res://Art/3D/Meshes/Buildings/BigBuilding3/big-house--block-col.glb" id="20_cnccd"]
 [ext_resource type="PackedScene" uid="uid://dolwarhg6y8xx" path="res://Art/3D/Meshes/Buildings/BigBuilding4/building-tall-col.glb" id="21_crasj"]
@@ -201,9 +200,6 @@ transform = Transform3D(5.54329e-07, 0, -1.5, 0, 1.5, 0, 1.5, 0, 5.54329e-07, 29
 [node name="SM_Roadsign_Big_04" parent="Final_envrinment/Road/RoadSigns" instance=ExtResource("26_p0mc3")]
 transform = Transform3D(5.54329e-07, 0, -1.5, 0, 1.5, 0, 1.5, 0, 5.54329e-07, 291.615, 1, 633.456)
 
-[node name="Sm_Sign_02" parent="Final_envrinment/Road/RoadSigns" instance=ExtResource("19_hbwnc")]
-transform = Transform3D(0.724006, 0, -1.3137, 0, 1.5, 0, 1.3137, 0, 0.724006, 138.624, 2.16649, 548.861)
-
 [node name="SM_Roadsign_Big_05" parent="Final_envrinment/Road/RoadSigns" instance=ExtResource("26_p0mc3")]
 transform = Transform3D(-1.43174, -0.21678, -0.391302, -0.148211, 1.46787, -0.270902, 0.422072, -0.219911, -1.42249, 57.632, 3.41112, 730.218)
 
@@ -233,9 +229,6 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 180.975, 2.16648, 505.5
 
 [node name="Sm_Sign_01" parent="Final_envrinment/Road" instance=ExtResource("34_vhlht")]
 transform = Transform3D(0.914614, 0, 0.404328, 0, 1, 0, -0.404328, 0, 0.914614, 175.355, 2.16649, 586.936)
-
-[node name="Sm_Sign_02" parent="Final_envrinment/Road" instance=ExtResource("34_vhlht")]
-transform = Transform3D(0.999798, 0, -0.0200696, 0, 1, 0, 0.0200696, 0, 0.999798, 150.821, 2.16649, 586.935)
 
 [node name="Sm_Sign_07" parent="Final_envrinment/Road" instance=ExtResource("34_vhlht")]
 transform = Transform3D(0.999798, 0, -0.0200696, 0, 1, 0, 0.0200696, 0, 0.999798, 148.738, 2.16649, 547.664)
